@@ -1,0 +1,67 @@
+% I may change the way this is done in a future version, 
+%  but given that some people needed it, if you need a different degree title 
+%  (e.g. Master of Science, Master in Science, Master of Arts, etc)
+%  uncomment the following 3 lines and set as appropriate (this *has* to be before \maketitle)
+% \makeatletter
+% \renewcommand {\@degree@string} {Master of Things}
+% \makeatother
+
+\title{Improving Software Project Health using Machine Learning}
+\author{Profir-Petru P\^ar\cb{t}achi}
+\department{Department of Computer Science}
+
+\maketitle
+\makedeclaration
+
+\begin{abstract} % 300 word limit
+In recent years systems that would previously live on different platforms
+have been integrated under a single umbrella. The proliferation of GitHub,
+which offers pull-requests, issue tracking and version history, and its
+integration with other solutions such as Gerrit, or Travis, as well as the
+response from competitors has led to leaner and faster development cycles.
+This has also reduced the cost of entry and created large, publicly
+accessible sources of source-code together with related project artefacts.
+
+This shift in tooling has also facilitated a shift in development paradigms,
+developers now prefer a continuous integration/continuous delivery
+infrastructure. This has led to more projects adopting a more agile
+development process. Developers often forgo tasks that may aid project
+health so that they can instead travel light. However, project health
+determines project success.  Project health encompasses traceability,
+documentation, adherence to coding conventions, in short tasks that allow
+for lower maintenance costs and higher accountability.
+
+Simultaneously, this shift has allowed for the proliferation of Natural
+Language or Natural Language and Formal Language textual artefacts which are
+programmatically accessible. This suggests that approaches from Natural
+Language Processing and Machine Learning are now feasible and indeed
+desirable. This thesis aims to (semi-)automate tasks for this new paradigm
+and its attendant infrastructure by bringing to the foreground the relevant
+NLP and ML techniques.
+
+Under this umbrella, we focus on three synergistic tasks from this domain:
+(1) improving the issue-pull-request traceability, which can aid existing
+systems to automatically curate the issue backlog as pull-requests are
+merged; (2) untangling commits in a version history, which can aid the
+beforementioned traceability task as well as improve the usability of
+determining a fault introducing commit, or cherry-picking via tools such as
+git bisect; (3) mixed-text parsing, to allow better API mining and open new
+avenues for project-specific code-recommendation tools.	
+\end{abstract}
+
+\begin{impactstatement}
+The work presented as part of this thesis opens the door to further research in applications of machine learning towards aiding the process of software development and making the profession more accessible. Directly, it helps developers maintain projects in a state of lower technical debt and can, over time, enable more sophisticated analysis by researchers as the quality of the data improves. It also further paves the way towards multi-channel analysis of coding artefacts where signal from both code and natural language are considered. \todo{more stuff here about how this is impactful.}
+\end{impactstatement}
+
+\begin{acknowledgements}
+Acknowledge all the things!
+\end{acknowledgements}
+
+\setcounter{tocdepth}{2} 
+% Setting this higher means you get contents entries for
+%  more minor section headers.
+
+\tableofcontents
+\listoffigures
+\listoftables
+

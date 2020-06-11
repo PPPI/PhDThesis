@@ -1,0 +1,29 @@
+\newcommand{\cf}{\hbox{\emph{cf.}}\xspace}
+\newcommand{\deletia}{\ldots [deletia] \ldots}
+\newcommand{\etal}{\hbox{\emph{et al.}}\xspace}
+\newcommand{\eg}{\hbox{\emph{e.g.}}\xspace}
+\newcommand{\ie}{\hbox{\emph{i.e.}}\xspace}
+\newcommand{\scil}{\hbox{\emph{sc.}}\xspace} %scilicet: it is permitted to know
+\newcommand{\st}{\hbox{\emph{s.t.}}\xspace}
+\newcommand{\wrt}{\hbox{\emph{w.r.t.}}\xspace}
+\newcommand{\etc}{\hbox{\emph{etc.}}\xspace}
+\newcommand{\viz}{\hbox{\emph{viz.}}\xspace} %videlicet: it is permitted to see
+\newcommand{\infinity}{\infty}
+\newcommand{\green}{PineGreen}
+% Gotta have todos
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+
+% Missing unicode chars, other brokenness in ucs/inputenc {{{1
+\DeclareUnicodeCharacter{183}{\cdot}						% ·
+\DeclareUnicodeCharacter{931}{\ensuremath\Sigma}			% Σ
+\DeclareUnicodeCharacter{9001}{\ensuremath\langle}			% 〈
+\DeclareUnicodeCharacter{9002}{\ensuremath\rangle}			% 〉
+\DeclareUnicodeCharacter{9608}{\ensuremath\blacksquare}		% █
+\DeclareUnicodeCharacter{1013}{\in}							% ϵ
+\DeclareUnicodeCharacter{8213}{---}							% ―
+
+\PrerenderUnicode{ț}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{conj}{Conjecture}

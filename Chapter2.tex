@@ -1,0 +1,88 @@
+\chapter{Flexeme: Untangling Commits Using Lexical Flows}
+\label{chapter:flexeme}
+
+% Copied here to avoid issues with the paper latex
+\newcommand{\deltaPDG}{$\delta$-PDG\xspace}
+\newcommand{\deltaPDGnCV}{$\delta$-PDG+CV\xspace}
+\newcommand{\deltaPDGs}{$\delta$-PDGs\xspace}
+\newcommand{\deltaPDGN}{$\delta$-NFG\xspace}
+\newcommand{\deltaPDGNs}{$\delta$-NFGs\xspace}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+
+\newcommand{\ourapproach}{\textsc{flexeme}\xspace}
+\newcommand{\Ourapproach}{\textsc{Flexeme}\xspace}
+\renewcommand{\ourtool}{\textsc{heddle}\xspace}
+\renewcommand{\Ourtool}{\textsc{Heddle}\xspace}
+\newcommand{\projURL}{\url{https://github.com/PPPI/Flexeme}\xspace}
+
+% I've moved our results here so they can be easily updated consistently...
+\newcommand{\Ouraccuracy}{$0.81$\xspace}
+\newcommand{\Ouraccuracyhigh}{$0.84$\xspace}
+\newcommand{\OuraccuracyhighProject}{Nancy\xspace}
+\newcommand{\Ourspeedup}{$32$\xspace}
+\newcommand{\OurslowdownBarnett}{$9$\xspace}
+\newcommand{\Ourabsolutespeedup}{$3'10''$\xspace}
+\newcommand{\Ourruntime}{ten seconds\xspace}
+\newcommand{\OurtoolsAtomicAccuracy}{$0.63$\xspace}
+\newcommand{\OurtoolsAtomicLabelAccuracy}{$0.93$\xspace}
+
+% Comparisons or other tools
+\newcommand{\OurtoolVsHerzigAccuracy}{$0.14$\xspace}
+\newcommand{\BarnettAccuracy}{$0.13$\xspace}
+\newcommand{\HerzigConceptAccuracyDrop}{$0.07$\xspace}
+
+% Scalability Results
+\newcommand{\OurtoolsScalabilityRegression}{$t = 0.3371 - 0.0041 n + 0.0015 n^2$, $R^2=1.00$\xspace}
+\newcommand{\HerzigScalabilityRegression}{$t = 0.8794 - 0.0528 n + 0.0019 n^2$, $R^2=0.99$\xspace}
+\newcommand{\SpeedGainAtScale}{$68$ seconds\xspace}
+
+% p-values
+% Cross-tool
+\newcommand{\HerzigDeltaOurtoolAccuracy}{$p<0.001$\xspace}
+\newcommand{\HerzigDeltaOurtoolTime}{$p=0.51$\xspace}
+% Cross-concepts
+\newcommand{\BarnettConceptsAccuracy}{$p < 0.01$\xspace}
+\newcommand{\HerzigConceptsAccuracy}{$p=0.28$\xspace}
+\newcommand{\OurtoolConceptsAccuracy}{$p=0.76$\xspace}
+
+\newcommand{\annequiv}{$\equiv_{a}$\xspace}
+\newcommand{\nodeequiv}{$\equiv_{n}$\xspace}
+
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+% ------------------------------------------------------- [ Colour Definitions ]
+\definecolor{cb-green-sea}  {RGB}{  0, 146, 146}
+\definecolor{cb-purple}     {RGB}{ 73,   0, 146}
+\definecolor{cb-blue-sky}   {RGB}{109, 182, 255}
+\definecolor{cb-burgundy}   {RGB}{146,   0,   0}
+
+% Define diff language for lstlisting
+\lstdefinelanguage{diff}{
+  morecomment=[f][\color{cb-blue-sky}]{@@}, % group identifier
+  morecomment=[f][\color{cb-burgundy}]-,    % deleted lines 
+  morecomment=[f][\color{cb-green-sea}]+,   % added lines
+  morecomment=[f][\color{cb-purple}]{---},  % Diff header lines (must appear after +,-)
+  morecomment=[f][\color{magenta}]{+++},
+}
+
+\paragraph{Paper Authors}\\
+Profir-Petru~P\^ar\c{t}achi, Department of Computer Science, University College London, United Kingdom\\
+Santanu~Kumar~Dash, University of Surrey, United Kingdom\\
+Miltiadis~Allamanis, Microsoft Research, Cambridge, United Kingdom\\
+Earl~T.~Barr, Department of Computer Science, University College London, United Kingdom
+
+\paragraph{Abstract}
+\subimport{../untangle-tex/}{../untangle-tex/abstract}
+
+\subimport{../untangle-tex/}{../untangle-tex/intro}
+\subimport{../untangle-tex/}{../untangle-tex/example}
+\subimport{../untangle-tex/}{../untangle-tex/definitions}
+\subimport{../untangle-tex/}{../untangle-tex/implementation}
+\subimport{../untangle-tex/}{../untangle-tex/evaluation}
+\subimport{../untangle-tex/}{../untangle-tex/results}
+\subimport{../untangle-tex/}{../untangle-tex/threats}
+\subimport{../untangle-tex/}{../untangle-tex/rel_work}
+\subimport{../untangle-tex/}{../untangle-tex/conclusion}
