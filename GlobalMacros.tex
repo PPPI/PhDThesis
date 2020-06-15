@@ -8,10 +8,21 @@
 \newcommand{\wrt}{\hbox{\emph{w.r.t.}}\xspace}
 \newcommand{\etc}{\hbox{\emph{etc.}}\xspace}
 \newcommand{\viz}{\hbox{\emph{viz.}}\xspace} %videlicet: it is permitted to see
+\newcommand{\vs}{\hbox{\emph{vs.}}\xspace}
 \newcommand{\infinity}{\infty}
 \newcommand{\green}{PineGreen}
-% Gotta have todos
-\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{true} % comment this line to deactivate comments
+\ifthenelse{\boolean{showcomments}}{
+  \newcommand{\nbc}[3]{
+    {\colorbox{#3}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}%
+    {\textcolor{#3}{\textsf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}}}
+  \newcommand{\todo}[1]{\nbc{TODO}{#1}{blue}\xspace}
+}{
+  \newcommand{\nbc}[3]{}
+  \newcommand{\todo}[1]{}
+}
 
 % Missing unicode chars, other brokenness in ucs/inputenc {{{1
 \DeclareUnicodeCharacter{183}{\cdot}						% ·
