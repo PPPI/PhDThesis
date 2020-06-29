@@ -1,5 +1,91 @@
-\chapter{Introductory Material}
-\label{chapterlabel1}
+\chapter{Project Health}
+\label{chapter:introduction}
 
-% This just dumps some pseudolatin in so you can see some text in place.
-\blindtext
+Some projects are vibrant;  some moribund; others implode after a few commits.
+Project health determines project success.  Project health encompasses:
+\todo{Definition}. These tasks often involve a mixture of artefacts, both in
+Natural and in Formal languages. 
+
+In recent years systems that would previously live on different platforms have
+been integrated under a single umbrella. The proliferation of GitHub, which
+offers pull-requests, issue tracking and version history, and its integration
+with other solutions such as Gerrit, for Code Reviews, Travis, for continuous
+integration and delivery, as well as the response from competitors such as
+GitLab and Atlassian to offer equivalent offerings has led to leaner and faster
+development cycles. This has also reduced the cost of entry and created large,
+publicly accessible sources of source-code together with related project
+artefacts. Within this context, developers can benefit from the automation of
+tasks, especially if they are oft forgotten or ignored in favour of traveling
+light. 
+
+This shift in tooling has also facilitated a shift in development paradigms,
+developers now prefer a continuous integration/continuous delivery
+infrastructure. This has led to more projects adopting a more agile development
+process. Cleland-Huang \etal~\cite{Cleland-Huang2014} and St{\aa}hl
+\etal~\cite{Stahl2017} observe that for traceability to be adopted within an
+agile framework, it must remain within the traveling light paradigm.
+Simultaneously, this shift has allowed for the proliferation of Natural Language
+or Natural Language and Formal Language textual artefacts which are
+programmatically accessible. This suggests that approaches from Natural Language
+Processing and Machine Learning are now feasible and indeed desirable. This
+thesis aims to (semi-)automate tasks for this new paradigm and its attendant
+infrastructure by bringing to the foreground the relevant NLP and ML techniques.
+
+Under this umbrella, we focus on three synergistic tasks from this domain: (1)
+improving the issue-pull-request traceability, which can aid existing systems to
+automatically curate the issue backlog as pull-requests are merged; (2)
+untangling commits in a version history, which can aid the beforementioned
+traceability task as well as improve the usability of determining a fault
+introducing commit, or cherry-picking via tools such as git bisect; (3)
+mixed-text parsing, to allow better API mining and open new avenues for
+project-specific code-recommendation tools. 
+
+The tasks range from more developer focused to more researcher focused; however,
+all tasks aim to, at worst, provide benefits to developers as a side-product if
+not directly helping them.
+
+Under the three synergistic tasks, we have found the following ways of improving
+the state-of-the-art:
+
+Towards making traceability attractive for agile development, Ståhl \etal [2]
+provide the Eiffel framework, which allows integrating different sources of
+traceability information in a light-weight manner. AIDE-MEMOIRE seeks to provide
+issue-pull-request traceability information, directly helping developers by
+allowing features for automatic triaging that already exist to work more
+efficiently. This fits within the future directions proposed by Ståhl \etal and
+enabled by Eiffel, while the problem itself represents a recast of the Bachman
+\etal’s “Missing Links” problem~\cite{MissingLinks} to modern development
+practices. 
+
+Traceability, importantly for this research, and other tasks such as fault
+localisation or patch synthesis must contend with bias in the training data
+whenever a statistical approach is considered. This bias is influenced by a
+multitude of factors among which the mentioned “Missing Links” problem as well
+as tangled commits as observed by Herzig \etal~\cite{Herzig2016} (Herzig and
+Zeller~\cite{Herzig2013}). FLEXEME aims to forward the state-of-the-art in
+commit untangling and thus enable the creation of better statistical tooling for
+developers indirectly, while directly allowing them to improve the health of
+their version histories. 
+
+Despite the international nature of platforms such as GitHub, a significant
+portion of software development information is in English. This leads to
+projects in other natural languages to adopt English terms within their
+processes as observed by Treude \etal~\cite{Treude2015portuguese}. Further, such
+natural language can mix any natural languages it may use with formal languages.
+This same phenomenon is observable on mailing lists, such as the Linux Kernel
+Mailing List, and developer fora, such as StackOverflow. POSIT borrows from the
+NLP literature that concerns itself with code-switching to provide solutions to
+this problem within the Software Engineering context and allow extending methods
+to languages other than English or resources that freely mix natural and formal
+languages.
+
+This thesis aims to improve the state-of-the-art of (semi-)automation of tasks
+and the attending infrastructure of Continuous Integration and Development
+projects. It proposes to do so by advancing the state-of-the-art for three
+problems: (1) issue-pull-request traceability, (2) commit untangling, and (3)
+the parsing of mixed-text containing formal languages. All solutions should be
+targeting a continuous integration, continuous delivery context. Further, these
+solutions interact synergistically, the latter two improve the quality of the
+training data for the first, while also improving the general health of
+developer version histories (2) or developer issue trackers and fora (3).
+
