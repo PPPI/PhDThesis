@@ -30,3 +30,21 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
+
+\newcommand{\doublesignature}[2][Profir-Petru P\^ar\cb{t}achi]{%
+  \parbox{\textwidth}{
+    \vspace{2cm}
+    \today
+    \parbox{5cm}{
+      \centering
+      \rule{4cm}{1pt}\\
+       #1 
+    }
+    \hfill
+    \parbox{5cm}{
+      \centering
+      \rule{4cm}{1pt}\\
+      #2
+    }
+  }
+}

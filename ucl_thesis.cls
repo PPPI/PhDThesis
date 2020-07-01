@@ -575,6 +575,17 @@
 }
 %    \end{macrocode}
 %  \end{environment}
+%  \begin{environment}{statement of conjoint work}
+%  An environment for the Statement of Conjoint Work
+%    \begin{macrocode}
+    \newcommand \@conjoint{Statement of Conjoint Work}
+    \newenvironment{conjoint}{%
+        \chapter*{\@conjoint}%
+        \@mkboth{\@conjoint}{\@conjoint}%
+    }{%
+    }
+    %    \end{macrocode}
+    %  \end{environment}
 %  \Finale
 \endinput
 %%
