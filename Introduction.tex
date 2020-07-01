@@ -1,5 +1,10 @@
-\chapter{Project Health}
+\chapter{Introduction}
 \label{chapter:introduction}
+
+\todo{Intro for Intro}
+
+\section{Project Health}
+\label{chapter:introduction:sec:proj_health}
 
 Some projects are vibrant;  some moribund; others implode after a few commits.
 Project health determines project success.  Project health encompasses:
@@ -89,3 +94,130 @@ solutions interact synergistically, the latter two improve the quality of the
 training data for the first, while also improving the general health of
 developer version histories (2) or developer issue trackers and fora (3).
 
+\section{Problem Statements}
+\label{chapter:introduction:sec:problem_statement}
+
+\todo{what am I solving?}
+
+Software development is a community task. The programming task itself is a
+component of a much wider process. It is, however, a task that is viewed
+exclusively when considered by developers at the cost of other administrative
+tasks. This manifests itself as, for example, in the case of traceability which
+companies to recognise as important by organisations reaching an insufficient
+level of traceability~\cite{mader2009motivation}. These administrative tasks
+come with the promise of facilitating internal follow-ups, evaluation or
+improvement of the development process~\cite{domges1998adapting}. Agile
+practice, and especially Continuous Integration, by suggesting a lean approach
+to documentation, reduces the direct applicability of existing approaches,
+though work has been done to adapt to the new paradigm~\cite{Stahl2017}.
+
+To help developers, tool-smiths themselves require supporting artefacts and
+utilities. One of these is access to high quality data that can be used both to
+train a human intuition for a task as well as statistical approaches to enable
+developers from less well maintained projects improve their situation. The
+proliferation of web-sites such as GitHub, BitBucket/JIRA, GitLab, and others
+that enable developers to have commits, issues, pull-request, code-reviews and
+other development processes under one umbrella also open a potential resource to
+researchers and tool-smiths that wish to study the properties of the
+inter-relationships of such artefacts. In this context, traceability can help
+developers maintain the collective memory of projects. When using such
+resources, developers are incentivised to maintain code-review/issue to commit
+links by the promise of automatic triaging of issues as commits resolving them
+are accepted into the mainline. We have, however, observed a lack of such links
+as far as GitHub is concerned, despite an encouragement of contributors to do so
+in the contribution guidelines. Additionally, links may not be clear if the
+fixes are presented as unfocused patches, hiding bug fixing beyond many lines of
+refactoring. In our work, we try to make these task simpler to facilitate both
+further research and adoption by developers.
+
+Further, despite access to mark-up to help developers demarcate code from
+English, in practice, even on StackOverflow, an active question-answering
+community for coding related tasks, submitters do forget to do so. This reduces
+the applicable research tools which use such formatting cues. To further
+increase our model options, we also propose a new tagging and segmentation
+approach to automate this task.
+
+Overall, the focus of this research focuses on the creation of tools and
+meta-tools that (semi-)automate development tasks within a Continuous
+Integration project paradigm. The former focus directly on improving the
+development process by reducing the administrative burden on the developers,
+while the latter focus on enabling a wider range of tools to be applicable. The
+goal as a whole is a improvement of the development process by allowing more
+time to be dedicated to the programming task rather than tasks required to
+maintain the project health.
+
+\section{Goals and Objectives}
+\label{chapter:introduction:sec:goals}
+
+\todo{what do I want to achieve?}
+
+\section{Contributions}
+\label{chapter:introduction:sec:contrib}
+
+\todo{How do I contribute to the general advancement of knowledge?}
+
+\section{List of Papers}
+\label{chapter:introduction:sec:papers}
+
+A long research project, like a PhD, is a close collaboration where it is
+difficult, often impossible, to separate each collaborator's contributions.
+What is clear is who took the lead on which aspects and tasks.  I now enumerate
+the tasks I lead on each of the papers included in this thesis.
+
+\noindent\textbf{Aide-mémoire: Improving a Project’s Collective Memory via Pull
+Request-Issue Links} 
+
+\noindent\emph{Authors: Profir-Petru Pârțachi, David R. White, Earl T. Barr}
+
+\noindent\emph{Venue: Under submission to ACM Transactions on Software
+Engineering and Methodology (TOSEM)}
+
+\noindent I have determined and mined the dataset of GitHub projects. I have
+implemented the proposed PR-Issue linker, performed the exploratory data
+analysis and feature engineering as well as wrote the evaluation and result
+analysis scripts. The experimental and EDA designs were done in close
+collaboration with David White who made sure I perform these correctly and
+guided me patiently.
+
+\noindent\textbf{Flexeme: Untangling Commits Using Lexical Flows}
+
+\noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Miltose
+Allamanis, Earl T. Barr}
+
+\noindent\emph{Venue: Proceedings of 28th ACM Joint European Software
+Engineering Conference and Symposium on the Foundations of Software Engineering,
+(ESEC/FSE 2020)}
+
+\noindent  I have implemented in full the construction of our new structure,
+though the idea of the structure was from Earl Barr, and the details of the
+specification were worked in close collaboration. I also implemented the
+necessary methods to construct the dataset, reproduced previous work in the area
+and implemented our proposed untangling algorithms as well as their evaluation
+on the constructed dataset. The RefiNym implementation was provided by Santanu
+Dash who helped me integrate it with Flexeme. The original PDG extraction
+implementation for C\# code was provided by Miltose Allamanis. Santanu Dash and
+I performed the manual evaluations.
+
+\noindent\textbf{POSIT: Simultaneously Tagging Natural and Programming
+Languages} 
+
+\noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Christoph
+Treude, Earl T. Barr}
+
+\noindent\emph{Venue: Proceedings of 42nd International Conference on Software
+Engineering (ICSE ’20)}
+
+\noindent I have implemented the preprocessing scripts, the Neural Network that
+realises POSIT, the adaptation of the previous State-of-the-art to our problem,
+and the necessary evaluation scripts. The Code Comments corpus was provided by
+Santanu Dash. The original implementation of TaskNav was provided by Christoph
+Treude. The informal proof of context-sensitivity of mixed-text was worked on in
+close collaboration with Earl Barr without whom the proof would have not been
+finished in a timely manner. Manual evaluation of POSIT was done together with
+Santanu Dash, while manual evaluations of TaskNav augmented with POSIT were done
+together with Christoph Treude.
+
+\section{Thesis Organisation}
+\label{chapter:introduction:sec:organisation}
+
+\todo{Lazy enum or drop this section}

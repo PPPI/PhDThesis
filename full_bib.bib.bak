@@ -33,16 +33,6 @@
   doi      = {10.1109/MC.2007.195},
   keywords = {document handling;formal specification;information retrieval;automated traceability;information-retrieval techniques;legacy documents;requirements trace matrix;Best practices;Capability maturity model;Code standards;Maintenance engineering;Manuals;Software maintenance;Standards development;Standards organizations;System testing;Unified modeling language;automated traceability}
 }
-
-@inproceedings{Abebe2010,
-  author       = {Abebe, Surafel Lemma and Tonella, Paolo},
-  booktitle    = {IEEE 18th Int. Conf. on Prog. Comp. (ICPC) 2010},
-  title        = {Natural language parsing of program element names for concept extraction},
-  year         = {2010},
-  organization = {IEEE},
-  pages        = {156--159},
-  doi          = {10.1109/icpc.2010.29}
-}
 @inproceedings{Adel2013,
   abstract  = {In this paper, we investigate the appli-cation of recurrent neural network lan-guage models (RNNLM) and factored language models (FLM) to the task of language modeling for Code-Switching speech. We present a way to integrate part-of-speech tags (POS) and language in-formation (LID) into these models which leads to significant improvements in terms of perplexity. Furthermore, a comparison between RNNLMs and FLMs and a de-tailed analysis of perplexities on the dif-ferent backoff levels are performed. Fi-nally, we show that recurrent neural net-works and factored language models can be combined using linear interpolation to achieve the best performance. The final combined language model provides 37.8{\%} relative improvement in terms of perplex-ity on the SEAME development set and a relative improvement of 32.7{\%} on the evaluation set compared to the traditional n-gram language model.},
   author    = {Adel, Heike and Vu, Ngoc Thang and Schultz, Tanja},
@@ -135,16 +125,6 @@
   keywords = {aspect-oriented programming,scattering,tan-}
 }
 
-@inproceedings{Baltes2018,
-  author       = {Baltes, Sebastian and Dumani, Lorik and Treude, Christoph and Diehl, Stephan},
-  booktitle    = {Proc. 15th Int. Conf. Min. Soft. Rep.},
-  title        = {{Sotorrent: Reconstructing and analyzing the evolution of {Stack} {Overflow} posts}},
-  year         = {2018},
-  organization = {ACM},
-  pages        = {319--330},
-  doi          = {10.1145/3196398.3196430}
-}
-
 @misc{bangorTalk,
   author       = {Deuchar, Margaret},
   howpublished = {\url{http://www.bangortalk.org.uk/speakers.php?c= miami}},
@@ -152,21 +132,6 @@
   year         = {2010},
   doi          = {10.21415/T5J01D},
   publisher    = {TalkBank}
-}
-}
-
-@inproceedings{Banko:2004:PST:1220355.1220435,
-  author    = {Banko, Michele and Moore, Robert C.},
-  booktitle = {Proc. 20th Int. Conf. Comp. Ling.},
-  title     = {{Part of Speech Tagging in Context}},
-  year      = {2004},
-  address   = {Stroudsburg, PA, USA},
-  publisher = {Association for Computational Linguistics},
-  series    = {COLING '04},
-  acmid     = {1220435},
-  articleno = {556},
-  doi       = {10.3115/1220355.1220435},
-  location  = {Geneva, Switzerland}
 }
 
 @article{Barnett2015,
@@ -248,21 +213,6 @@
   title     = {{Natural Language Processing with Python}},
   publisher = {O'Reilly Media},
   year      = 2009
-}
-
-@article{Borg2014,
-  author   = {Borg, Markus and Runeson, Per and Ard{\"o}, Anders},
-  journal  = {Empirical Software Engineering},
-  title    = {Recovering from a decade: a systematic mapping of information retrieval approaches to software traceability},
-  year     = {2014},
-  issn     = {1573-7616},
-  month    = dec,
-  number   = {6},
-  pages    = {1565--1616},
-  volume   = {19},
-  abstract = {Engineers in large-scale software development have to manage large amounts of information, spread across many artifacts. Several researchers have proposed expressing retrieval of trace links among artifacts, i.e. trace recovery, as an Information Retrieval (IR) problem. The objective of this study is to produce a map of work on IR-based trace recovery, with a particular focus on previous evaluations and strength of evidence. We conducted a systematic mapping of IR-based trace recovery. Of the 79 publications classified, a majority applied algebraic IR models. While a set of studies on students indicate that IR-based trace recovery tools support certain work tasks, most previous studies do not go beyond reporting precision and recall of candidate trace links from evaluations using datasets containing less than 500 artifacts. Our review identified a need of industrial case studies. Furthermore, we conclude that the overall quality of reporting should be improved regarding both context and tool details, measures reported, and use of IR terminology. Finally, based on our empirical findings, we present suggestions on how to advance research on IR-based  trace recovery.},
-  day      = {01},
-  doi      = {10.1007/s10664-013-9255-y}
 }
 
 @book{Breiman+84,
@@ -365,17 +315,6 @@
   keywords = {Code changes,Commit message,Summarization}
 }
 
-@article{Chen2017,
-  author        = {Chen, Zhengdao and Li, Xiang and Bruna, Joan},
-  title         = {{Supervised Community Detection with Hierarchical Graph Neural Networks}},
-  year          = {2017},
-  abstract      = {We study methods for supervised community detection on graphs. This estimation problem is typically formulated in terms of the spectrum of certain operators, as well as with posterior inference under certain probabilistic graphical models. Focusing on random graph families such as the Stochastic Block Model, recent research has unified both approaches, and identified both statistical and computational signal-to-noise detection thresholds. We identify the resulting class of algorithms with a family of Graph Neural Networks and show that they can reach those detection thresholds in a purely data-driven manner, without access to the underlying generative models and with no parameter assumptions. For that purpose, we propose to augment GNNs with the non-Backtracking operator, defined on the line graph of edge adjacencies. We also perform the first analysis of optimization landscape on a simplified GNN family, revealing an interesting transition from rugged to simple as the graph size increases. Finally, the resulting model is also tested on real datasets, performing significantly better than rigid parametric models.},
-  archiveprefix = {arXiv},
-  arxivid       = {1705.08415},
-  eprint        = {1705.08415},
-  eprinttype    = {arxiv}
-}
-
 @article{Cleland-Huang2014,
   author   = {Cleland-Huang, Jane and Gotel, Olly and Hayes, Jane Huffman and M{\"{a}}der, Patrick and Zisman, Andrea},
   journal  = {FOSE 2014: Proceedings of the on Future of Software Engineering (36th ICSE 2014)},
@@ -457,37 +396,6 @@
   doi     = {10.1016/j.jss.2013.07.009}
 }
 
-@inproceedings{Constant:2011:MPT:2021121.2021134,
-  author    = {Constant, Matthieu and Sigogne, Anthony},
-  booktitle = {Proc. Workshop Multiword Expr.},
-  title     = {{MWU-aware part-of-speech Tagging with a CRF Model and Lexical Resources}},
-  year      = {2011},
-  address   = {Stroudsburg, PA, USA},
-  pages     = {49--56},
-  publisher = {Association for Computational Linguistics},
-  series    = {MWE '11},
-  acmid     = {2021134},
-  isbn      = {978-1-932432-97-8},
-  location  = {Portland, Oregon},
-  numpages  = {8},
-  url       = {http://dl.acm.org/citation.cfm?id=2021121.2021134}
-}
-
-@inproceedings{constant:hal-00790624,
-  author      = {Constant, Mathieu and Tellier, Isabelle},
-  booktitle   = {{8th Int. Conf. Lang. Res. Eval. (LREC'12)}},
-  title       = {{Evaluating the Impact of External Lexical Resources into a CRF-based Multiword Segmenter and part-of-speech Tagger}},
-  year        = {2012},
-  address     = {Turkey},
-  month       = may,
-  pages       = {646--650},
-  file        = {constant-tellier-lrec2012.pdf:https\://hal-upec-upem.archives-ouvertes.fr/hal-00790624/file/constant-tellier-lrec2012.pdf:PDF},
-  hal_id      = {hal-00790624},
-  hal_version = {v1},
-  keywords    = {Multiword Expressions ; Part Of Speech tagging ; Statistical and machine learning methods ; Conditional Random Fields ; Morphosyntactic lexicons ; lexical segmentation},
-  url         = {https://hal-upec-upem.archives-ouvertes.fr/hal-00790624}
-}
-
 @article{CVB-LDA,
   author   = {Teh, Yee Whye and Newman, David and Welling, Max and Neaman, D},
   journal  = {Advances in Neural Information Processing Systems 19 (NIPS 2006)},
@@ -501,7 +409,7 @@
   keywords = {LDA: collapsed variational Bayes,Taylor expansion,approximation}
 }
 
-@inproceedings{DeepLearningForTraces,
+@InProceedings{DeepLearningForTraces,
   author    = {J. Guo and J. Cheng and J. Cleland-Huang},
   booktitle = {2017 IEEE/ACM 39th International Conference on Software Engineering (ICSE)},
   title     = {{Semantically Enhanced Software Traceability Using Deep Learning Techniques}},
@@ -509,7 +417,8 @@
   month     = may,
   pages     = {3--14},
   doi       = {10.1109/ICSE.2017.9},
-  keywords  = {Machine learning;Natural language processing;Recurrent neural networks;Semantics;Software;Standards;Training;Deep Learning;Recurrent Neural Network;Semantic Representation;Traceability}
+  eprint    = {1804.02438v1},
+  keywords  = {Machine learning;Natural language processing;Recurrent neural networks;Semantics;Software;Standards;Training;Deep Learning;Recurrent Neural Network;Semantic Representation;Traceability},
 }
 
 @inproceedings{Dias2015,
@@ -529,16 +438,6 @@
   issn            = {1534-5351},
   mendeley-groups = {Untangle},
   url             = {http://ieeexplore.ieee.org/document/7081844/}
-}
-
-@inproceedings{dietrich2019man,
-  author       = {Dietrich, Jens and Luczak-Roesch, Markus and Dalefield, Elroy},
-  booktitle    = {Proc. 16th Int. Conf. Min. Soft. Repo.},
-  title        = {Man vs machine: a study into language identification of stack overflow code snippets},
-  year         = {2019},
-  organization = {IEEE Press},
-  pages        = {205--209},
-  doi          = {10.1109/msr.2019.00041}
 }
 
 @inproceedings{DifferentVectorRepresentations,
@@ -609,21 +508,6 @@
   doi       = {10.1109/MSR.2012.6224280},
   issn      = {2160-1852},
   keywords  = {software fault tolerance;software metrics;software quality;statistical analysis;Eclipse;I/O tasks;Mozilla Firefox;Mylyn;business logic;code lines;code quality;defect-proneness;historical metrics;software defects;software development;software project;source code entities;statistical topic modeling technique;structural metrics;Correlation;Fires;History;Java;Measurement;Software systems;code quality;software concerns;topic modeling}
-}
-
-@article{Falessi2017,
-  author   = {Falessi, Davide and Di Penta, Massimiliano and Canfora, Gerardo and Cantone, Giovanni},
-  journal  = {Empirical Software Engineering},
-  title    = {Estimating the number of remaining links in traceability recovery},
-  year     = {2017},
-  issn     = {1573-7616},
-  month    = jun,
-  number   = {3},
-  pages    = {996--1027},
-  volume   = {22},
-  abstract = {Although very important in software engineering, establishing traceability links between software artifacts is extremely tedious, error-prone, and it requires significant effort. Even when approaches for automated traceability recovery exist, these provide the requirements analyst with a, usually very long, ranked list of candidate links that needs to be manually inspected. In this paper we introduce an approach called Estimation of the Number of Remaining Links (ENRL) which aims at estimating, via Machine Learning (ML) classifiers, the number of remaining positive links in a ranked list of candidate traceability links produced by a Natural Language Processing techniques-based recovery approach. We have evaluated the accuracy of the ENRL approach by considering several ML classifiers and NLP techniques on three datasets from industry and academia, and concerning traceability links among different kinds of software artifacts including requirements, use cases, design documents, source code, and test cases. Results from our study indicate that: (i) specific estimation models are able to provide accurate estimates of the number of remaining positive links; (ii) the estimation accuracy depends on the choice of the NLP technique, and (iii) univariate estimation models outperform multivariate ones.},
-  day      = {01},
-  doi      = {10.1007/s10664-016-9460-6}
 }
 
 @inproceedings{Falleri2010,
@@ -751,67 +635,12 @@
   year    = {2007}
 }
 
-@article{Gonen2018,
-  author        = {Gonen, Hila and Goldberg, Yoav},
-  title         = {{Language Modeling for Code-Switching: Evaluation, Integration of Monolingual Data, and Discriminative Training}},
-  year          = {2018},
-  abstract      = {We focus on the problem of language modeling for code-switched language, in the context of automatic speech recognition (ASR). Language modeling for code-switched language is challenging for (at least) three reasons: (1) lack of available large-scale code-switched data for training; (2) lack of a replicable evaluation setup that is ASR directed yet isolates language modeling performance from the other intricacies of the ASR system; and (3) the reliance on generative modeling. We tackle these three issues: we propose an ASR-motivated evaluation setup which is decoupled from an ASR system and the choice of vocabulary, and provide an evaluation dataset for English-Spanish code-switching. This setup lends itself to a discriminative training approach, which we demonstrate to work better than generative language modeling. Finally, we present an effective training protocol that integrates small amounts of code-switched data with large amounts of monolingual data, for both the generative and discriminative cases.},
-  archiveprefix = {arXiv},
-  arxivid       = {1810.11895},
-  doi           = {10.18653/v1/d19-1427},
-  eprint        = {1810.11895},
-  eprinttype    = {arxiv}
-}
-
 @misc{GoogleGHTorrent,
   title        = {{Google Cloud Public Table of GitHub Projects}},
   howpublished = {\url{https://bigquery.cloud.google.com/dataset/ghtorrent-bq:ght}},
   author       = {Gousios, Georgios and Spinellis, D.},
   note         = {{Contents from 2.9M public, open source licensed repositories on GitHub; Accessed: 2017-08-10}},
   year         = {2017}
-}
-
-@inproceedings{Haiduc2010a,
-  author    = {Haiduc, Sonia and Aponte, Jairo and Marcus, Andrian},
-  booktitle = {Proc. 32Nd ACM/IEEE International Conference on Software Engineering - Volume 2},
-  title     = {{Supporting Program Comprehension with Source Code Summarization}},
-  year      = {2010},
-  address   = {New York, NY, USA},
-  pages     = {223--226},
-  publisher = {ACM},
-  series    = {ICSE '10},
-  acmid     = {1810335},
-  doi       = {10.1145/1810295.1810335},
-  isbn      = {978-1-60558-719-6},
-  keywords  = {program comprehension, summary, text summarization},
-  location  = {Cape Town, South Africa},
-  numpages  = {4}
-}
-
-@inproceedings{Haiduc2010b,
-  author    = {S. Haiduc and J. Aponte and L. Moreno and A. Marcus},
-  booktitle = {2010 17th Work. Conf. on Rev. Eng.},
-  title     = {{On the Use of Automated Text Summarization Techniques for Summarizing Source Code}},
-  year      = {2010},
-  month     = oct,
-  pages     = {35--44},
-  abstract  = {During maintenance developers cannot read the entire code of large systems. They need a way to get a quick understanding of source code entities (such as, classes, methods, packages, etc.), so they can efficiently identify and then focus on the ones related to their task at hand. Sometimes reading just a method header or a class name does not tell enough about its purpose and meaning, while reading the entire implementation takes too long. We study a solution which mitigates the two approaches, i.e., short and accurate textual descriptions that illustrate the software entities without having to read the details of the implementation. We create such descriptions using techniques from automatic text summarization. The paper presents a study that investigates the suitability of various such techniques for generating source code summaries. The results indicate that a combination of text summarization techniques is most appropriate for source code summarization and that developers generally agree with the summaries produced.},
-  doi       = {10.1109/WCRE.2010.13},
-  issn      = {2375-5369},
-  keywords  = {software maintenance;automated text summarization technique;textual description;software entity;source code summarization;Lead;Large scale integration;Semantics;Software systems;Computer science;Correlation;text summarization;program comprehension}
-}
-
-@inproceedings{Hellendoorn2018,
-  author          = {Hellendoorn, Vincent J and Bird, Christian and Barr, Earl T and Allamanis, Miltiadis},
-  booktitle       = {Proc. 2018 26th ACM Jt. Meet. Eur. Softw. Eng. Conf. Symp. Found. Softw. Eng. - ESEC/FSE 2018},
-  title           = {{Deep learning type inference}},
-  year            = {2018},
-  pages           = {152--162},
-  publisher       = {ACM},
-  volume          = {18},
-  abstract        = {Dynamically typed languages such as JavaScript and Python are increasingly popular, yet static typing has not been totally eclipsed: Python now supports type annotations and languages like TypeScript offer a middle-ground for JavaScript: a strict superset of JavaScript, to which it transpiles, coupled with a type system that permits partially typed programs. However, static typing has a cost: adding annotations, reading the added syntax, and wrestling with the type system to fix type errors. Type inference can ease the transition to more statically typed code and unlock the benefits of richer compile-time information, but is limited in languages like JavaScript as it cannot soundly handle duck-typing or runtime evaluation via eval. We propose DeepTyper, a deep learning model that understands which types naturally occur in certain contexts and relations and can provide type suggestions, which can often be verified by the type checker, even if it could not infer the type initially. DeepTyper, leverages an automatically aligned corpus of tokens and types to accurately predict thousands of variable and function type annotations. Furthermore, we demonstrate that context is key in accurately assigning these types and introduce a technique to reduce overfitting on local cues while highlighting the need for further improvements. Finally, we show that our model can interact with a compiler to provide more than 4,000 additional type annotations with over 95{\%} precision that could not be inferred without the aid of DeepTyper. CCS CONCEPTS • Software and its engineering → Software notations and tools; Automated static analysis; • Theory of computation → Type structures; KEYWORDS},
-  doi             = {10.1145/3236024.3236051},
-  mendeley-groups = {Code pseudo-PoS tagging}
 }
 @article{Herzig2013,
   author          = {Herzig, Kim and Zeller, Andreas},
@@ -886,20 +715,6 @@
   volume  = {7376},
   doi     = {10.1007/978-3-642-31537-4_13}
 }
-@article{Huang2015,
-  author        = {Huang, Zhiheng and Xu, Wei and Yu, Kai},
-  title         = {{Bidirectional LSTM-CRF Models for Sequence Tagging}},
-  year          = {2015},
-  issn          = {0270-6474},
-  abstract      = {In this paper, we propose a variety of Long Short-Term Memory (LSTM) based models for sequence tagging. These models include LSTM networks, bidirectional LSTM (BI-LSTM) networks, LSTM with a Conditional Random Field (CRF) layer (LSTM-CRF) and bidirectional LSTM with a CRF layer (BI-LSTM-CRF). Our work is the first to apply a bidirectional LSTM CRF (denoted as BI-LSTM-CRF) model to NLP benchmark sequence tagging data sets. We show that the BI-LSTM-CRF model can efficiently use both past and future input features thanks to a bidirectional LSTM component. It can also use sentence level tag information thanks to a CRF layer. The BI-LSTM-CRF model can produce state of the art (or close to) accuracy on POS, chunking and NER data sets. In addition, it is robust and has less dependence on word embedding as compared to previous observations.},
-  archiveprefix = {arXiv},
-  arxivid       = {1508.01991},
-  doi           = {10.1061/(ASCE)CO.1943-7862.0000274.},
-  eprint        = {1508.01991},
-  eprinttype    = {arxiv},
-  isbn          = {9781510827585},
-  pmid          = {3944616}
-}
 @article{InternetScaleMining,
   author   = {Linstead, Erik and Bajracharya, Sushil and Ngo, Trung and Rigor, Paul and Lopes, Cristina and Baldi, Pierre},
   journal  = {Data Mining and Knowledge Discovery},
@@ -913,14 +728,6 @@
   doi      = {10.1007/s10618-008-0118-x},
   isbn     = {1384-5810},
   keywords = {Author-topic probabilistic modeling,Code retrieval,Code search,Mining software,Program understanding,Software analysis}
-}
-
-@inproceedings{Jamatia2015,
-  title     = {part-of-speech tagging for code-mixed english-hindi twitter and facebook chat messages},
-  author    = {Jamatia, Anupam and Gamb{\"a}ck, Bj{\"o}rn and Das, Amitava},
-  booktitle = {Proc. Int. Conf. Rec. Adv. in Nat. Lang. Proc.},
-  pages     = {239--248},
-  year      = {2015}
 }
 @misc{jiralinkdoc,
   title        = {{JIRA: Link JIRA issues to Confluence pages automatically}},
@@ -988,20 +795,6 @@
   url      = {http://portal.acm.org/citation.cfm?doid=1985793.1985842},
   year     = {2011}
 }
-
-@article{Kersten2005,
-  author   = {Kersten, Mik and Murphy, Gail C},
-  journal  = {Proceedings of the 4th international conference on Aspect-oriented software development - AOSD '05},
-  title    = {{Mylar}},
-  year     = {2005},
-  issn     = {0740-7459},
-  pages    = {159--168},
-  abstract = {Even when working on a well-modularized software system, programmers tend to spend more time navigating the code than working with it. This phenomenon arises because it is impossible to modularize the code for all tasks that occur over the lifetime of a system. We describe the use of a degree-of-interest (DOI) model to capture the task context of program elements scattered across a code base. The Mylar tool that we built encodes the DOI of program elements by monitoring the programmer's activity, and displays the encoded DOI model in views of Java and AspectJ programs. We also present the results of a preliminary diary study in which professional programmers used Mylar for their daily work on enterprise-scale Java systems.},
-  doi      = {10.1145/1052898.1052912},
-  file     = {:D$backslash$:/Downloads/Kersten, Murphy, 2005, Mylar.pdf},
-  isbn     = {1595930434},
-  keywords = {a cohesive,for instance,in the code,may need to examine,programmers must,repeatedly visit multiple places,system,the code corresponding to,they,to a large software,to make a change}
-}
 @inproceedings{kim2006program,
   author    = {Kim, Miryung and Notkin, David},
   booktitle = {Proceedings of the 2006 international workshop on Mining software repositories},
@@ -1009,18 +802,6 @@
   year      = {2006},
   pages     = {58--64},
   doi       = {10.1145/1137983.1137999}
-}
-
-@article{Kingma14,
-  author    = {Kingma, Diederik P. and Ba, Jimmy},
-  journal   = {CoRR},
-  title     = {{Adam: A Method for Stochastic Optimization.}},
-  year      = {2014},
-  volume    = {abs/1412.6980},
-  ee        = {http://arxiv.org/abs/1412.6980},
-  keywords  = {dblp},
-  timestamp = {2018-08-14T14:24:27.000+0200},
-  url       = {http://dblp.uni-trier.de/db/journals/corr/corr1412.html\#KingmaB14}
 }
 
 @inproceedings{Kirinuki2014,
@@ -1050,51 +831,6 @@
   doi      = {10.1109/APSEC.2016.028},
   isbn     = {9781509055753},
   keywords = {Change pattern,Repository mining,Source code analysis}
-}
-
-@article{Knyazev2007,
-  author          = {Knyazev, A V and Argentati, M E and Lashuk, I. and Ovtchinnikov, E E},
-  journal         = {SIAM Journal on Scientific Computing},
-  title           = {{Block Locally Optimal Preconditioned Eigenvalue Xolvers (BLOPEX) in Hypre and PETSc}},
-  year            = {2007},
-  issn            = {1064-8275},
-  number          = {5},
-  pages           = {2224--2239},
-  volume          = {29},
-  abstract        = {We describe our software package Block Locally Optimal Preconditioned Eigenvalue Xolvers (BLOPEX) publicly released recently. BLOPEX is available as a stand-alone serial library, as an external package to PETSc (``Portable, Extensible Toolkit for Scientific Computation'', a general purpose suite of tools for the scalable solution of partial differential equations and related problems developed by Argonne National Laboratory), and is also built into {\{}$\backslash$it hypre{\}} (``High Performance Preconditioners'', scalable linear solvers package developed by Lawrence Livermore National Laboratory). The present BLOPEX release includes only one solver--the Locally Optimal Block Preconditioned Conjugate Gradient (LOBPCG) method for symmetric eigenvalue problems. {\{}$\backslash$it hypre{\}} provides users with advanced high-quality parallel preconditioners for linear systems, in particular, with domain decomposition and multigrid preconditioners. With BLOPEX, the same preconditioners can now be efficiently used for symmetric eigenvalue problems. PETSc facilitates the integration of independently developed application modules with strict attention to component interoperability, and makes BLOPEX extremely easy to compile and use with preconditioners that are available via PETSc. We present the LOBPCG algorithm in BLOPEX for {\{}$\backslash$it hypre{\}} and PETSc. We demonstrate numerically the scalability of BLOPEX by testing it on a number of distributed and shared memory parallel systems, including a Beowulf system, SUN Fire 880, an AMD dual-core Opteron workstation, and IBM BlueGene/L supercomputer, using PETSc domain decomposition and {\{}$\backslash$it hypre{\}} multigrid preconditioning. We test BLOPEX on a model problem, the standard 7-point finite-difference approximation of the 3-D Laplacian, with the problem size in the range {\$}10{\^{}}5-10{\^{}}8{\$}.},
-  archiveprefix   = {arXiv},
-  arxivid         = {0705.2626},
-  doi             = {10.1137/060661624},
-  eprint          = {0705.2626},
-  isbn            = {1064827500},
-  keywords        = {BLOPEX,Beowulf.,BlueGene,Conjugate gradient,LOBPCG,Laplacian,PETSc,domain decomposition,eigenvalue,eigenvector,hypre,iterative method,multigrid,parallel computing,preconditioner,preconditioning},
-  mendeley-groups = {Untangle}
-}
-
-@article{Krzakala2013,
-  author    = {Krzakala, Florent and Moore, Cristopher and Mossel, Elchanan and Neeman, Joe and Sly, Allan and Zdeborov{\'a}, Lenka and Zhang, Pan},
-  journal   = {Proceedings of the National Academy of Sciences},
-  title     = {Spectral redemption in clustering sparse networks},
-  year      = {2013},
-  issn      = {0027-8424},
-  number    = {52},
-  pages     = {20935--20940},
-  volume    = {110},
-  abstract  = {Spectral algorithms are widely applied to data clustering problems, including finding communities or partitions in graphs and networks. We propose a way of encoding sparse data using a {\textquotedblleft}nonbacktracking{\textquotedblright} matrix, and show that the corresponding spectral algorithm performs optimally for some popular generative models, including the stochastic block model. This is in contrast with classical spectral algorithms, based on the adjacency matrix, random walk matrix, and graph Laplacian, which perform poorly in the sparse case, failing significantly above a recently discovered phase transition for the detectability of communities. Further support for the method is provided by experiments on real networks as well as by theoretical arguments and analogies from probability theory, statistical physics, and the theory of random matrices.Spectral algorithms are classic approaches to clustering and community detection in networks. However, for sparse networks the standard versions of these algorithms are suboptimal, in some cases completely failing to detect communities even when other algorithms such as belief propagation can do so. Here, we present a class of spectral algorithms based on a nonbacktracking walk on the directed edges of the graph. The spectrum of this operator is much better-behaved than that of the adjacency matrix or other commonly used matrices, maintaining a strong separation between the bulk eigenvalues and the eigenvalues relevant to community structure even in the sparse case. We show that our algorithm is optimal for graphs generated by the stochastic block model, detecting communities all of the way down to the theoretical limit. We also show the spectrum of the nonbacktracking operator for some real-world networks, illustrating its advantages over traditional spectral clustering.},
-  doi       = {10.1073/pnas.1312486110},
-  eprint    = {http://www.pnas.org/content/110/52/20935.full.pdf},
-  publisher = {National Academy of Sciences}
-}
-
-@article{Kuhn1955,
-  author   = {Kuhn, H. W.},
-  journal  = {Naval Research Logistics Quarterly},
-  title    = {{The Hungarian method for the assignment problem}},
-  number   = {1--2},
-  pages    = {83--97},
-  volume   = {2},
-  abstract = {Abstract Assuming that numerical scores are available for the performance of each of n persons on each of n jobs, the “assignment problem” is the quest for an assignment of persons to jobs so that the sum of the n scores so obtained is as large as possible. It is shown that ideas latent in the work of two Hungarian mathematicians may be exploited to yield a new method of solving this problem.},
-  doi      = {10.1002/nav.3800020109}
 }
 
 
@@ -1190,20 +926,6 @@
   numpages   = {23},
   publisher  = {Elsevier North-Holland, Inc.}
 }
-@inproceedings{LDATime2,
-  author    = {A. Hindle and M. W. Godfrey and R. C. Holt},
-  booktitle = {2009 IEEE International Conference on Software Maintenance},
-  title     = {{What's hot and what's not: Windowed developer topic analysis}},
-  year      = {2009},
-  month     = sep,
-  pages     = {339--348},
-  abstract  = {As development on a software project progresses, developers shift their focus between different topics and tasks many times. Managers and newcomer developers often seek ways of understanding what tasks have recently been worked on and how much effort has gone into each; for example, a manager might wonder what unexpected tasks occupied their team's attention during a period when they were supposed to have been implementing new features. Tools such as Latent Dirichlet Allocation (LDA) and Latent Semantic Indexing (LSI) can be used to extract a set of independent topics from a corpus of commit-log comments. Previous work in the area has created a single set of topics by analyzing comments from the entire lifetime of the project. In this paper, we propose windowing the topic analysis to give a more nuanced view of the system's evolution. By using a defined time-window of, for example, one month, we can track which topics come and go over time, and which ones recur. We propose visualizations of this model that allows us to explore the evolving stream of topics of development occurring over time. We demonstrate that windowed topic analysis offers advantages over topic analysis applied to a project's lifetime because many topics are quite local.},
-  doi       = {10.1109/ICSM.2009.5306310},
-  isbn      = {9781424448289},
-  issn      = {1063-6773},
-  journal   = {IEEE International Conference on Software Maintenance, ICSM},
-  keywords  = {program visualisation;programming language semantics;software engineering;word processing;commit-log comments;latent dirichlet allocation tool;latent semantic indexing tool;software developers;software project development;windowed topic analysis;Control systems;Database systems;History;Indexing;Large scale integration;Linear discriminant analysis;Pattern analysis;Performance analysis;Software development management;Visualization}
-}
 @article{Le2014,
   author   = {Le, Wei and Pattison, Shannon D.},
   journal  = {Proc. 36th Int. Conf. Softw. Eng. - ICSE 2014},
@@ -1232,11 +954,12 @@
   year            = {2016}
 }
 
-@article{li2019graph,
-  title   = {Graph matching networks for learning the similarity of graph structured objects},
+@Article{li2019graph,
   author  = {Li, Yujia and Gu, Chenjie and Dullien, Thomas and Vinyals, Oriol and Kohli, Pushmeet},
   journal = {arXiv preprint arXiv:1904.12787},
-  year    = {2019}
+  title   = {Graph matching networks for learning the similarity of graph structured objects},
+  year    = {2019},
+  eprint  = {1904.12787v2},
 }
 
 @article{Linstead2007,
@@ -1375,36 +1098,22 @@
   title    = {{An empirical analysis of reopened bugs based on open source projects}},
   year     = {2016}
 }
-@inproceedings{mikolov2013distributed,
-  title     = {Distributed representations of words and phrases and their compositionality},
+
+@InProceedings{mikolov2013distributed,
   author    = {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and Corrado, Greg S and Dean, Jeff},
   booktitle = {Advances in neural information processing systems},
+  title     = {Distributed representations of words and phrases and their compositionality},
+  year      = {2013},
   pages     = {3111--3119},
-  year      = {2013}
+  eprint    = {1310.4546v1},
 }
 
-@article{mikolov2013efficient,
-  title   = {Efficient estimation of word representations in vector space},
+@Article{mikolov2013efficient,
   author  = {Mikolov, Tomas and Chen, Kai and Corrado, Greg and Dean, Jeffrey},
   journal = {arXiv preprint arXiv:1301.3781},
-  year    = {2013}
-}
-
-@inproceedings{Mills:2017:ATL:3106237.3121280,
-  author    = {Mills, Chris},
-  booktitle = {Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering},
-  title     = {{Automating Traceability Link Recovery Through Classification}},
-  year      = {2017},
-  address   = {New York, NY, USA},
-  pages     = {1068--1070},
-  publisher = {ACM},
-  series    = {ESEC/FSE 2017},
-  acmid     = {3121280},
-  doi       = {10.1145/3106237.3121280},
-  isbn      = {978-1-4503-5105-8},
-  keywords  = {Classification, Machine Learning, Traceability},
-  location  = {Paderborn, Germany},
-  numpages  = {3}
+  title   = {Efficient estimation of word representations in vector space},
+  year    = {2013},
+  eprint  = {1301.3781v3},
 }
 
 @article{MissingLinks,
@@ -1555,7 +1264,7 @@
   title        = {{OpenHub statistics for elasticsearch}},
   author       = {{OpenHub}},
   howpublished = {\url{https://www.openhub.net/p/elasticsearch/analyses/latest/languages_summary}},
-  note         = {Accessed: 30.10.2017}
+  note         = {Accessed: 2017-10-30}
 }
 
 @inproceedings{Oliveto2010,
@@ -1588,11 +1297,12 @@
   publisher = {Curran Associates, Inc.}
 }
 
-@article{petrov2011universal,
-  title   = {A universal part-of-speech tagset},
+@Article{petrov2011universal,
   author  = {Petrov, Slav and Das, Dipanjan and McDonald, Ryan},
   journal = {arXiv preprint arXiv:1104.2086},
-  year    = {2011}
+  title   = {A universal part-of-speech tagset},
+  year    = {2011},
+  eprint  = {1104.2086v1},
 }
 
 @article{Pinheiro96,
@@ -1654,15 +1364,6 @@
   booktitle = {Companion Proc. 36th Int. Conf. Soft. Eng.},
   pages     = {686--689},
   year      = {2014}
-}
-
-@inproceedings{ponzanelli2014improving,
-  title        = {Improving low quality stack overflow post detection},
-  author       = {Ponzanelli, Luca and Mocci, Andrea and Bacchelli, Alberto and Lanza, Michele and Fullerton, David},
-  booktitle    = {2014 IEEE Int. Conf. Soft. Maint. Evol.},
-  pages        = {541--544},
-  year         = {2014},
-  organization = {IEEE}
 }
 
 @article{Ponzanelli2015a,
@@ -1745,7 +1446,7 @@
 }
 
 @misc{ProjectRepo,
-  title        = {{\Ourtoollong: Accurate Issue Links at Pull Request submission}},
+  title        = {{Aide-mémoire: Accurate Issue Links at Pull Request submission}},
   author       = {P\^ar\cb{t}achi, Profir-Petru and Barr, Earl T. and White, David R.},
   howpublished = {\url{https://github.com/PPPI/a-m/}},
   note         = {Accessed: 2017-08-14},
@@ -1815,23 +1516,6 @@
   year      = {2018}
 }
 
-@article{relink,
-  author    = {Wu, Rongxin and Zhang, Hongyu and Kim, Sunghun and Cheung, Shing-Chi},
-  journal   = {Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering},
-  title     = {{ReLink: Recovering Links Between Bugs and Changes}},
-  year      = {2011},
-  pages     = {15--25},
-  acmid     = {2025120},
-  address   = {New York, NY, USA},
-  doi       = {10.1145/2025113.2025120},
-  isbn      = {978-1-4503-0443-6},
-  keywords  = {bugs, changes, data quality, mining software repository, missing links},
-  location  = {Szeged, Hungary},
-  numpages  = {11},
-  publisher = {ACM},
-  series    = {ESEC/FSE '11}
-}
-
 @inproceedings{RetForBugLoc,
   author    = {Rao, Shivani and Kak, Avinash},
   booktitle = {Proceeding of the 8th working conference on Mining software repositories - MSR '11},
@@ -1891,21 +1575,8 @@
 @misc{Roslyn,
   author       = {{Microsoft}},
   howpublished = {\url{https://github.com/dotnet/roslyn}},
-  note         = {Accessed: 31-05-2018},
+  note         = {Accessed: 2018-05-31},
   title        = {Microsoft Rosyln}
-}
-
-@article{Saade2014,
-  author        = {Saade, Alaa and Krzakala, Florent and Zdeborov{\'{a}}, Lenka},
-  title         = {{Spectral Clustering of Graphs with the Bethe Hessian}},
-  year          = {2014},
-  issn          = {1049-5258},
-  pages         = {1--9},
-  abstract      = {Spectral clustering is a standard approach to label nodes on a graph by studying the (largest or lowest) eigenvalues of a symmetric real matrix such as e.g. the adjacency or the Laplacian. Recently, it has been argued that using instead a more complicated, non-symmetric and higher dimensional operator, related to the non-backtracking walk on the graph, leads to improved performance in detecting clusters, and even to optimal performance for the stochastic block model. Here, we propose to use instead a simpler object, a symmetric real matrix known as the Bethe Hessian operator, or deformed Laplacian. We show that this approach combines the performances of the non-backtracking operator, thus detecting clusters all the way down to the theoretical limit in the stochastic block model, with the computational, theoretical and memory advantages of real symmetric matrices.},
-  archiveprefix = {arXiv},
-  arxivid       = {1406.1880},
-  eprint        = {1406.1880},
-  eprinttype    = {arxiv}
 }
 
 @article{scarselli2008graph,
@@ -2011,14 +1682,6 @@
   abstract = {Context: version control repositories contain a wealth of implicit information that can be used to answer many questions about a project's development process. However, this information is not directly accessible in the repositories and must be extracted and visualized. Objective: the main objective of this work is to develop a flexible and generic interactive visualization engine called ConceptCloud that supports exploratory search in version control repositories. Method: ConceptCloud is a flexible, interactive browser for SVN and Git repositories. Its main novelty is the combination of an intuitive tag cloud visualization with an underlying concept lattice that provides a formal structure for navigation. ConceptCloud supports concurrent navigation in multiple linked but individually customizable tag clouds, which allows for multi-faceted repository browsing, and scriptable construction of unique visualizations. Results: we describe the mathematical foundations and implementation of our approach and use ConceptCloud to quickly gain insight into the team structure and development process of three projects. We perform a user study to determine the usability of ConceptCloud. We show that untrained participants are able to answer historical questions about a software project better using ConceptCloud than using a linear list of commits. Conclusion: ConceptCloud can be used to answer many difficult questions such as “What has happened in this project while I was away?” and “Which developers collaborate?”. Tag clouds generated from our approach provide a visualization in which version control data can be aggregated and explored interactively.},
   doi      = {10.1016/j.infsof.2016.12.001}
 }
-@inproceedings{Solorio2008,
-  author       = {Solorio, Thamar and Liu, Yang},
-  booktitle    = {Proc. Conf. on Emp. Meth. in Nat. Lang. Proc.},
-  title        = {{part-of-speech tagging for English-Spanish code-switched text}},
-  year         = {2008},
-  organization = {Association for Computational Linguistics},
-  pages        = {1051--1060}
-}
 
 @misc{sorevcorpus,
   author       = {P\^ar\cb{t}achi, Profir-Petru and Dash, Santanu K and Treude, Christoph and Barr, Earl T},
@@ -2034,41 +1697,6 @@
   pages    = {1--10},
   title    = {{Joint part-of-speech and Language ID Tagging for Code-Switched Data}},
   year     = {2018}
-}
-
-@article{StableRoommateProblem,
-  author     = {Irving, Robert W. and Manlove, David F.},
-  journal    = {J. Algorithms},
-  title      = {{The Stable Roommates Problem with Ties}},
-  year       = {2002},
-  issn       = {0196-6774},
-  month      = apr,
-  number     = {1},
-  pages      = {85--105},
-  volume     = {43},
-  acmid      = {589924},
-  address    = {Duluth, MN, USA},
-  doi        = {10.1006/jagm.2002.1219},
-  issue_date = {April 2002},
-  keywords   = {NP-completeness, approximation algorithm, indifference, linear-time algorithm, stable matching problem, super-stability, weak stability},
-  numpages   = {21},
-  publisher  = {Academic Press, Inc.}
-}
-
-@article{Stahl2017,
-  author          = {St{\aa}hl, Daniel and Hall{\'{e}}n, Kristofer and Bosch, Jan},
-  journal         = {Empir. Softw. Eng.},
-  title           = {{Achieving traceability in large scale continuous integration and delivery deployment, usage and validation of the eiffel framework}},
-  year            = {2017},
-  issn            = {1573-7616},
-  number          = {3},
-  pages           = {967--995},
-  volume          = {22},
-  abstract        = {The importance of traceability in software development has long been recognized, not only for reasons of legality and certification, but also to enable the development itself. At the same time, organizations are known to struggle to live up to traceability requirements, and there is an identified lack of studies on traceability practices in the industry, not least in the area of tooling and infrastructure. This paper presents, investigates and discusses Eiffel, an industry developed solution designed to provide real time traceability in continuous integration and delivery. The traceability needs of industry professionals are also investigated through interviews, providing context to that solution. It is then validated through further interviews, a comparison with previous traceability methods and a review of literature. It is found to address the identified traceability needs and found in some cases to reduce traceability data acquisition times from days to minutes, while at the same time alternatives offering comparable functionality are lacking. In this work, traceability is shown not only to be an important concern to engineers, but also regarded as a prerequisite to successful large scale continuous integration and delivery. At the same time, promising developments in technical infrastructure are documented and clear differences in traceability mindset between separate industry projects is revealed.},
-  doi             = {10.1007/s10664-016-9457-1},
-  file            = {:D$backslash$:/OneDrive/Documents/Mendeley Desktop/St{aa}hl, Hall{'{e}}n, Bosch/Empirical Software Engineering/St{aa}hl, Hall{'{e}}n, Bosch{_}2017{_}Achieving traceability in large scale continuous integration and delivery deployment, usage and validation o.pdf},
-  keywords        = {Continuous delivery,Continuous integration,Traceability,Very-large-scale software systems},
-  mendeley-groups = {Aide-m{\'{e}}moire}
 }
 
 @article{Tao2012,
@@ -2096,15 +1724,6 @@
   author    = {Salton, Gerard and McGill, Michael J},
   year      = {1986},
   publisher = {McGraw-Hill, Inc.}
-}
-
-@inproceedings{Tian2015,
-  title        = {A comparative study on the effectiveness of part-of-speech tagging techniques on bug reports},
-  author       = {Tian, Yuan and Lo, David},
-  booktitle    = {SANER'15},
-  pages        = {570--574},
-  year         = {2015},
-  organization = {IEEE}
 }
 
 @book{TopicModelSurvey,
@@ -2150,44 +1769,6 @@
   year     = {2017}
 }
 
-@inproceedings{Treude:2015:TTN:2819009.2819128,
-  author    = {Treude, Christoph and Sicard, Mathieu and Klocke, Marc and Robillard, Martin},
-  booktitle = {Proc. 37th Int. Conf. Soft. Eng. - Volume 2},
-  title     = {{TaskNav: Task-based Navigation of Software Documentation}},
-  year      = {2015},
-  address   = {Piscataway, NJ, USA},
-  pages     = {649--652},
-  publisher = {IEEE Press},
-  series    = {ICSE '15},
-  acmid     = {2819128},
-  location  = {Florence, Italy},
-  numpages  = {4},
-  url       = {http://dl.acm.org/citation.cfm?id=2819009.2819128}
-}
-
-@inproceedings{Treude2015portuguese,
-  title        = {Challenges in analyzing software documentation in {Portuguese}},
-  author       = {Treude, Christoph and Prolo, Carlos A and Figueira Filho, Fernando},
-  booktitle    = {Proc. 29th Bra. Sym. Soft. Eng.},
-  pages        = {179--184},
-  year         = {2015},
-  organization = {IEEE}
-}
-
-@article{Trivedi2018,
-  author          = {Trivedi, Rakshit and Sisman, Bunyamin and Dong, Xin Luna and Faloutsos, Christos and Ma, Jun and Zha, Hongyuan},
-  journal         = {Proc. 56th Annu. Meet. Assoc. Comput. Linguist. (Volume 1 Long Pap.},
-  title           = {{LinkNBed: Multi-Graph Representation Learning with Entity Linkage}},
-  year            = {2018},
-  pages           = {252--262},
-  archiveprefix   = {arXiv},
-  arxivid         = {1807.08447},
-  doi             = {arXiv:1807.08447v1},
-  eprint          = {1807.08447},
-  mendeley-groups = {Untangle},
-  url             = {http://aclweb.org/anthology/P18-1024}
-}
-
 @inproceedings{TwitterLDA,
   abstract  = {Twitter as a new form of social media can potentially con- tain much useful information, but content analysis on Twitter has not been well studied. In particular, it is not clear whether as an information source Twitter can be simply regarded as a faster news feed that covers mostly the same information as traditional news media. In This paper we empirically compare the content of Twitter with a traditional news medium, New York Times, using unsupervised topic modeling. We use a Twitter-LDA model to discover topics from a representative sample of the entire Twitter.We then use text mining techniques to compare these Twitter topics with topics from New York Times, taking into considera- tion topic categories and types. We also study the relation between the proportions of opinionated tweets and retweets and topic categories and types. Our comparisons show interesting and useful findings for down- stream IR or DM applications.},
   author    = {Zhao, Wayne Xin and Jiang, Jing and Weng, Jianshu and He, Jing and Lim, Ee-Peng and Yan, Hongfei and Li, Xiaoming},
@@ -2210,14 +1791,15 @@
   note    = {accepted as poster}
 } 
 
-@article{vishwanathan2010graph,
-  title   = {Graph kernels},
+@Article{vishwanathan2010graph,
   author  = {Vishwanathan, S Vichy N and Schraudolph, Nicol N and Kondor, Risi and Borgwardt, Karsten M},
   journal = {Journal of Machine Learning Research},
-  volume  = {11},
+  title   = {Graph kernels},
+  year    = {2010},
   number  = {Apr},
   pages   = {1201--1242},
-  year    = {2010}
+  volume  = {11},
+  eprint  = {0807.0093v1},
 }
 
 @article{Viterbi1967,
@@ -2233,29 +1815,6 @@
   abstract = {The probability of error in decoding an optimal convolutional code transmitted over a memoryless channel is bounded from above and below as a function of the constraint length of the code. For all but pathological channels the bounds are asymptotically (exponentially) tight for rates above<tex>R_{0}</tex>, the computational cutoff rate of sequential decoding. As a function of constraint length the performance of optimal convolutional codes is shown to be superior to that of block codes of the same length, the relative improvement increasing with rate. The upper bound is obtained for a specific probabilistic nonsequential decoding algorithm which is shown to be asymptotically optimum for rates above<tex>R_{0}</tex>and whose performance bears certain similarities to that of sequential decoding algorithms.},
   doi      = {10.1109/TIT.1967.1054010},
   keywords = {Convolutional codes}
-}
-
-@inproceedings{Vyas2014,
-  title     = {Pos tagging of english-hindi code-mixed social media content},
-  author    = {Vyas, Yogarshi and Gella, Spandana and Sharma, Jatin and Bali, Kalika and Choudhury, Monojit},
-  booktitle = {Proc. 2014 Conf. on Emp. Meth. in Nat. Lang. Proc. (EMNLP)},
-  pages     = {974--979},
-  year      = {2014}
-}
-
-@article{Wallach2009,
-  author   = {Wallach, Hanna M and Mimno, David and Mccallum, Andrew},
-  journal  = {Advances in Neural Information Processing Systems 22},
-  title    = {{Rethinking LDA : Why Priors Matter}},
-  year     = {2009},
-  issn     = {0269-9370},
-  number   = {2},
-  pages    = {1973--1981},
-  volume   = {22},
-  abstract = {Implementations of topic models typically use symmetric Dirichlet priors with fixed concentration parameters, with the implicit assumption that such smoothing parameters have little practical effect. In this paper, we explore several classes of structured priors for topic models. We find that an asymmetric Dirichlet prior over the documenttopic distributions has substantial advantages over a symmet- ric prior, while an asymmetric prior over the topicword distributions provides no real benefit. Approximation of this prior structure through simple, efficient hy- perparameter optimization steps is sufficient to achieve these performance gains. The prior structure we advocate substantially increases the robustness of topic models to variations in the number of topics and to the highly skewed word fre- quency distributions common in natural language. Since this prior structure can be implemented using efficient algorithms that add negligible cost beyond standard inference techniques, we recommend it as a new standard for topic modeling.},
-  doi      = {10.1007/s10708-008-9161-9},
-  isbn     = {9781615679119},
-  pmid     = {2508715}
 }
 
 @article{Watanabe2010,
@@ -2284,43 +1843,12 @@
   year   = {1968}
 }
 
-@article{weka,
-  author     = {Hall, Mark and Frank, Eibe and Holmes, Geoffrey and Pfahringer, Bernhard and Reutemann, Peter and Witten, Ian H.},
-  journal    = {SIGKDD Explor. Newsl.},
-  title      = {{The WEKA Data Mining Software: An Update}},
-  year       = {2009},
-  issn       = {1931-0145},
-  month      = nov,
-  number     = {1},
-  pages      = {10--18},
-  volume     = {11},
-  acmid      = {1656278},
-  address    = {New York, NY, USA},
-  doi        = {10.1145/1656274.1656278},
-  issue_date = {June 2009},
-  numpages   = {9},
-  publisher  = {ACM}
-}
-
 @misc{wikicorpus,
   author       = {{Wikipedia}},
   howpublished = {\url{https://en.wikipedia.org/wiki/Wikipedia:Database_download}},
   note         = {[Online; accessed 05-Sep-2018]},
   title        = {{Wikipedia:Database download}},
   year         = {2018}
-}
-
-@inproceedings{winata-charmodel,
-  author    = {Winata, Genta Indra and Wu, Chien-Sheng and Madotto, Andrea and Fung, Pascale},
-  booktitle = {Proc. Third Workshop Comp. Appr. Ling. Code-Switching},
-  title     = {{Bilingual Character Representation for Efficiently Addressing Out-of-Vocabulary Words in Code-Switching Named Entity Recognition}},
-  year      = {2018},
-  address   = {Melbourne, Australia},
-  month     = jul,
-  pages     = {110--114},
-  publisher = {Association for Computational Linguistics},
-  doi       = {10.18653/v1/W18-3214},
-  url       = {https://www.aclweb.org/anthology/W18-3214}
 }
 
 @inproceedings{yanardag2015deep,
@@ -2343,14 +1871,6 @@
   isbn      = {9783319462561},
   issn      = {1611-3349},
   keywords  = {Abbreviated identifier expansion,Information retrieval (IR) techniques,Program comprehension}
-}
-
-@inproceedings{Yasunaga&al.18.naacl,
-  author    = {Michihiro Yasunaga and Jungo Kasai and Dragomir R. Radev},
-  booktitle = {Proc. NAACL},
-  title     = {{Robust Multilingual part-of-speech Tagging via Adversarial Training}},
-  year      = {2018},
-  publisher = {Association for Computational Linguistics}
 }
 
 @article{Yin2018,
@@ -2420,6 +1940,672 @@
   pages     = {429--445},
   year      = {2005},
   publisher = {IEEE}
+}
+
+@article{DBLP:journals/corr/abs-1904-12787,
+  author        = {Yujia Li and
+               Chenjie Gu and
+               Thomas Dullien and
+               Oriol Vinyals and
+               Pushmeet Kohli},
+  title         = {Graph Matching Networks for Learning the Similarity of Graph Structured
+               Objects},
+  journal       = {CoRR},
+  volume        = {abs/1904.12787},
+  year          = {2019},
+  url           = {http://arxiv.org/abs/1904.12787},
+  archiveprefix = {arXiv},
+  eprint        = {1904.12787},
+  timestamp     = {Thu, 02 May 2019 15:13:44 +0200},
+  biburl        = {https://dblp.org/rec/bib/journals/corr/abs-1904-12787},
+  bibsource     = {dblp computer science bibliography, https://dblp.org}
+}
+@article{domges1998adapting,
+  title     = {Adapting traceability environments to project-specific needs},
+  author    = {D{\"o}mges, Ralf and Pohl, Klaus},
+  journal   = {Communications of the ACM},
+  volume    = {41},
+  number    = {12},
+  pages     = {54--62},
+  year      = {1998},
+  publisher = {ACM New York, NY, USA}
+}
+@inproceedings{hindle2012naturalness,
+  title        = {On the naturalness of software},
+  author       = {Hindle, Abram and Barr, Earl T and Su, Zhendong and Gabel, Mark and Devanbu, Premkumar},
+  booktitle    = {2012 34th International Conference on Software Engineering (ICSE)},
+  pages        = {837--847},
+  year         = {2012},
+  organization = {IEEE}
+}
+
+@Misc{jiralinkdoc,
+  author       = {{JIRA}},
+  howpublished = {\url{https://www.atlassian.com/blog/confluence/link-jira-issues-to-confluence-pages-automatically}},
+  note         = {Accessed: 2017-08-20},
+  title        = {{JIRA: Link JIRA issues to Confluence pages automatically}},
+}
+@inproceedings{lakew2017multilingual,
+  title     = {Multilingual Neural Machine Translation for Low Resource Languages.},
+  author    = {Lakew, Surafel Melaku and Di Gangi, Mattia Antonino and Federico, Marcello},
+  booktitle = {CLiC-it},
+  year      = {2017}
+}
+
+@inproceedings{mader2009motivation,
+  title        = {Motivation matters in the traceability trenches},
+  author       = {Mader, Patrick and Gotel, Orlena and Philippow, Ilka},
+  booktitle    = {2009 17th IEEE International Requirements Engineering Conference},
+  pages        = {143--148},
+  year         = {2009},
+  organization = {IEEE}
+}
+
+@Misc{Octoverse2016,
+  author       = {{GitHub}},
+  howpublished = {\url{https://octoverse.github.com/}},
+  note         = {Accessed: 2017-08-07},
+  title        = {{GitHub Octoverse 2016}},
+}
+
+@Misc{ohes,
+  author       = {{OpenHub}},
+  howpublished = {\url{https://www.openhub.net/p/elasticsearch/analyses/latest/languages_summary}},
+  note         = {Accessed: 30.10.2017},
+  title        = {{OpenHub statistics for elasticsearch}},
+}
+
+@article{Prechelt2014,
+  author    = {Lutz Prechelt and Alexander Pepper},
+  title     = {Bflinks: Reliable Bugfix Links via Bidirectional References and Tuned Heuristics},
+  publisher = {International Scholarly Research Notices},
+  vol       = {2014},
+  year      = {2014},
+  doi       = {https://doi.org/10.1155/2014/701357}
+}
+
+@Misc{Roslyn,
+  author       = {{Microsoft}},
+  howpublished = {\url{https://github.com/dotnet/roslyn}},
+  note         = {Accessed: 31-05-2018},
+  title        = {Microsoft Rosyln},
+}
+
+@misc{SciPy,
+  author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
+  title  = {{SciPy}: Open source scientific tools for {Python}},
+  year   = {2001--},
+  url    = {http://www.scipy.org/},
+  note   = {[Online; accessed 31.07.2017]}
+} 
+
+
+@misc{SciPy,
+  author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
+  title  = {{SciPy}: Open source scientific tools for {Python}},
+  year   = {2001--},
+  url    = {http://www.scipy.org/},
+  note   = {[Online; accessed 17.08.2018]}
+} 
+
+@book{smola1998learning,
+  title     = {Learning with kernels},
+  author    = {Smola, Alex J and Sch{\"o}lkopf, Bernhard},
+  volume    = {4},
+  year      = {1998},
+  publisher = {Citeseer}
+}
+
+@Misc{sodump,
+  author       = {{Stack Exchange}},
+  howpublished = {\url{https://archive.org/details/stackexchange}},
+  note         = {[Online; accessed 05-Sep-2018]},
+  title        = {{Stack Exchange Data Dump}},
+  year         = {2018},
+}
+
+@Misc{sorevcorpus,
+  author       = {{Stack Overflow}},
+  howpublished = {\url{elided.for.blind/review}},
+  note         = {[Online; to-be-published]},
+  title        = {{StackOverflow: Code Formatting Revisions Corpus}},
+  year         = {20xx},
+}
+
+@Misc{tensorflow2015-whitepaper,
+  author = {Mart\'{\i}n~Abadi and Ashish~Agarwal and Paul~Barham and Eugene~Brevdo and Zhifeng~Chen and Craig~Citro and Greg~S.~Corrado and Andy~Davis and Jeffrey~Dean and Matthieu~Devin and Sanjay~Ghemawat and Ian~Goodfellow and Andrew~Harp and Geoffrey~Irving and Michael~Isard and Yangqing Jia and Rafal~Jozefowicz and Lukasz~Kaiser and Manjunath~Kudlur and Josh~Levenberg and Dan~Man\'{e} and Rajat~Monga and Sherry~Moore and Derek~Murray and Chris~Olah and Mike~Schuster and Jonathon~Shlens and Benoit~Steiner and Ilya~Sutskever and Kunal~Talwar and Paul~Tucker and Vincent~Vanhoucke and Vijay~Vasudevan and Fernanda~Vi\'{e}gas and Oriol~Vinyals and Pete~Warden and Martin~Wattenberg and Martin~Wicke and Yuan~Yu and Xiaoqiang~Zheng},
+  note   = {Software available from tensorflow.org},
+  title  = {{TensorFlow}: Large-Scale Machine Learning on Heterogeneous Systems},
+  year   = {2015},
+  url    = {http://tensorflow.org/},
+}
+@inproceedings{vaswani2017attention,
+  title     = {Attention is all you need},
+  author    = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  booktitle = {Advances in neural information processing systems},
+  pages     = {5998--6008},
+  year      = {2017}
+}
+@article{wang2019language,
+  title   = {Language models with transformers},
+  author  = {Wang, Chenguang and Li, Mu and Smola, Alexander J},
+  journal = {arXiv preprint arXiv:1904.09408},
+  year    = {2019}
+}
+
+@Misc{wikicorpus,
+  author       = {{Wikipedia}},
+  howpublished = {\url{https://en.wikipedia.org/wiki/Wikipedia:Database_download}},
+  note         = {[Online; accessed 05-Sep-2018]},
+  title        = {{Wikipedia:Database download}},
+  year         = {2018},
+}
+
+@InProceedings{Abebe2010,
+  author       = {Abebe, Surafel Lemma and Tonella, Paolo},
+  booktitle    = {Program Comprehension (ICPC), 2010 IEEE 18th International Conference on},
+  title        = {Natural language parsing of program element names for concept extraction},
+  year         = {2010},
+  organization = {IEEE},
+  pages        = {156--159},
+  doi          = {10.1109/icpc.2010.29},
+}
+
+@InProceedings{Baltes2018,
+  author       = {Baltes, Sebastian and Dumani, Lorik and Treude, Christoph and Diehl, Stephan},
+  booktitle    = {Proceedings of the 15th International Conference on Mining Software Repositories},
+  title        = {{Sotorrent: Reconstructing and analyzing the evolution of {Stack} {Overflow} posts}},
+  year         = {2018},
+  organization = {ACM},
+  pages        = {319--330},
+  doi          = {10.1145/3196398.3196430},
+}
+
+@InProceedings{Banko:2004:PST:1220355.1220435,
+  author    = {Banko, Michele and Moore, Robert C.},
+  booktitle = {Proceedings of the 20th International Conference on Computational Linguistics},
+  title     = {{Part of Speech Tagging in Context}},
+  year      = {2004},
+  address   = {Stroudsburg, PA, USA},
+  publisher = {Association for Computational Linguistics},
+  series    = {COLING '04},
+  acmid     = {1220435},
+  articleno = {556},
+  doi       = {10.3115/1220355.1220435},
+  location  = {Geneva, Switzerland},
+  url       = {https://doi.org/10.3115/1220355.1220435},
+}
+
+@Article{Borg2014,
+  author   = {Borg, Markus and Runeson, Per and Ard{\"o}, Anders},
+  journal  = {Empirical Software Engineering},
+  title    = {Recovering from a decade: a systematic mapping of information retrieval approaches to software traceability},
+  year     = {2014},
+  issn     = {1573-7616},
+  month    = dec,
+  number   = {6},
+  pages    = {1565--1616},
+  volume   = {19},
+  abstract = {Engineers in large-scale software development have to manage large amounts of information, spread across many artifacts. Several researchers have proposed expressing retrieval of trace links among artifacts, i.e. trace recovery, as an Information Retrieval (IR) problem. The objective of this study is to produce a map of work on IR-based trace recovery, with a particular focus on previous evaluations and strength of evidence. We conducted a systematic mapping of IR-based trace recovery. Of the 79 publications classified, a majority applied algebraic IR models. While a set of studies on students indicate that IR-based trace recovery tools support certain work tasks, most previous studies do not go beyond reporting precision and recall of candidate trace links from evaluations using datasets containing less than 500 artifacts. Our review identified a need of industrial case studies. Furthermore, we conclude that the overall quality of reporting should be improved regarding both context and tool details, measures reported, and use of IR terminology. Finally, based on our empirical findings, we present suggestions on how to advance research on IR-based  trace recovery.},
+  day      = {01},
+  doi      = {10.1007/s10664-013-9255-y},
+  url      = {https://doi.org/10.1007/s10664-013-9255-y},
+}
+
+@Article{Chen2017,
+  author        = {Chen, Zhengdao and Li, Xiang and Bruna, Joan},
+  title         = {{Supervised Community Detection with Hierarchical Graph Neural Networks}},
+  year          = {2017},
+  abstract      = {We study methods for supervised community detection on graphs. This estimation problem is typically formulated in terms of the spectrum of certain operators, as well as with posterior inference under certain probabilistic graphical models. Focusing on random graph families such as the Stochastic Block Model, recent research has unified both approaches, and identified both statistical and computational signal-to-noise detection thresholds. We identify the resulting class of algorithms with a family of Graph Neural Networks and show that they can reach those detection thresholds in a purely data-driven manner, without access to the underlying generative models and with no parameter assumptions. For that purpose, we propose to augment GNNs with the non-Backtracking operator, defined on the line graph of edge adjacencies. We also perform the first analysis of optimization landscape on a simplified GNN family, revealing an interesting transition from rugged to simple as the graph size increases. Finally, the resulting model is also tested on real datasets, performing significantly better than rigid parametric models.},
+  archiveprefix = {arXiv},
+  arxivid       = {1705.08415},
+  eprint        = {1705.08415},
+  eprinttype    = {arxiv},
+  url           = {http://arxiv.org/abs/1705.08415},
+}
+
+@InProceedings{Constant:2011:MPT:2021121.2021134,
+  author    = {Constant, Matthieu and Sigogne, Anthony},
+  booktitle = {Proceedings of the Workshop on Multiword Expressions: From Parsing and Generation to the Real World},
+  title     = {{MWU-aware part-of-speech Tagging with a CRF Model and Lexical Resources}},
+  year      = {2011},
+  address   = {Stroudsburg, PA, USA},
+  pages     = {49--56},
+  publisher = {Association for Computational Linguistics},
+  series    = {MWE '11},
+  acmid     = {2021134},
+  isbn      = {978-1-932432-97-8},
+  location  = {Portland, Oregon},
+  numpages  = {8},
+  url       = {http://dl.acm.org/citation.cfm?id=2021121.2021134},
+}
+
+@InProceedings{constant:hal-00790624,
+  author      = {Constant, Mathieu and Tellier, Isabelle},
+  booktitle   = {{8th International Conference on Language Resources and Evaluation (LREC'12)}},
+  title       = {{Evaluating the Impact of External Lexical Resources into a CRF-based Multiword Segmenter and part-of-speech Tagger}},
+  year        = {2012},
+  address     = {Turkey},
+  month       = may,
+  pages       = {646--650},
+  file        = {constant-tellier-lrec2012.pdf:https\://hal-upec-upem.archives-ouvertes.fr/hal-00790624/file/constant-tellier-lrec2012.pdf:PDF},
+  hal_id      = {hal-00790624},
+  hal_version = {v1},
+  keywords    = {Multiword Expressions ; Part Of Speech tagging ; Statistical and machine learning methods ; Conditional Random Fields ; Morphosyntactic lexicons ; lexical segmentation},
+  pdf         = {https://hal-upec-upem.archives-ouvertes.fr/hal-00790624/file/constant-tellier-lrec2012.pdf},
+  url         = {https://hal-upec-upem.archives-ouvertes.fr/hal-00790624},
+}
+
+@InProceedings{dietrich2019man,
+  author       = {Dietrich, Jens and Luczak-Roesch, Markus and Dalefield, Elroy},
+  booktitle    = {Proceedings of the 16th International Conference on Mining Software Repositories},
+  title        = {Man vs machine: a study into language identification of stack overflow code snippets},
+  year         = {2019},
+  organization = {IEEE Press},
+  pages        = {205--209},
+  doi          = {10.1109/msr.2019.00041},
+}
+
+@Article{Falessi2017,
+  author   = {Falessi, Davide and Di Penta, Massimiliano and Canfora, Gerardo and Cantone, Giovanni},
+  journal  = {Empirical Software Engineering},
+  title    = {Estimating the number of remaining links in traceability recovery},
+  year     = {2017},
+  issn     = {1573-7616},
+  month    = jun,
+  number   = {3},
+  pages    = {996--1027},
+  volume   = {22},
+  abstract = {Although very important in software engineering, establishing traceability links between software artifacts is extremely tedious, error-prone, and it requires significant effort. Even when approaches for automated traceability recovery exist, these provide the requirements analyst with a, usually very long, ranked list of candidate links that needs to be manually inspected. In this paper we introduce an approach called Estimation of the Number of Remaining Links (ENRL) which aims at estimating, via Machine Learning (ML) classifiers, the number of remaining positive links in a ranked list of candidate traceability links produced by a Natural Language Processing techniques-based recovery approach. We have evaluated the accuracy of the ENRL approach by considering several ML classifiers and NLP techniques on three datasets from industry and academia, and concerning traceability links among different kinds of software artifacts including requirements, use cases, design documents, source code, and test cases. Results from our study indicate that: (i) specific estimation models are able to provide accurate estimates of the number of remaining positive links; (ii) the estimation accuracy depends on the choice of the NLP technique, and (iii) univariate estimation models outperform multivariate ones.},
+  day      = {01},
+  doi      = {10.1007/s10664-016-9460-6},
+  url      = {https://doi.org/10.1007/s10664-016-9460-6},
+}
+
+@Article{Gonen2018,
+  author        = {Gonen, Hila and Goldberg, Yoav},
+  title         = {{Language Modeling for Code-Switching: Evaluation, Integration of Monolingual Data, and Discriminative Training}},
+  year          = {2018},
+  abstract      = {We focus on the problem of language modeling for code-switched language, in the context of automatic speech recognition (ASR). Language modeling for code-switched language is challenging for (at least) three reasons: (1) lack of available large-scale code-switched data for training; (2) lack of a replicable evaluation setup that is ASR directed yet isolates language modeling performance from the other intricacies of the ASR system; and (3) the reliance on generative modeling. We tackle these three issues: we propose an ASR-motivated evaluation setup which is decoupled from an ASR system and the choice of vocabulary, and provide an evaluation dataset for English-Spanish code-switching. This setup lends itself to a discriminative training approach, which we demonstrate to work better than generative language modeling. Finally, we present an effective training protocol that integrates small amounts of code-switched data with large amounts of monolingual data, for both the generative and discriminative cases.},
+  archiveprefix = {arXiv},
+  arxivid       = {1810.11895},
+  doi           = {10.18653/v1/d19-1427},
+  eprint        = {1810.11895},
+  eprinttype    = {arxiv},
+  url           = {http://arxiv.org/abs/1810.11895},
+}
+
+@InProceedings{Haiduc2010a,
+  author    = {Haiduc, Sonia and Aponte, Jairo and Marcus, Andrian},
+  booktitle = {Proceedings of the 32Nd ACM/IEEE International Conference on Software Engineering - Volume 2},
+  title     = {{Supporting Program Comprehension with Source Code Summarization}},
+  year      = {2010},
+  address   = {New York, NY, USA},
+  pages     = {223--226},
+  publisher = {ACM},
+  series    = {ICSE '10},
+  acmid     = {1810335},
+  doi       = {10.1145/1810295.1810335},
+  isbn      = {978-1-60558-719-6},
+  keywords  = {program comprehension, summary, text summarization},
+  location  = {Cape Town, South Africa},
+  numpages  = {4},
+  url       = {http://doi.acm.org/10.1145/1810295.1810335},
+}
+
+@InProceedings{Haiduc2010b,
+  author    = {S. Haiduc and J. Aponte and L. Moreno and A. Marcus},
+  booktitle = {2010 17th Working Conference on Reverse Engineering},
+  title     = {{On the Use of Automated Text Summarization Techniques for Summarizing Source Code}},
+  year      = {2010},
+  month     = oct,
+  pages     = {35--44},
+  abstract  = {During maintenance developers cannot read the entire code of large systems. They need a way to get a quick understanding of source code entities (such as, classes, methods, packages, etc.), so they can efficiently identify and then focus on the ones related to their task at hand. Sometimes reading just a method header or a class name does not tell enough about its purpose and meaning, while reading the entire implementation takes too long. We study a solution which mitigates the two approaches, i.e., short and accurate textual descriptions that illustrate the software entities without having to read the details of the implementation. We create such descriptions using techniques from automatic text summarization. The paper presents a study that investigates the suitability of various such techniques for generating source code summaries. The results indicate that a combination of text summarization techniques is most appropriate for source code summarization and that developers generally agree with the summaries produced.},
+  doi       = {10.1109/WCRE.2010.13},
+  issn      = {2375-5369},
+  keywords  = {software maintenance;automated text summarization technique;textual description;software entity;source code summarization;Lead;Large scale integration;Semantics;Software systems;Computer science;Correlation;text summarization;program comprehension},
+}
+
+@InProceedings{Hellendoorn2018,
+  author          = {Hellendoorn, Vincent J and Bird, Christian and Barr, Earl T and Allamanis, Miltiadis},
+  booktitle       = {Proc. 2018 26th ACM Jt. Meet. Eur. Softw. Eng. Conf. Symp. Found. Softw. Eng. - ESEC/FSE 2018},
+  title           = {{Deep learning type inference}},
+  year            = {2018},
+  pages           = {152--162},
+  publisher       = {ACM},
+  volume          = {18},
+  abstract        = {Dynamically typed languages such as JavaScript and Python are increasingly popular, yet static typing has not been totally eclipsed: Python now supports type annotations and languages like TypeScript offer a middle-ground for JavaScript: a strict superset of JavaScript, to which it transpiles, coupled with a type system that permits partially typed programs. However, static typing has a cost: adding annotations, reading the added syntax, and wrestling with the type system to fix type errors. Type inference can ease the transition to more statically typed code and unlock the benefits of richer compile-time information, but is limited in languages like JavaScript as it cannot soundly handle duck-typing or runtime evaluation via eval. We propose DeepTyper, a deep learning model that understands which types naturally occur in certain contexts and relations and can provide type suggestions, which can often be verified by the type checker, even if it could not infer the type initially. DeepTyper, leverages an automatically aligned corpus of tokens and types to accurately predict thousands of variable and function type annotations. Furthermore, we demonstrate that context is key in accurately assigning these types and introduce a technique to reduce overfitting on local cues while highlighting the need for further improvements. Finally, we show that our model can interact with a compiler to provide more than 4,000 additional type annotations with over 95{\%} precision that could not be inferred without the aid of DeepTyper. CCS CONCEPTS • Software and its engineering → Software notations and tools; Automated static analysis; • Theory of computation → Type structures; KEYWORDS},
+  doi             = {10.1145/3236024.3236051},
+  mendeley-groups = {Code pseudo-PoS tagging},
+  url             = {https://doi.org/10.1145/3236024.3236051 http://dl.acm.org/citation.cfm?doid=3236024.3236051},
+}
+
+@Article{Huang2015,
+  author        = {Huang, Zhiheng and Xu, Wei and Yu, Kai},
+  title         = {{Bidirectional LSTM-CRF Models for Sequence Tagging}},
+  year          = {2015},
+  issn          = {0270-6474},
+  abstract      = {In this paper, we propose a variety of Long Short-Term Memory (LSTM) based models for sequence tagging. These models include LSTM networks, bidirectional LSTM (BI-LSTM) networks, LSTM with a Conditional Random Field (CRF) layer (LSTM-CRF) and bidirectional LSTM with a CRF layer (BI-LSTM-CRF). Our work is the first to apply a bidirectional LSTM CRF (denoted as BI-LSTM-CRF) model to NLP benchmark sequence tagging data sets. We show that the BI-LSTM-CRF model can efficiently use both past and future input features thanks to a bidirectional LSTM component. It can also use sentence level tag information thanks to a CRF layer. The BI-LSTM-CRF model can produce state of the art (or close to) accuracy on POS, chunking and NER data sets. In addition, it is robust and has less dependence on word embedding as compared to previous observations.},
+  archiveprefix = {arXiv},
+  arxivid       = {1508.01991},
+  doi           = {10.1061/(ASCE)CO.1943-7862.0000274.},
+  eprint        = {1508.01991},
+  eprinttype    = {arxiv},
+  isbn          = {9781510827585},
+  pmid          = {3944616},
+  url           = {http://arxiv.org/abs/1508.01991},
+}
+
+@InProceedings{Jamatia2015,
+  author    = {Jamatia, Anupam and Gamb{\"a}ck, Bj{\"o}rn and Das, Amitava},
+  booktitle = {Proceedings of the International Conference Recent Advances in Natural Language Processing},
+  title     = {part-of-speech tagging for code-mixed english-hindi twitter and facebook chat messages},
+  year      = {2015},
+  pages     = {239--248},
+}
+
+@Article{Kersten2005,
+  author   = {Kersten, Mik and Murphy, Gail C},
+  journal  = {Proceedings of the 4th international conference on Aspect-oriented software development - AOSD '05},
+  title    = {{Mylar}},
+  year     = {2005},
+  issn     = {0740-7459},
+  pages    = {159--168},
+  abstract = {Even when working on a well-modularized software system, programmers tend to spend more time navigating the code than working with it. This phenomenon arises because it is impossible to modularize the code for all tasks that occur over the lifetime of a system. We describe the use of a degree-of-interest (DOI) model to capture the task context of program elements scattered across a code base. The Mylar tool that we built encodes the DOI of program elements by monitoring the programmer's activity, and displays the encoded DOI model in views of Java and AspectJ programs. We also present the results of a preliminary diary study in which professional programmers used Mylar for their daily work on enterprise-scale Java systems.},
+  doi      = {10.1145/1052898.1052912},
+  isbn     = {1595930434},
+  keywords = {a cohesive,for instance,in the code,may need to examine,programmers must,repeatedly visit multiple places,system,the code corresponding to,they,to a large software,to make a change},
+}
+
+@Article{Kingma14,
+  author    = {Kingma, Diederik P. and Ba, Jimmy},
+  journal   = {CoRR},
+  title     = {{Adam: A Method for Stochastic Optimization.}},
+  year      = {2014},
+  volume    = {abs/1412.6980},
+  added-at  = {2018-08-13T00:00:00.000+0200},
+  ee        = {http://arxiv.org/abs/1412.6980},
+  keywords  = {dblp},
+  timestamp = {2018-08-14T14:24:27.000+0200},
+  url       = {http://dblp.uni-trier.de/db/journals/corr/corr1412.html\#KingmaB14},
+}
+
+@Article{Knyazev2007,
+  author          = {Knyazev, A V and Argentati, M E and Lashuk, I. and Ovtchinnikov, E E},
+  journal         = {SIAM Journal on Scientific Computing},
+  title           = {{Block Locally Optimal Preconditioned Eigenvalue Xolvers (BLOPEX) in Hypre and PETSc}},
+  year            = {2007},
+  issn            = {1064-8275},
+  number          = {5},
+  pages           = {2224--2239},
+  volume          = {29},
+  abstract        = {We describe our software package Block Locally Optimal Preconditioned Eigenvalue Xolvers (BLOPEX) publicly released recently. BLOPEX is available as a stand-alone serial library, as an external package to PETSc (``Portable, Extensible Toolkit for Scientific Computation'', a general purpose suite of tools for the scalable solution of partial differential equations and related problems developed by Argonne National Laboratory), and is also built into {\{}$\backslash$it hypre{\}} (``High Performance Preconditioners'', scalable linear solvers package developed by Lawrence Livermore National Laboratory). The present BLOPEX release includes only one solver--the Locally Optimal Block Preconditioned Conjugate Gradient (LOBPCG) method for symmetric eigenvalue problems. {\{}$\backslash$it hypre{\}} provides users with advanced high-quality parallel preconditioners for linear systems, in particular, with domain decomposition and multigrid preconditioners. With BLOPEX, the same preconditioners can now be efficiently used for symmetric eigenvalue problems. PETSc facilitates the integration of independently developed application modules with strict attention to component interoperability, and makes BLOPEX extremely easy to compile and use with preconditioners that are available via PETSc. We present the LOBPCG algorithm in BLOPEX for {\{}$\backslash$it hypre{\}} and PETSc. We demonstrate numerically the scalability of BLOPEX by testing it on a number of distributed and shared memory parallel systems, including a Beowulf system, SUN Fire 880, an AMD dual-core Opteron workstation, and IBM BlueGene/L supercomputer, using PETSc domain decomposition and {\{}$\backslash$it hypre{\}} multigrid preconditioning. We test BLOPEX on a model problem, the standard 7-point finite-difference approximation of the 3-D Laplacian, with the problem size in the range {\$}10{\^{}}5-10{\^{}}8{\$}.},
+  archiveprefix   = {arXiv},
+  arxivid         = {0705.2626},
+  doi             = {10.1137/060661624},
+  eprint          = {0705.2626},
+  isbn            = {1064827500},
+  keywords        = {BLOPEX,Beowulf.,BlueGene,Conjugate gradient,LOBPCG,Laplacian,PETSc,domain decomposition,eigenvalue,eigenvector,hypre,iterative method,multigrid,parallel computing,preconditioner,preconditioning},
+  mendeley-groups = {Untangle},
+  url             = {http://math.cudenver.edu/ http://epubs.siam.org/doi/10.1137/060661624},
+}
+
+@Article{Krzakala2013,
+  author    = {Krzakala, Florent and Moore, Cristopher and Mossel, Elchanan and Neeman, Joe and Sly, Allan and Zdeborov{\'a}, Lenka and Zhang, Pan},
+  journal   = {Proceedings of the National Academy of Sciences},
+  title     = {Spectral redemption in clustering sparse networks},
+  year      = {2013},
+  issn      = {0027-8424},
+  number    = {52},
+  pages     = {20935--20940},
+  volume    = {110},
+  abstract  = {Spectral algorithms are widely applied to data clustering problems, including finding communities or partitions in graphs and networks. We propose a way of encoding sparse data using a {\textquotedblleft}nonbacktracking{\textquotedblright} matrix, and show that the corresponding spectral algorithm performs optimally for some popular generative models, including the stochastic block model. This is in contrast with classical spectral algorithms, based on the adjacency matrix, random walk matrix, and graph Laplacian, which perform poorly in the sparse case, failing significantly above a recently discovered phase transition for the detectability of communities. Further support for the method is provided by experiments on real networks as well as by theoretical arguments and analogies from probability theory, statistical physics, and the theory of random matrices.Spectral algorithms are classic approaches to clustering and community detection in networks. However, for sparse networks the standard versions of these algorithms are suboptimal, in some cases completely failing to detect communities even when other algorithms such as belief propagation can do so. Here, we present a class of spectral algorithms based on a nonbacktracking walk on the directed edges of the graph. The spectrum of this operator is much better-behaved than that of the adjacency matrix or other commonly used matrices, maintaining a strong separation between the bulk eigenvalues and the eigenvalues relevant to community structure even in the sparse case. We show that our algorithm is optimal for graphs generated by the stochastic block model, detecting communities all of the way down to the theoretical limit. We also show the spectrum of the nonbacktracking operator for some real-world networks, illustrating its advantages over traditional spectral clustering.},
+  doi       = {10.1073/pnas.1312486110},
+  eprint    = {http://www.pnas.org/content/110/52/20935.full.pdf},
+  publisher = {National Academy of Sciences},
+  url       = {http://www.pnas.org/content/110/52/20935},
+}
+
+@Article{Kuhn1955,
+  author   = {Kuhn, H. W.},
+  journal  = {Naval Research Logistics Quarterly},
+  title    = {{The Hungarian method for the assignment problem}},
+  number   = {1--2},
+  pages    = {83--97},
+  volume   = {2},
+  abstract = {Abstract Assuming that numerical scores are available for the performance of each of n persons on each of n jobs, the “assignment problem” is the quest for an assignment of persons to jobs so that the sum of the n scores so obtained is as large as possible. It is shown that ideas latent in the work of two Hungarian mathematicians may be exploited to yield a new method of solving this problem.},
+  doi      = {10.1002/nav.3800020109},
+  eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.3800020109},
+  url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.3800020109},
+}
+
+@InProceedings{LDATime2,
+  author    = {Hindle, Abram and Godfrey, Michael W. and Holt, Richard C.},
+  booktitle = {2009 IEEE International Conference on Software Maintenance},
+  title     = {{What's hot and what's not: Windowed developer topic analysis}},
+  year      = {2009},
+  month     = sep,
+  pages     = {339--348},
+  abstract  = {As development on a software project progresses, developers shift their focus between different topics and tasks many times. Managers and newcomer developers often seek ways of understanding what tasks have recently been worked on and how much effort has gone into each; for example, a manager might wonder what unexpected tasks occupied their team's attention during a period when they were supposed to have been implementing new features. Tools such as Latent Dirichlet Allocation (LDA) and Latent Semantic Indexing (LSI) can be used to extract a set of independent topics from a corpus of commit-log comments. Previous work in the area has created a single set of topics by analyzing comments from the entire lifetime of the project. In this paper, we propose windowing the topic analysis to give a more nuanced view of the system's evolution. By using a defined time-window of, for example, one month, we can track which topics come and go over time, and which ones recur. We propose visualizations of this model that allows us to explore the evolving stream of topics of development occurring over time. We demonstrate that windowed topic analysis offers advantages over topic analysis applied to a project's lifetime because many topics are quite local.},
+  doi       = {10.1109/ICSM.2009.5306310},
+  isbn      = {9781424448289},
+  issn      = {1063-6773},
+  journal   = {IEEE International Conference on Software Maintenance, ICSM},
+  keywords  = {program visualisation;programming language semantics;software engineering;word processing;commit-log comments;latent dirichlet allocation tool;latent semantic indexing tool;software developers;software project development;windowed topic analysis;Control systems;Database systems;History;Indexing;Large scale integration;Linear discriminant analysis;Pattern analysis;Performance analysis;Software development management;Visualization},
+}
+
+@InProceedings{Mills:2017:ATL:3106237.3121280,
+  author    = {Mills, Chris},
+  booktitle = {Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering},
+  title     = {{Automating Traceability Link Recovery Through Classification}},
+  year      = {2017},
+  address   = {New York, NY, USA},
+  pages     = {1068--1070},
+  publisher = {ACM},
+  series    = {ESEC/FSE 2017},
+  acmid     = {3121280},
+  doi       = {10.1145/3106237.3121280},
+  isbn      = {978-1-4503-5105-8},
+  keywords  = {Classification, Machine Learning, Traceability},
+  location  = {Paderborn, Germany},
+  numpages  = {3},
+  url       = {http://doi.acm.org/10.1145/3106237.3121280},
+}
+
+@InProceedings{ponzanelli2014improving,
+  author       = {Ponzanelli, Luca and Mocci, Andrea and Bacchelli, Alberto and Lanza, Michele and Fullerton, David},
+  booktitle    = {2014 IEEE International Conference on Software Maintenance and Evolution},
+  title        = {Improving low quality stack overflow post detection},
+  year         = {2014},
+  organization = {IEEE},
+  pages        = {541--544},
+}
+
+@Article{relink,
+  author    = {Wu, Rongxin and Zhang, Hongyu and Kim, Sunghun and Cheung, Shing-Chi},
+  journal   = {Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering},
+  title     = {{ReLink: Recovering Links Between Bugs and Changes}},
+  year      = {2011},
+  pages     = {15--25},
+  acmid     = {2025120},
+  address   = {New York, NY, USA},
+  booktitle = {Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering},
+  doi       = {10.1145/2025113.2025120},
+  isbn      = {978-1-4503-0443-6},
+  keywords  = {bugs, changes, data quality, mining software repository, missing links},
+  location  = {Szeged, Hungary},
+  numpages  = {11},
+  publisher = {ACM},
+  series    = {ESEC/FSE '11},
+  url       = {http://doi.acm.org/10.1145/2025113.2025120},
+}
+
+@Article{Saade2014,
+  author        = {Saade, Alaa and Krzakala, Florent and Zdeborov{\'{a}}, Lenka},
+  title         = {{Spectral Clustering of Graphs with the Bethe Hessian}},
+  year          = {2014},
+  issn          = {1049-5258},
+  pages         = {1--9},
+  abstract      = {Spectral clustering is a standard approach to label nodes on a graph by studying the (largest or lowest) eigenvalues of a symmetric real matrix such as e.g. the adjacency or the Laplacian. Recently, it has been argued that using instead a more complicated, non-symmetric and higher dimensional operator, related to the non-backtracking walk on the graph, leads to improved performance in detecting clusters, and even to optimal performance for the stochastic block model. Here, we propose to use instead a simpler object, a symmetric real matrix known as the Bethe Hessian operator, or deformed Laplacian. We show that this approach combines the performances of the non-backtracking operator, thus detecting clusters all the way down to the theoretical limit in the stochastic block model, with the computational, theoretical and memory advantages of real symmetric matrices.},
+  archiveprefix = {arXiv},
+  arxivid       = {1406.1880},
+  eprint        = {1406.1880},
+  eprinttype    = {arxiv},
+  url           = {http://arxiv.org/abs/1406.1880},
+}
+
+@InProceedings{Solorio2008,
+  author       = {Solorio, Thamar and Liu, Yang},
+  booktitle    = {Proceedings of the Conference on Empirical Methods in Natural Language Processing},
+  title        = {{part-of-speech tagging for English-Spanish code-switched text}},
+  year         = {2008},
+  organization = {Association for Computational Linguistics},
+  pages        = {1051--1060},
+}
+
+@Article{StableRoommateProblem,
+  author     = {Irving, Robert W. and Manlove, David F.},
+  journal    = {J. Algorithms},
+  title      = {{The Stable Roommates Problem with Ties}},
+  year       = {2002},
+  issn       = {0196-6774},
+  month      = apr,
+  number     = {1},
+  pages      = {85--105},
+  volume     = {43},
+  acmid      = {589924},
+  address    = {Duluth, MN, USA},
+  doi        = {10.1006/jagm.2002.1219},
+  issue_date = {April 2002},
+  keywords   = {NP-completeness, approximation algorithm, indifference, linear-time algorithm, stable matching problem, super-stability, weak stability},
+  numpages   = {21},
+  publisher  = {Academic Press, Inc.},
+  url        = {http://dx.doi.org/10.1006/jagm.2002.1219},
+}
+
+@Article{Stahl2017,
+  author          = {St{\aa}hl, Daniel and Hall{\'{e}}n, Kristofer and Bosch, Jan},
+  journal         = {Empir. Softw. Eng.},
+  title           = {{Achieving traceability in large scale continuous integration and delivery deployment, usage and validation of the eiffel framework}},
+  year            = {2017},
+  issn            = {1573-7616},
+  number          = {3},
+  pages           = {967--995},
+  volume          = {22},
+  abstract        = {The importance of traceability in software development has long been recognized, not only for reasons of legality and certification, but also to enable the development itself. At the same time, organizations are known to struggle to live up to traceability requirements, and there is an identified lack of studies on traceability practices in the industry, not least in the area of tooling and infrastructure. This paper presents, investigates and discusses Eiffel, an industry developed solution designed to provide real time traceability in continuous integration and delivery. The traceability needs of industry professionals are also investigated through interviews, providing context to that solution. It is then validated through further interviews, a comparison with previous traceability methods and a review of literature. It is found to address the identified traceability needs and found in some cases to reduce traceability data acquisition times from days to minutes, while at the same time alternatives offering comparable functionality are lacking. In this work, traceability is shown not only to be an important concern to engineers, but also regarded as a prerequisite to successful large scale continuous integration and delivery. At the same time, promising developments in technical infrastructure are documented and clear differences in traceability mindset between separate industry projects is revealed.},
+  doi             = {10.1007/s10664-016-9457-1},
+  keywords        = {Continuous delivery,Continuous integration,Traceability,Very-large-scale software systems},
+  mendeley-groups = {Aide-m{\'{e}}moire},
+}
+
+@InProceedings{Tian2015,
+  author       = {Tian, Yuan and Lo, David},
+  booktitle    = {2015 IEEE 22nd International Conference on Software Analysis, Evolution and Reengineering (SANER)},
+  title        = {A comparative study on the effectiveness of part-of-speech tagging techniques on bug reports},
+  year         = {2015},
+  organization = {IEEE},
+  pages        = {570--574},
+}
+
+@InProceedings{Treude:2015:TTN:2819009.2819128,
+  author    = {Treude, Christoph and Sicard, Mathieu and Klocke, Marc and Robillard, Martin},
+  booktitle = {Proceedings of the 37th International Conference on Software Engineering - Volume 2},
+  title     = {{TaskNav: Task-based Navigation of Software Documentation}},
+  year      = {2015},
+  address   = {Piscataway, NJ, USA},
+  pages     = {649--652},
+  publisher = {IEEE Press},
+  series    = {ICSE '15},
+  acmid     = {2819128},
+  location  = {Florence, Italy},
+  numpages  = {4},
+  url       = {http://dl.acm.org/citation.cfm?id=2819009.2819128},
+}
+
+@InProceedings{Treude2015portuguese,
+  author       = {Treude, Christoph and Prolo, Carlos A and Figueira Filho, Fernando},
+  booktitle    = {Proceedings of the 29th Brazilian Symposium on Software Engineering},
+  title        = {Challenges in analyzing software documentation in {Portuguese}},
+  year         = {2015},
+  organization = {IEEE},
+  pages        = {179--184},
+}
+
+@Article{Trivedi2018,
+  author          = {Trivedi, Rakshit and Sisman, Bunyamin and Dong, Xin Luna and Faloutsos, Christos and Ma, Jun and Zha, Hongyuan},
+  journal         = {Proc. 56th Annu. Meet. Assoc. Comput. Linguist. (Volume 1 Long Pap.},
+  title           = {{LinkNBed: Multi-Graph Representation Learning with Entity Linkage}},
+  year            = {2018},
+  pages           = {252--262},
+  archiveprefix   = {arXiv},
+  arxivid         = {1807.08447},
+  doi             = {arXiv:1807.08447v1},
+  eprint          = {1807.08447},
+  mendeley-groups = {Untangle},
+  url             = {http://aclweb.org/anthology/P18-1024},
+}
+
+@InProceedings{Vyas2014,
+  author    = {Vyas, Yogarshi and Gella, Spandana and Sharma, Jatin and Bali, Kalika and Choudhury, Monojit},
+  booktitle = {Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  title     = {Pos tagging of english-hindi code-mixed social media content},
+  year      = {2014},
+  pages     = {974--979},
+}
+
+@Article{Wallach2009,
+  author   = {Wallach, Hanna M and Mimno, David and Mccallum, Andrew},
+  journal  = {Advances in Neural Information Processing Systems 22},
+  title    = {{Rethinking LDA : Why Priors Matter}},
+  year     = {2009},
+  issn     = {0269-9370},
+  number   = {2},
+  pages    = {1973--1981},
+  volume   = {22},
+  abstract = {Implementations of topic models typically use symmetric Dirichlet priors with fixed concentration parameters, with the implicit assumption that such smoothing parameters have little practical effect. In this paper, we explore several classes of structured priors for topic models. We find that an asymmetric Dirichlet prior over the documenttopic distributions has substantial advantages over a symmet- ric prior, while an asymmetric prior over the topicword distributions provides no real benefit. Approximation of this prior structure through simple, efficient hy- perparameter optimization steps is sufficient to achieve these performance gains. The prior structure we advocate substantially increases the robustness of topic models to variations in the number of topics and to the highly skewed word fre- quency distributions common in natural language. Since this prior structure can be implemented using efficient algorithms that add negligible cost beyond standard inference techniques, we recommend it as a new standard for topic modeling.},
+  doi      = {10.1007/s10708-008-9161-9},
+  isbn     = {9781615679119},
+  pmid     = {2508715},
+}
+
+@Article{weka,
+  author     = {Hall, Mark and Frank, Eibe and Holmes, Geoffrey and Pfahringer, Bernhard and Reutemann, Peter and Witten, Ian H.},
+  journal    = {SIGKDD Explor. Newsl.},
+  title      = {{The WEKA Data Mining Software: An Update}},
+  year       = {2009},
+  issn       = {1931-0145},
+  month      = nov,
+  number     = {1},
+  pages      = {10--18},
+  volume     = {11},
+  acmid      = {1656278},
+  address    = {New York, NY, USA},
+  doi        = {10.1145/1656274.1656278},
+  issue_date = {June 2009},
+  numpages   = {9},
+  publisher  = {ACM},
+  url        = {http://doi.acm.org/10.1145/1656274.1656278},
+}
+
+@InProceedings{winata-charmodel,
+  author    = {Winata, Genta Indra and Wu, Chien-Sheng and Madotto, Andrea and Fung, Pascale},
+  booktitle = {Proceedings of the Third Workshop on Computational Approaches to Linguistic Code-Switching},
+  title     = {{Bilingual Character Representation for Efficiently Addressing Out-of-Vocabulary Words in Code-Switching Named Entity Recognition}},
+  year      = {2018},
+  address   = {Melbourne, Australia},
+  month     = jul,
+  pages     = {110--114},
+  publisher = {Association for Computational Linguistics},
+  doi       = {10.18653/v1/W18-3214},
+  url       = {https://www.aclweb.org/anthology/W18-3214},
+}
+
+@InProceedings{Yasunaga&al.18.naacl,
+  author    = {Michihiro Yasunaga and Jungo Kasai and Dragomir R. Radev},
+  booktitle = {Proceedings of NAACL},
+  title     = {{Robust Multilingual part-of-speech Tagging via Adversarial Training}},
+  year      = {2018},
+  publisher = {Association for Computational Linguistics},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

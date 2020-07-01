@@ -29,7 +29,11 @@ Request-Issue Links}
 
 \noindent\emph{Authors: Profir-Petru Pârțachi, David R. White, Earl T. Barr}
 
-I have implemented the proposed PR-Issue linker, performed the exploratory data
+\noindent\emph{Venue: Under submission to ACM Transactions on Software
+Engineering and Methodology (TOSEM)}
+
+\noindent I have determined and mined the dataset of GitHub projects. I have
+implemented the proposed PR-Issue linker, performed the exploratory data
 analysis and feature engineering as well as wrote the evaluation and result
 analysis scripts. The experimental and EDA designs were done in close
 collaboration with David White who made sure I perform these correctly and
@@ -40,15 +44,19 @@ guided me patiently.
 \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Miltose
 Allamanis, Earl T. Barr}
 
-I have implemented in full the construction of our new structure, though the
-idea of the structure was from Earl Barr, and the details of the specification
-were worked in close collaboration. I also implemented the necessary methods to
-construct the dataset, reproduced previous work in the area and implemented our
-proposed untangling algorithms as well as their evaluation on the constructed
-dataset. The RefiNym implementation was provided by Santanu Dash who helped me
-integrate it with Flexeme. The original PDG extraction implementation for C\#
-code was provided by Miltose Allamanis. Santanu Dash and I performed the manual
-evaluations.
+\noindent\emph{Venue: Proceedings of 28th ACM Joint European Software
+Engineering Conference and Symposium on the Foundations of Software Engineering,
+(ESEC/FSE 2020)}
+
+\noindent  I have implemented in full the construction of our new structure,
+though the idea of the structure was from Earl Barr, and the details of the
+specification were worked in close collaboration. I also implemented the
+necessary methods to construct the dataset, reproduced previous work in the area
+and implemented our proposed untangling algorithms as well as their evaluation
+on the constructed dataset. The RefiNym implementation was provided by Santanu
+Dash who helped me integrate it with Flexeme. The original PDG extraction
+implementation for C\# code was provided by Miltose Allamanis. Santanu Dash and
+I performed the manual evaluations.
 
 \noindent\textbf{POSIT: Simultaneously Tagging Natural and Programming
 Languages} 
@@ -56,9 +64,12 @@ Languages}
 \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Christoph
 Treude, Earl T. Barr}
 
-I have implemented the preprocessing scripts, the Neural Network that realises
-POSIT, the adaptation of the previous State-of-the-art to our problem, and the
-necessary evaluation scripts. The Code Comments corpus was provided in by
+\noindent\emph{Venue: Proceedings of 42nd International Conference on Software
+Engineering (ICSE ’20)}
+
+\noindent I have implemented the preprocessing scripts, the Neural Network that
+realises POSIT, the adaptation of the previous State-of-the-art to our problem,
+and the necessary evaluation scripts. The Code Comments corpus was provided by
 Santanu Dash. The original implementation of TaskNav was provided by Christoph
 Treude. The informal proof of context-sensitivity of mixed-text was worked on in
 close collaboration with Earl Barr without whom the proof would have not been
@@ -135,7 +146,11 @@ techniques and research avenues for Big Code.
 
 \begin{acknowledgements}
 \todo{Reduce repetitiveness}
-I would like to thank my supervisor, Dr Earl T. Barr for the sage advice and
+A PhD is not an easy journey, but one I will look back on fondly. Along the way,
+I have had the support of many for whom I wish to dedicate the following
+paragraphs in thanks.
+
+I would like to thank my supervisor, Dr Earl T. Barr, for the sage advice and
 importantly patience with me especially as I was navigating the landscape of
 academic writing. I would also like to thank Earl for bearing with me as I fell
 ill throughout the journey and offering support during those times. The
@@ -143,37 +158,47 @@ dialectic we had trying to formally prove a hypothesis with the clock ticking to
 the deadline will be a fond memory for years despite the stress of the moment
 then.
 
-I would like to thank Dr David R. White for the `Desk Compensation Meetings'
-that set me on the path towards rigorous experimental design early in my PhD and
-that formed the support beams for my empirical studies throughout my doctoral
-work. I would also like to thank David for being there for me when I needed
-someone to listen to me and helping navigate the academic landscape with more
-confidence.
+I would also like to thank Dr David R. White for the `Desk Compensation
+Meetings' that set me on the path towards rigorous experimental design early in
+my PhD. That formed the support beams for my empirical studies throughout my
+doctoral work. I would also like to thank David for being there for me when I
+needed someone to listen to me and helping navigate the academic landscape with
+more confidence.
 
-I would like to thank Dr Santanu Dash, for helping me navigate the rougher sides
-of Roslyn and enabling the work that followed from that. I would also like to
-thank Santanu for helping me pursue an idea that later became a paper by helping
-me with initial labelled data that would have been impossible without his CLANG
-knowledge. The help and advice navigating formal languages helped shape my work.
+For the help and patience they showed, I would also like to thank my co-authors
+during my PhD research. I would like to thank Dr Santanu Dash, for helping me
+navigate the rougher sides of Roslyn and enabling the work that followed from
+that. I would also like to thank Santanu for helping me pursue an idea that
+later became a paper by helping me with initial labelled data that would have
+been impossible without his CLANG knowledge. The help and advice navigating
+formal languages helped shape my work.
 
-I would like to thank Miltose Allamanis and Christoph Treude, who have made
-invaluable contributions and were a pleasure to work with as co-authors. Miltose
-has helped me get a better start writing Machine Learning code, while Christoph
-helped me better understand how to do qualitative and manual quantitative
-analysis
+I extend similar gratitude to Miltose Allamanis and Christoph Treude, who have
+made invaluable contributions and were a pleasure to work with as co-authors.
+Miltose has helped me get a better start writing Machine Learning code, while
+Christoph helped me better understand how to do qualitative and manual
+quantitative analysis
 
-I would like to thank my lab mates that made the journey more fun: Leo Jeoffe,
-David Kelly, Bobby Bruce, DongGyun Han, Matheus Paix\~ao, Carlos Gavidia,
-Giovani Guizzo, Vali Tawosi, Rebecca Mousa, Jie Zhang. The informal chats were
-invaluable and they all helped me through the journey. Discussing our work
-together helped me, and I hope them as well, better understand how to do proper
-science, to better understand how and when statistical techniques should be
-applied, how to formulate experiments, how to thoroughly explore hypothesises.
+I would like to thank my lab mates in CREST and SSE that made the journey more
+fun: Leo Jeoffe, David Kelly, Bobby Bruce, DongGyun Han, Matheus Paix\~ao,
+Carlos Gavidia, Giovani Guizzo, Vali Tawosi, Rebecca Mousa, Jie Zhang. The
+informal chats were invaluable and they all helped me through the journey.
+Discussing our work together helped me, and I hope them as well, better
+understand how to do proper science, to better understand how and when
+statistical techniques should be applied, how to formulate experiments, how to
+thoroughly explore hypothesises.
 
-I would like to thank my family, my dear older sister for always bearing with me
-and lending a ear to listen and a pair of eyes to double check my English. My
-parents for supporting me through my PhD years and even donating time on the
-home PC when I needed extra compute resources on a tight deadline.
+Last but not by any means least, I would like to thank my family, my dear older
+sister for always bearing with me and lending a ear to listen and a pair of eyes
+to double check my English. My parents for supporting me through my PhD years
+and even donating time on the home PC when I needed extra compute resources on a
+tight deadline.
+
+Our research is shaped by those in our network, those we talk to even causally,
+thus the sum total of the contributions to this research is beyond any
+quantifiable scope; I cannot hope to enumerate everyone who has contributed to
+my work in the multitude of ways that I have been supported along on this
+journey. To everyone, thank you.
 
 \end{acknowledgements}
 

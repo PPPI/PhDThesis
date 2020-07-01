@@ -64,6 +64,8 @@
 
 % Keep the main file clean, moved custom macros to the GlobalMacros file
 \input{GlobalMacros}
+% Flags for content selection
+\setboolean{showconjoin}{false}
 
 % Sets up links within your document, for e.g. contents page entries
 %  and references, and also PDF metadata.
@@ -80,15 +82,13 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-% Flags for content selection
-\setboolean{showcomments}{true} % comment this line to deactivate comments
-\setboolean{showconjoin}{true}
 \begin{document}
 
 % At last, content! Remember filenames are case-sensitive and 
 %  *must not* include spaces.
 \include{Preamble}
 \include{Introduction}
+\include{Literature}
 \include{Chapter1}
 \include{Chapter2}
 \include{Chapter3}

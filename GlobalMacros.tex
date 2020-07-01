@@ -12,7 +12,18 @@
 \newcommand{\infinity}{\infty}
 \newcommand{\green}{PineGreen}
 
+\newcommand{\stormed}{StORMeD\xspace}
+\newcommand{\SO}{Stack Overflow\xspace}
+\newcommand{\deltaPDG}{$\delta$-PDG\xspace}
+\newcommand{\deltaPDGnCV}{$\delta$-PDG+CV\xspace}
+\newcommand{\deltaPDGs}{$\delta$-PDGs\xspace}
+\newcommand{\deltaPDGN}{$\delta$-NFG\xspace}
+\newcommand{\deltaPDGNs}{$\delta$-NFGs\xspace}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
 \newboolean{showcomments}
+\setboolean{showcomments}{true} % comment this line to deactivate comments
 \ifthenelse{\boolean{showcomments}}{
   \newcommand{\nbc}[3]{
     {\colorbox{#3}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}%

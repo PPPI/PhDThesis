@@ -11,7 +11,7 @@ LaTeXSources= $(wildcard *.tex *.bib) ucl_thesis.cls
 all: Main.pdf
 
 
-Main.pdf: $(LaTeXSources)
+Improving_Software_Project_Health_using_Machine_Learning.pdf: $(LaTeXSources)
 	lualatex --halt-on-error $(basename $@).tex
 	bibtex $(basename $@)
 	lualatex --halt-on-error $(basename $@).tex
