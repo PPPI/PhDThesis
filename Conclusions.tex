@@ -2,3 +2,22 @@
 \label{chapter:conclusions}
 
 \todo{We conclude on how the three papers advance the state of the art. How further advances could be made and future directions for project health.}
+
+\section{Summary of Contributions}
+
+\todo{summarise key takeaways of the three papers, sum them up under a single umbrella}
+
+We proposed the first online PR-Issue linker, advanced the state of the art for commit untangling, and open the door to mixed-text analysis.
+
+\section{Summary of Future Work}
+
+\todo{more fluff}
+
+\textbf{Mixed-text comprehension}
+POSIT is a step along the path to mixed-text comprehension. It offers the first building blocks, an equivalent for Part of Speech tags for mixed-text. More sophisticated models can build upon this to aid comprehension and parsing of mixed text such that meaning is carried over from the Natural Language channel to the algorithmic channel.
+
+\textbf{Graph Neural Network Approaches for Graph Similarity}
+In Flexeme, we make use of graph kernels for graph Similarity computation; however recent research in Graph Neural Networks show promising results, and future work may focus on replacing our graph kernels for a neural network implementation if a suitable training corpus is present.
+
+\textbf{Multi-version PDG Static Analysis}
+In Flexeme, we propose a novel structure, the \deltaPDGN. While we demonstrate its use for commit untangling, this same structure could be employed for multi-version static analysis when the analysis depends on Program Dependency Trees. Alternatively, one could consider version sensitive slicing.
