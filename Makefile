@@ -8,7 +8,7 @@
 LaTeXSources= $(wildcard *.tex *.bib) ucl_thesis.cls
 
 .PHONY: all clean superclean test
-all: Main.pdf
+all: Improving_Software_Project_Health_using_Machine_Learning.pdf
 
 
 Improving_Software_Project_Health_using_Machine_Learning.pdf: $(LaTeXSources)
