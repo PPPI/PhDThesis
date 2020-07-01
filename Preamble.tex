@@ -13,6 +13,7 @@
 \maketitle
 \makedeclaration
 
+\ifthenelse{\boolean{showconjoin}}{
 \begin{conjoint}
 The thesis “Improving Project Health using Machine Learning” by Pârțachi
 Profir-Petru, the undersigned, is composed of three main papers which were
@@ -63,6 +64,7 @@ Christoph Treude.
 
 \doublesignature{Earl T. Barr}
 \end{conjoint}
+}{}
 
 \begin{abstract} % 300 word limit
 In recent years systems that would previously live on different platforms
@@ -101,14 +103,30 @@ avenues for project-specific code-recommendation tools.
 \end{abstract}
 
 \begin{impactstatement}
-The work presented as part of this thesis opens the door to further research in
-applications of machine learning towards aiding the process of software
-development and making the profession more accessible. Directly, it helps
-developers maintain projects in a state of lower technical debt and can, over
-time, enable more sophisticated analysis by researchers as the quality of the
-data improves. It also further paves the way towards multi-channel analysis of
-coding artefacts where signal from both code and natural language are
-considered. \todo{more stuff here about how this is impactful.}
+In the modern world, software is ubiquitous: from the personal computers most of
+us use to the mission critical systems that require fine control. Software
+quality is usually a result of a healthy software project, \ie it is not just a
+function of the code, rather of the process producing that code as well.
+Further, projects are not just source-code; indeed, they contain a wealth of
+documents written in English or other languages. Focusing only on source-code
+tells us only half the story.
+
+In this thesis, I propose the notion of project health; a notion that was
+previously colloquially understood and that encompasses those processes that
+help project succeed and flourish. Under this umbrella, I focus on three tasks
+that could impede project success: pull-request-issue linking, commit separation
+into atomic patches, and mixed-text segmentation and pre-processing. I focus on
+tasks that would break assumptions made by researchers when proposing techniques
+in the first two, while the latter proposes a new way of handling data enabling
+analysis which is aware of algorithmic and natural language information. By
+borrowing techniques and methodology from Machine Learning, I propose prototype
+systems to resolve these issues.
+
+The work proposed in this follows the ethos of helping developers help
+themselves and us. We help developers maintain project health with its inherent
+benefits: easier onboarding, lower costs of maintenance \etc. This in turn can
+create better training data for researchers and may enable yet better automation
+techniques and research avenues for Big Code.
 \end{impactstatement}
 
 \begin{acknowledgements}

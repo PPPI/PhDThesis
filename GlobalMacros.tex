@@ -13,7 +13,6 @@
 \newcommand{\green}{PineGreen}
 
 \newboolean{showcomments}
-\setboolean{showcomments}{true} % comment this line to deactivate comments
 \ifthenelse{\boolean{showcomments}}{
   \newcommand{\nbc}[3]{
     {\colorbox{#3}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}%
@@ -50,3 +49,5 @@
     }
   }
 }
+
+\newboolean{showconjoin}
