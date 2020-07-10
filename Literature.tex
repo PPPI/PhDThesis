@@ -80,6 +80,8 @@ should be finished as linking can be considered good enough.
 \subsection{Commit-Issue Link Inference}
 \label{chapter:literature:sec:am_rel_work:cli}
 
+\todo{udpate or drop}
+
 Emerging from research into task-aware developer tools
 \cite{Robillard:2003:FTL:776816.776969}, Kersten \etal were the first to connect
 source code to tasks~\cite{Kersten2005}. To this end, they instrumented Eclipse
@@ -128,6 +130,54 @@ textually summarises code changes. More recently, Sun \etal~\cite{PULink} have
 tackled the issue of labelled data in the context of commit-issue linking by
 converting the problem to a semi-supervised learning problem and thus allowing
 the use of unlabelled data in the construction of classifiers.
+
+Sun~\etal~\cite{FRLink} used non-source files in commits for commit-issue link
+inference. They argue that these files are important for capturing developer
+intent. They use the standard heuristics, such as checking for camelCase or
+snake\_case, to determine the relevancy of a non-source file in a commit. As is
+conventional, they implement these heuristics as regexes. They use the resulting
+set of non-source files together with the co-committed source files to compute
+textual features. They scan a preset and fixed list of the similarity thresholds
+to find the maximum F1-score where Recall is at least 0.80. The procedure raises
+two unanswered questions. First, how did the authors determine the threshold
+granularity? Second, how does training FRLink on F1-score for a task whose
+performance is measured in terms of F1-score avoid overfitting? They report
+these choices allow FRLink to improve Recall over previous work while matching
+or improving F1-score. 
+
+Sun~\etal evaluate FRLink on a new corpus of GitHub projects. This corpus
+differs from the Apache corpus used in prior work in the conventions governing
+commit messages:  Apache messages tend to be descriptive~\cite{ApachePractice},
+while FRLink's mined GitHub tend to contain exact matches, because copying issue
+text is common practice~\cite{ruan2019deeplink}. Sun~\etal do not investigate
+the effect of this differing practice on their results. They specify their
+corpus in sufficient detail to reconstruct it. FRLink, the tool, however, is not
+available. When we tried to reproduce FRLink, using its description in
+Sun~\etal's paper, we were unable to reproduce the reported results.   
+We contacted the authors repeatedly for help explaining and correcting our
+reproduction without response. More recently, Sun~\etal~\cite{PULink} treat
+existing links as labels and reformulate the missing link problem into a
+semi-supervised problem. As Bachmann~\etal found, existing links are biased;
+Sun~\etal do not discuss how they coped with this bias. They report that their
+solution, PULink, outperforms FRLink on FRLink's corpus. Like FRLink, PULink is
+not available.
+
+Ruan~\etal~\cite{ruan2019deeplink} empirically studied the state of commit-issue
+linking on GitHub Java projects and found only 42.2\% to be linked. They propose
+DeepLink, a neural approach to the missing links problem. DeepLink trains a text
+embedding for non-source artefacts and a code embedding for source artefacts
+using the skip-gram model~\cite{mikolov2013efficient, mikolov2013distributed},
+then passes each of these embeddings separately through an LSTM layer to obtain
+the final vector representations. They use cosine similarity to compare the
+vectors, choosing the maximum similarity to represent the score of the
+commit-issue link. They show an improvement over FRLink in terms of F1-score,
+and further show that pre-processing heuristics similar to previous work, such
+as ReLink~\cite{relink} or MLink~\cite{MLink}, help DeepLink achieve a higher
+F1-score. They also spot that the FRLink corpus had commit logs and issue titles
+that are exact matches, introducing bias in the dataset which Ruan \etal handle,
+while FRLink does not. Since they did not evaluate DeepLink on Apache Commons or
+against RCLinker and DeepLink is not available, we do not know its performance
+relative to RCLinker.
 
 Separately from the work in commit-issue linking, Rath \etal~\cite{1804.02433}
 consider traceability between issues and commits (feature implementation and bug
