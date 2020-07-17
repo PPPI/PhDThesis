@@ -2,13 +2,48 @@
 \label{chapter:literature}
 
 \todo{Chapter Intro}
+In this chapter I first present the wider literature that concerns developer
+activities impacting project health in \Cref{todo}. I then focus on the
+subproblems tackled in the thesis and start by presenting Traceability and
+Commit-Issue linking literature in \Cref{chapter:literature:sec:am_rel_work}.
+\Cref{chapter:literature:sec:flexeme_rel_work} presents the literature around
+commit untangling. I conclude this chapter by describing the literature around
+mixed-text in \Cref{chapter:literature:sec:posit_rel_work}.
+
 \section{Bridging the Gap between Issues and History}
 %TODO: Importance of metadata for our framework/system
 \label{chapter:literature:sec:am_rel_work}
 
-In this section, we focus on software traceability as an area, the
-position of the commits to issues traceability task within this wider context,
-and our proposed contribution within this.
+In this section, we focus on software traceability as an area, the position of
+the commits to issues traceability task within this wider context, and our
+proposed contribution within this.
+
+\subsection{Modern Development}
+\label{am:sec:relwork:modern_dev}
+
+Modern development increasingly relies on tooling that integrates Version
+Control, Issue Tracking, Wikis, Continuous Integration and Continuous Deployment
+under a single system. Notable examples are GitHub and Atlassian's JIRA. This
+new development paradigm poses new problems and opportunities. Kalliamvakou
+\etal~\cite{Kalliamvakou2014} elucidates these, using GitHub as their archetypal
+example. A particular opportunity Kalliamvakou~\etal identify is this paradigm's
+integration of Version Control and Issue Tracking. Aide-mémoire rests on this
+integration. Aide-mémoire also takes a step toward realising a promise they
+identify:  interlinking developers, pull requests, issues and commits to offer a
+comprehensive view of the software development process. 
+
+Lack of PR-issue links is an ongoing problem in modern software development.  So
+much so, Agile practice specifies spring cleaning an issue (a user story in
+Agile terminology) backlog. During backlog refinement, developers remove stale
+stories and reprioritise and re-estimate remaining stories. When all stories are
+stale, this practice discards all sprint-related artefacts --- issues, feature
+requests, user stories, as well their links --- in favour of starting the next
+sprint from a clean slate~\cite{BacklogRefinement}. Projects must resort to this
+spring cleaning all too often~\cite{laurieTrattPersonalCommunciation}. Clearly,
+this practice loses valuable information. The loss of documentation it entails
+it just one example. Adoption of PR-issue inference tooling, like Aide-mémoire,
+promises to reduce the need to resort to this drastic measure by enabling
+automatic issue triaging.
 
 \subsection{Software Traceability}
 \label{chapter:literature:sec:am_rel_work:tracability}
@@ -80,56 +115,41 @@ should be finished as linking can be considered good enough.
 \subsection{Commit-Issue Link Inference}
 \label{chapter:literature:sec:am_rel_work:cli}
 
-\todo{udpate or drop}
+The \emph{missing link problem} is the offline prediction problem of inferring
+missing commit-issue links given a version history and issue tracker archive.
+Bachman~\etal were the first to formulate and quantify this
+problem~\cite{Bird2009,MissingLinks}. Their work aids developers indirectly by
+helping researchers and tool-smiths avoid the bias introduced by missing links
+that could undermine their techniques or tools. Specifically, they show that by
+assuming recorded links to be representative of all links, tools are biased to
+use code from more experienced developers, thus not learning from mistakes or
+bugs introduced by less experienced contributors. 
 
-Emerging from research into task-aware developer tools
-\cite{Robillard:2003:FTL:776816.776969}, Kersten \etal were the first to connect
-source code to tasks~\cite{Kersten2005}. To this end, they instrumented Eclipse
-to infer a developer's task, then recorded the files accessed while the
-developer worked on that task. Over the resulting data they trained a model to
-infer file-issue links. This formulation is inherently online and open-world, as
-developers create tasks and files or finish tasks and remove files. In
-terminology not used within the paper, Kersten \etal were the first to solve the
-software traceability problem in an online fashion for two specific software
-artefacts: files and tasks. Their task inference is imprecise and coarse-grained
-when compared to an issue tracker, and files are much more coarse-grained than
-PRs or even commits; subsequent work leveraged issue trackers and considered
-commits to directly address the commit-issue link inference problem. To date,
-this later work has tackled the commit-issue link inference problem
-retrospectively, without considering solving the problem at the PR level. 
+Bachman~\etal together with Apache Commons developers manually supplied missing
+links and published their Apache Commons corpus. Wo~\etal are the first to
+attempt to automatically infer them. They propose ReLink~\cite{relink}, which
+measures the similarity of change logs and bug reports with cosine similarity on
+tf-idf vectors, learning a threshold for true links. Nguyen~\etal exploited
+commit and issue tracker metadata in MLink~\cite{MLink} to improve recall over
+ReLink. They evaluated MLink on the Apache Commons corpus, making it the de
+facto standard. ReLink and MLink first consider only commit data to form an
+initial set of commit-issue links that they then filter. Prechlet and
+Pepper~\cite{prechelt2014bflinks} dispense with the initial commit-only stage,
+and instead consider both commit and issue data from the start. They argue this
+bi-directional inference is more sound. Their BFLinks proposes two link
+predictors (based on bug and commit IDs) and a series of filters to reduce the
+candidate set of links.
 
-Bachman \etal were the first to formulate and quantify a variant of CLIP, which
-they called the missing link problem, as the closed world, archaeological
-problem of inferring missing commit-issue links given a version history and
-issue tracker archives~\cite{Bird2009,MissingLinks}. Their work aids developers
-indirectly, by helping researchers and tool-smiths avoid the bias introduced by
-missing links that could undermine their techniques or tools. Specifically, they
-show that by assuming recorded links to be representative of all links, tools
-are biased to use code from more experienced developers, thus not learning from
-mistakes or bugs introduced by less experienced contributors. Wo \etal measured
-the similarity of change logs and bug reports with cosine similarity on tf-idf
-vectors, learning a threshold for true links, and proposed ReLink, the first
-technique for solving the missing link problem ~\cite{relink}. Nguyen \etal
-exploited commit and issue tracker metadata in MLink~\cite{MLink} to improve
-recall over ReLink. They evaluated their tool on the Apache Commons corpus,
-which became a de facto standard benchmark in that area. However, their use of a
-golden corpus has been argued to be unsound in practice due to the reliance on
-such a corpus, which negates the need for a solution. In BFLinks, Prechlet and
-Pepper~\cite{Prechelt2014} provide a framework for linking and propose two
-candidate generators (based on bug and commit IDs respectively) and a series of
-filters to reduce the candidate set of links, emphasising the importance of
-looking at the traceability links bi-directionally. They also argue that
-previous work, ReLink, required an unsound tuning of filter parameters that
-require a golden set of links. Li \etal further improved recall in
-RCLinker~\cite{RCLinker}, the current state of the art. They trained a
-statistical classifier that uses cosine similarity on tf-idf vectors to
-undersample the training data.  Their tf-idf based cosine similarity measure
-works better on natural language text than raw source code changes, and they
-therefore use ChangeScribe~\cite{ChangeScribe} as a preprocessing step to
-textually summarises code changes. More recently, Sun \etal~\cite{PULink} have
-tackled the issue of labelled data in the context of commit-issue linking by
-converting the problem to a semi-supervised learning problem and thus allowing
-the use of unlabelled data in the construction of classifiers.
+Prior to Aide-mémoire, Li~\etal was the state of the art.
+RCLinker~\cite{RCLinker} further improves recall. \Cref{am:sec:reproduction}
+details RCLinker's realisation. RCLinker relies on
+ChangeScribe~\cite{ChangeScribe} to produce textual descriptions of commits,
+especially those that lack commit messages. PRs have their own message and
+aggregate multiple commits and their messages.  
+This fact alleviates the problem of sparse commit descriptions for Aide-mémoire.
+Both tools would benefit from better PR summarisation and description. Liu
+\etal~\cite{liu2019automatic} propose a tool, based on a bi-directional RNN with
+a copy network, to tackle this task. 
 
 Sun~\etal~\cite{FRLink} used non-source files in commits for commit-issue link
 inference. They argue that these files are important for capturing developer
@@ -148,19 +168,18 @@ or improving F1-score.
 Sun~\etal evaluate FRLink on a new corpus of GitHub projects. This corpus
 differs from the Apache corpus used in prior work in the conventions governing
 commit messages:  Apache messages tend to be descriptive~\cite{ApachePractice},
-while FRLink's mined GitHub tend to contain exact matches, because copying issue
-text is common practice~\cite{ruan2019deeplink}. Sun~\etal do not investigate
-the effect of this differing practice on their results. They specify their
-corpus in sufficient detail to reconstruct it. FRLink, the tool, however, is not
-available. When we tried to reproduce FRLink, using its description in
+while FRLink's GitHub sample tends to contain exact matches, because copying
+issue text is common practice~\cite{ruan2019deeplink}. Sun~\etal do not
+investigate the effect of this differing practice on their results. They specify
+their corpus in sufficient detail to reconstruct it. FRLink, the tool, however,
+is not available. When we tried to reproduce FRLink, using its description in
 Sun~\etal's paper, we were unable to reproduce the reported results.   
-We contacted the authors repeatedly for help explaining and correcting our
-reproduction without response. More recently, Sun~\etal~\cite{PULink} treat
-existing links as labels and reformulate the missing link problem into a
-semi-supervised problem. As Bachmann~\etal found, existing links are biased;
-Sun~\etal do not discuss how they coped with this bias. They report that their
-solution, PULink, outperforms FRLink on FRLink's corpus. Like FRLink, PULink is
-not available.
+We contacted the authors for help explaining and correcting our reproduction
+without response. More recently, Sun~\etal~\cite{PULink} treat existing links as
+labels and reformulate the missing link problem into a semi-supervised problem.
+As Bachmann~\etal found, existing links are biased; Sun~\etal do not discuss how
+they coped with this bias. They report that their solution, PULink, outperforms
+FRLink on FRLink's corpus. Like FRLink, PULink is not available.
 
 Ruan~\etal~\cite{ruan2019deeplink} empirically studied the state of commit-issue
 linking on GitHub Java projects and found only 42.2\% to be linked. They propose
@@ -179,16 +198,18 @@ while FRLink does not. Since they did not evaluate DeepLink on Apache Commons or
 against RCLinker and DeepLink is not available, we do not know its performance
 relative to RCLinker.
 
-Separately from the work in commit-issue linking, Rath \etal~\cite{1804.02433}
-consider traceability between issues and commits (feature implementation and bug
-fixes) and model the problem from two points of view: process and stakeholders.
-They deviate from the uni-gram based VSM of existing work in commit-issue
-linking opting, for a n-gram VSM, and are also the first paper in this area to
-perform feature selection. They delegate this task to the Weka implementation
-for feature auto-selection. They are quite thorough in their evaluation and
-consider multiple classifiers within the experimental set-up. Rath \etal's work
-is difficult to compare with previous commit-issue linking research, as their
-solution uses features obscured or unavailable in an online setting.
+Rath~\etal~\cite{1804.02433} also tackle the missing link problem, but from
+within the requirement engineering community and without referencing the line of
+work stemming from Bachmann~\etal. The missing link inference work above uses a
+vector space model over unigrams for textual features. They opt instead for a
+n-gram model. They are the first to perform feature selection, using Weka's
+feature auto-selection. They report promising results but on a different dataset
+than Apache Commons. As previously noted (\Cref{am:sec:reproduction}),
+Rath~\etal's work is difficult to compare with Aide-mémoire, because it uses
+temporal features, such as a predicate that is true when a commit falls between
+issue's creation and its resolution. In Aide-mémoire's online setting, this
+predicate will sometimes be defined in terms of an event that is in the future
+relative to the present query.
 
 In contrast to previous work, Aide-mémoire exclusively focuses on the PR-issue
 link inference problem. Good PR-issue linking accelerates development: PR-issue
@@ -225,15 +246,14 @@ patches may aid reduce this source of noise. Further, this can have an added
 benefit for developers since tools such as \lstinline+git bisect+ would also
 benefit from such a segmentation of commits.
 
-We propose a new multi-version representation of code, the
-\deltaPDGN. It is natural to think of identification of communities in it as a
-slicing problem ~\cite{slicingsurvey}. However, boundaries across concerns do
-not naturally map to a slicing criteria; it is unclear on how to seed the
-slicing algorithm and when to terminate it. This stems from concerns sharing
-edges making their separation into disjoint entities using a slicing criteria
-difficult to specify. In the rest of this section, we discuss the literature
-around the problem of tangled commits and the theoretical foundations of
-our approach.
+We propose a new multi-version representation of code, the \deltaPDGN. It is
+natural to think of identification of communities in it as a slicing problem
+~\cite{slicingsurvey}. However, boundaries across concerns do not naturally map
+to a slicing criteria; it is unclear on how to seed the slicing algorithm and
+when to terminate it. This stems from concerns sharing edges making their
+separation into disjoint entities using a slicing criteria difficult to specify.
+In the rest of this section, we discuss the literature around the problem of
+tangled commits and the theoretical foundations of our approach.
 
 \subsection{Impact of Tangled Commits}
 \label{chapter:literature:sec:flexeme_rel_work:impact}
@@ -241,8 +261,8 @@ our approach.
 Tao \etal~\cite{Tao2012} were amongst the first to highlight the problem of
 change decomposition in their study on programmer code comprehension; they
 highlight the need for decomposition when many files are touched, multiple
-features implemented, or multiple bug fixes committed. The last is diagnosed
-by Murphy-Hill \etal~\cite{Murphy-Hill2012} as a deliberate practice to improve
+features implemented, or multiple bug fixes committed. The last is diagnosed by
+Murphy-Hill \etal~\cite{Murphy-Hill2012} as a deliberate practice to improve
 programmer productivity. Tao \etal conclude that decomposition is required to
 aid developer understanding of code changes.
 
@@ -259,73 +279,135 @@ fault localisation.
 
 \subsection{Untangling Commits into Atomic Patches}
 \label{chapter:literature:sec:flexeme_rel_work:untangle}
+
+It is natural to think of identification of communities in the \deltaPDGN as a
+slicing problem~\cite{slicingsurvey}. However, boundaries across concerns do not
+naturally map to a slicing criterion; it is unclear how to seed a slicing
+algorithm and when to terminate it. This is because concerns are linked with
+multiple edges which makes their separation difficult to specify with a slicing
+criterion. In the rest of this section, we discuss the literature around the
+problem of tangled commits and the theoretical foundations of Flexeme.
+
 Research on the impact of both tangled commits and non-essential code changes
 prompted an investigation into changeset decomposition. Herzig
 \etal~\cite{Herzig2013, Herzig2016} apply confidence voters in concert with
 agglomerative clustering to decompose changesets with promising results,
-achieving an accuracy of $0.58$-$0.80$ albeit on an artificially constructed
-dataset that mimics common causes of tangled commits. In contrast, Kirinuki
+achieving an accuracy of $0.58$-$0.80$ on an artificially constructed dataset
+that mimics common causes of tangled commits. In contrast, Kirinuki
 \etal~\cite{Kirinuki2014, Kirinuki2017} compile a database of atomic patterns to
 aid the identification of tangled commits; they manually classify the resulting
 decompositions as True, False, or Unclear, and find more than half of the
 commits are correctly identified as tangled. The authors recognise that
 employing a database introduces bias into the system and may necessitate
 moderation via heuristics, such as ignoring changes that are too fine-grained or
-the addition of dependencies.
+add dependencies.
 
 Other approaches rely on dependency graphs and use-define chains: Roover
 \etal~\cite{Roover2017} use a slicing approach to segment commits across a
 Program Dependency Graph, and correctly classify commits as (un)tangled in over
 90\% of the cases for the systems studied, excluding some projects where they
-are hampered by toolchain limitations. They propose but do not implement the use
-of System Dependency Graphs to reduce some of the limitations of their approach,
-such as considering only an intraprocedural scenario. Barnett \etal
-\cite{Barnett2015} provide a proof of concept implementation for untangling
-based on projecting source changes onto def-use chains, and classify the derived
-clusters output as trivial or non-trivial. They perform an extensive user study
-to validate their method and provide further evidence for the need for commit
-decomposition tools. They demonstrate that even a simple approach can usefully
-assist a developer. 
+are hampered by toolchain limitations. They propose, but do not implement, the
+use of System Dependency Graphs to reduce some of the limitations of their
+approach, such as being solely intraprocedural. Flexeme tackles interprocedural
+and cross-file dependencies by merging the $\delta$-PDGs of the files touched by
+a commit.  
 
-Dias \etal~\cite{Dias2015} take a more developer-centric approach and propose
+Barnett~\etal~\cite{Barnett2015} implement and evaluate a commit-untangling
+prototype. This prototype projects commits onto def-use chains, clusters the
+results, then classifies the clusters as trivial or non-trivial. A cluster is
+trivial if its def-use chains all fall into the same method. Barnett~\etal
+employ a mixed approach to evaluate their prototype. They manually investigated
+results with few non-trivial clusters (0-1), finding that their approach
+correctly separated 4 of 6 non-atomic commits,  or many non-trivial clusters (>
+5), finding that, in all cases, their prototype's sole reliance on def-use
+chains lead to excessive clustering. For results containing 2--5 clusters, they
+conducted a user-study. They found that 16 out of the 20 developers surveyed
+agreed that the presented clusters were correct and complete. This result is
+strong evidence that their lightweight and elegant approach is useful,
+especially to the tangled commits that Microsoft developers encounter
+day-to-day. During the interviews, multiple developers agreed that the changeset
+analysed did indeed tangle two different tasks, sometimes even confirming that
+developers had themselves separated the commit in question after review. In
+addition to validating their prototype, their interviews also found evidence for
+the need for commit decomposition tools. Because they use def-use chains and
+ignore trivial clusters, Barnett~\etal's approach can miss tangled concerns that
+Flexeme can discern. Barnett~\etal's user study itself shows that this can
+matter: it reports that some developers disagreed with the classification of
+some changesets as trivial.
+
+Dias~\etal~\cite{Dias2015} take a more developer-centric approach and propose
 the EpiceaUntangler tool. They instrument the Eclipse IDE and use confidence
 voters over fine-grained IDE events that are later converted into a similarity
 score via a Random Forest Regressor. This score is used similarly to Herzig
 \etal~\cite{Herzig2016}'s metrics, \ie to perform agglomerative clustering. They
 take an instrumentation-based approach to harvest information that would
-otherwise be lost such as changes that override earlier ones. Additionally, they
-do this to avoid the reliance on static analysis. They report a high median
-success rate of 91\% when used by developers during a two-week study. While Dias
-\etal circumvent static analysis, they require instrumenting an IDE which
-locks developers into supported ones.
-
-FLEXEME, as submitted to ICSE 2019, proposed to perform commit untangling by
-considering graph communities in a multi-version representation of the code
-where each community represents a single concept. This approach proved to be
-faster than Herzig \etal's approach~\cite{Herzig2016} having a cost of $15.6$s
-compared to Herzig \etal's $792$ seconds, however, at a $6$ p.p. cost. The
-current iteration considers a heavier approach that first computes graph
-similarity between methods that have been changed and then performs
-agglomerative clustering similar to Herzig \etal and EpiceaUntangler.
+otherwise be lost, such as changes that override earlier ones. This approach
+also avoids relying on static analysis. They report a high median success rate
+of 91\% when used by developers during a two-week study. While Dias~\etal
+sidestep static analysis, they require developers to use an instrumented IDE.
+Heddle is complementary to EpiceaUntangler: it allows reviewers to propose
+untanglings of code that may originate from development contexts where
+instrumentation might not be possible.
 
 \subsection{Multiversion Representations of Code}
 \label{chapter:literature:sec:flexeme_rel_work:multiversion_repr}
 
-Previous work on multiversion representations of programs has focused on static
-analysis. Le \etal~\cite{Le2014} propose a Multiversion Interprocedural Control
-Graph (MVICFG) for efficient and scalable multiversion patch verification over
-systems such as the PuTTY SSH client. Our \deltaPDG is a generalisation of this
+Related work has considered multiversion representations of programs for static
+analysis. \citet{kim2006program} investigate the applicability of different
+techniques for matching elements between different versions of a program. They
+examine different program representations, such as String, AST, CFG, Binary or a
+combination of these as well as the tools that work on them on two hypothetical
+scenarios. They only consider the ability of the tools to match elements across
+versions and leave the compact representation of a multiversion structure as
+future work. Some of the conclusions from the matching challenges presented by
+\citet{kim2006program} are echoed in Flexeme as well, we make use of the UNIX
+diff as it is stored within version histories; however, we also make use of
+line-span hints from the compilers for each version of the application to better
+facilitate matching nodes within a NFG.
+
+Le~\etal~\cite{Le2014} propose a Multiversion Interprocedural Control Graph
+(MVICFG) for efficient and scalable multiversion patch verification over systems
+such as the PuTTY SSH client. Our $\delta$-PDG is a generalisation of this
 approach to a more expressive data structure, with applications beyond
-traditional static analysis. Sebastian and Harald~\cite{Sebastian2018}
-generalise the Le \etal MVICFG construction to arbitrary software artefacts by
-constructing a framework that creates a multiversion representation of concrete
-syntax trees for a git project. They adopt a generic ANTLR parser, allowing them
-to be language agnostic, and achieve scalability by state sharing and storing
-the multi-revision graph structure in a sparse data structure. They show the
+traditional static analysis. 
+
+Alexandru~\etal~\citep{alexandru2019redundancy} generalise the Le~\etal MVICFG
+construction to arbitrary software artefacts by constructing a framework that
+creates a multiversion representation of concrete syntax trees for a git
+project. They adopt a generic ANTLR parser, allowing them to be language
+agnostic, and achieve scalability by state sharing and storing the
+multi-revision graph structure in a sparse data structure. They show the
 usefulness of such a framework by means of `McCabe’s Complexity', which they
 implement in this framework such that it is language agnostic, does not repeat
 computations unnecessarily and reuses the data stores in the sparse graph by
-propagating from child to parent node.
+propagating from child to parent node. \citet{Sebastian2018} propose a compact,
+multiversion AST that cleverly shares state across versions. Flexeme, in
+contrast, rests on PDGs and is well-suited for the untangling tasks, as our
+evaluation demonstrates.
+
+\subsection{Semantic Slicing of Version Histories}
+\label{chapter:literature:sec:flexeme_rel_work:sem_slice_vh}
+
+Features in a system often co-evolve, which tangles the changes made for a one
+high-level feature with others in a version history. To resurface
+feature-specific changes, they dynamically slice a target version, then walk
+backwards in history while they can reverse the intra-version patch without
+conflict; at each version they reach, they add any commit that contains a hunk
+that touches the current slice to it. The goal of this semantic slicing of
+version histories is to find a minimal slice of a version history that captures
+the evolution of a feature. Li~\etal~\cite{Li2018, li2015semantic} first
+formulated and introduced this problem. Semantic slicing is a form of commit
+untangling backwards through history.  This retrospective framing is why they
+treat the history as immutable. In this initial solution, Li~\etal treat commits
+as atomic so their slices may contain noise introduced by tangled commits. To
+reduce this noise, Li~\etal, in more recent work~\cite{Li2019}, unpack commits
+into single-file commits into a private, local history. Flexeme, in contrast, is
+static and online:  built from the ground up to rewrite commits as developer
+make history.  
+As such Flexeme and semantic slicing are complementary:  Flexeme would improve
+the signal to noise ratio of semantic slicing. An interesting direction for
+future work would be to use Flexeme to preprocess version histories prior to
+semantically slicing them as with Definer~\cite{Li2019}.
 
 \subsection{Graph Segmentation, Graph Kernels, and Community Detection}
 \label{chapter:literature:sec:flexeme_rel_work:graph_seg}
@@ -392,7 +474,9 @@ Ponzanelli \etal's work on \SO which is closest to our work.
 In SE research, part-of-speech tagging has been directly applied for identifier
 naming~\cite{Binkley2011}, code summarisation~\cite{Haiduc2010a, Haiduc2010b},
 concept localisation~\cite{Abebe2010}, traceability-link
-recovery~\cite{Capobianco2013}, and bug fixing~\cite{Tian2015}. The main intuition behind the statistical approaches in this are are due to the naturalness of code as discussed by Hindle \etal~\cite{hindle2012naturalness}.
+recovery~\cite{Capobianco2013}, and bug fixing~\cite{Tian2015}. The main
+intuition behind the statistical approaches in this are are due to the
+naturalness of code as discussed by Hindle \etal~\cite{hindle2012naturalness}.
 
 Operating directly on source code (not mixed text), Newman
 \etal~\cite{Newman2017} created source code equivalents for lexeme categories
@@ -409,12 +493,12 @@ as well as code. They suggested the introduction of a new part-of-speech tag
 called Lexical Item to capture cases where the ``correct'' tag cannot be
 determined easily due to language switching.
 
-We first review natural language processing
-(NLP) research on code-switching, the natural language analogue of the mixed
-text problem.  This is work on which we based POSIT.  Then we discuss initial
-efforts to establish analogues for parts of speech categories for code and use
-them to tag code tokens.  We close with the pioneering work on \stormed, the
-first context-free work to automatically tackle the mixed text tagging problem.
+We first review natural language processing (NLP) research on code-switching,
+the natural language analogue of the mixed text problem.  This is work on which
+we based POSIT.  Then we discuss initial efforts to establish analogues for
+parts of speech categories for code and use them to tag code tokens.  We close
+with the pioneering work on \stormed, the first context-free work to
+automatically tackle the mixed text tagging problem.
 
 NLP researchers are growing more interested in code-switching text and speech,
 \ie that mixes multiple natural languages, among other reasons due to the higher
@@ -437,10 +521,10 @@ Conditional Random Fields. The mixtures of experts model performed better at
 network approach, opting to solve two related problems simultaneously:
 part-of-speech tagging and Language ID tagging. The second task can be thought
 of as a segmentation task, which in our English-code setting can be rendered
-using formatting for code-blocks. They combined a biLSTM with a CRF network at both outputs and fused the
-two learning targets by simply summing the respective losses. This network
-achieves a test accuracy of 90.25\% on the inter-sentential code-switched
-dataset from Miami Bangor~\cite{bangorTalk}.
+using formatting for code-blocks. They combined a biLSTM with a CRF network at
+both outputs and fused the two learning targets by simply summing the respective
+losses. This network achieves a test accuracy of 90.25\% on the inter-sentential
+code-switched dataset from Miami Bangor~\cite{bangorTalk}.
 
 In the context of natural languages mixed with source code, Ponzanelli \etal are
 the first to go beyond using regular expressions to parse such mixed text. When
