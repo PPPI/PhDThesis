@@ -1287,6 +1287,14 @@
   url      = {http://dl.acm.org/citation.cfm?doid=2568225.2568304}
 }
 
+@inproceedings{li2015semantic,
+  title     = {Semantic slicing of software version histories},
+  author    = {Li, Yi and Rubin, Julia and Chechik, Marsha},
+  booktitle = {Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering},
+  pages     = {686--696},
+  year      = {2015}
+}
+
 @article{Li2016,
   abstract        = {Graph-structured data appears frequently in domains including chemistry, natural language semantics, social networks, and knowledge bases. In this work, we study feature learning techniques for graph-structured inputs. Our starting point is previous work on Graph Neural Networks (Scarselli et al., 2009), which we modify to use gated recurrent units and modern optimization techniques and then extend to output sequences. The result is a flexible and broadly useful class of neural network models that has favorable inductive biases relative to purely sequence-based models (e.g., LSTMs) when the problem is graph-structured. We demonstrate the capabilities on some simple AI (bAbI) and graph algorithm learning tasks. We then show it achieves state-of-the-art performance on a problem from program verification, in which subgraphs need to be described as abstract data structures.},
   archiveprefix   = {arXiv},
@@ -1299,6 +1307,33 @@
   pages           = {1--20},
   title           = {{Gated graph sequence neural networks}},
   year            = {2016}
+}
+
+@article{Li2018,
+  abstract = {Software developers often need to transfer functionality, e.g., a set of commits implementing a new feature or a bug fix, from one branch of a configuration management system to another. That can be a challenging task as the existing configuration management tools lack support for matching high-level, semantic functionality with low-level version histories. The developer thus has to either manually identify the exact set of semantically-related commits implementing the functionality of interest or sequentially port a segment of the change history, 'inheriting' additional, unwanted functionality. In this paper, we tackle this problem by providing automated support for identifying the set of semantically-related commits implementing a particular functionality, which is defined by a set of tests. We formally define the semantic slicing problem, provide an algorithm for identifying a set of commits that constitute a slice, and propose techniques to minimize the produced slice. We then instantiate the overall approach, CSlicer, in a specific implementation for Java projects managed in Git and evaluate its correctness and effectiveness on a set of open-source software repositories. We show that it allows to identify subsets of change histories that maintain the functionality of interest but are substantially smaller than the original ones.},
+  author   = {Li, Yi and Zhu, Chenguang and Rubin, Julia and Chechik, Marsha},
+  doi      = {10.1109/TSE.2017.2664824},
+  journal  = {IEEE Trans. Softw. Eng.},
+  keywords = {Software changes,dependency,program analysis,version control},
+  number   = {2},
+  pages    = {182--201},
+  title    = {{Semantic Slicing of Software Version Histories}},
+  volume   = {44},
+  year     = {2018}
+}
+
+@article{Li2019,
+  abstract = {Semantic history slicing solves the problem of extracting changes related to a particular high-level functionality from software version histories. State-of-the-art techniques combine static program analysis and dynamic execution tracing to infer an over-approximated set of changes that can preserve the functional behaviors captured by a test suite. However, due to the conservative nature of such techniques, the sliced histories may contain irrelevant changes. In this paper, we propose a divide-and-conquer-style partitioning approach enhanced by dynamic delta refinement to produce much smaller semantic history slices. We utilize deltas in dynamic invariants generated from successive test executions to learn significance of changes with respect to the target functionality. Additionally, we introduce a file-level commit splitting technique for untangling unrelated changes introduced in a single commit. Empirical results indicate that these measurements accurately rank changes according to their relevance to the desired test behaviors and thus partition history slices in an efficient and effective manner.},
+  author   = {Li, Yi and Zhu, Chenguang and Gligoric, Milos and Rubin, Julia and Chechik, Marsha},
+  doi      = {10.1007/s10515-019-00260-8},
+  issn     = {15737535},
+  journal  = {Autom. Softw. Eng.},
+  keywords = {Program analysis,Semantic history slicing,Software configuration management},
+  number   = {4},
+  pages    = {757--793},
+  title    = {{Precise semantic history slicing through dynamic delta refinement}},
+  volume   = {26},
+  year     = {2019}
 }
 
 @article{li2019graph,
