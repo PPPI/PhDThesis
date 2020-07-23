@@ -88,12 +88,11 @@ as far as GitHub is concerned, despite an encouragement of contributors to do so
 in the contribution guidelines. Further, developers only partially recording
 such link introduces bias in the datasets researchers use.
 
-\begin{tcolorbox}
-    \emph{Pull-request-Issue Traceability:} Given a project, developers should
-    receive traceability link suggestions when pertinent, \ie when they are
-    already performing a task within which a link can be recorded. For a
-    pull-request-issue traceability, suggestions are to be made at issue triage
-    and PR submission.
+\begin{tcolorbox}[title=Pull-request-Issue Traceability]
+    Given a project, developers should receive traceability link suggestions
+    when pertinent, \ie when they are already performing a task within which a
+    link can be recorded. For a pull-request-issue traceability, suggestions are
+    to be made at issue triage and PR submission.
 \end{tcolorbox}
 
 Additionally, links may not be clear if the fixes are presented as unfocused
@@ -103,11 +102,11 @@ tangled commits introduce bias in defect prediction. In our work, I aim to
 provide a diff time solution for commit untangling to help developers reduce
 this bias. The promise to developers is enabling tooling such as git bisect.
 
-\begin{tcolorbox}
-    \emph{Commit Untangling:} Given a commit, the patch should be decomposed
-    into smaller patches such that each patch tackles a single task, \ie would
-    be linked to a single issue or implements a single stakeholder concern. On
-    atomic commits, this process should be the identity function.
+\begin{tcolorbox}[title=Commit Untangling]
+    Given a commit, the patch should be decomposed into smaller patches such
+    that each patch tackles a single task, \ie would be linked to a single issue
+    or implements a single stakeholder concern. On atomic commits, this process
+    should be the identity function.
 \end{tcolorbox}
 
 Despite the international nature of platforms such as GitHub, a significant
@@ -121,13 +120,12 @@ access to mark-up to help developers demarcate code from English, in practice,
 even on StackOverflow submitters do forget to do so. This reduces the applicable
 research tools which use such formatting cues.
 
-\begin{tcolorbox}
-    \emph{Mixed-text Parsing:} Given an artefact that freely
-    mixes natural languages and formal languages, separate the languages.
-    Further, for each token, provide the tag in the language from which the
-    token is taken. In natural languages, this tags are part-of-speech tags; in
-    formal languages, these tags are the AST tags of the parents of the
-    terminals.
+\begin{tcolorbox}[title=Mixed-text Parsing]
+    Given an artefact that freely mixes natural languages and formal languages,
+    separate the languages. Further, for each token, provide the tag in the
+    language from which the token is taken. In natural languages, this tags are
+    part-of-speech tags; in formal languages, these tags are the AST tags of the
+    parents of the terminals.
 \end{tcolorbox}
 
 The tasks range from more developer focused to more researcher focused; however,

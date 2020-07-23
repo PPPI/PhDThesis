@@ -422,6 +422,10 @@
 \newcommand \@maketitle{%
     \newpage%
     \null%
+    \vspace{-3.4cm}%
+    \hspace{-4.6cm}%
+    \includegraphics{images/ucl-banner-a4.eps}%
+    \null%
     \vspace*{5em}%
 %%%
 %%%  Julia Schnabel wanted the following added.
@@ -464,6 +468,7 @@
 %    \begin{macrocode}
        \newcommand \makedeclaration {%
          \clearpage%
+         \thispagestyle{empty}%
          I, \@author , confirm that the work presented in this thesis is my own.
          Where information has been derived from other sources, I confirm that
          this has been indicated in the work. The work presented in this thesis
