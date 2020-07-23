@@ -156,7 +156,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
-\RequirePackage[scaled=1]{helvet}
+\RequirePackage[scaled]{helvet}
 \RequirePackage{mathptmx}
 %    \end{macrocode}
 %
