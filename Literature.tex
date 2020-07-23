@@ -81,7 +81,7 @@ recommender that filters the suggestions. Finally, St{\aa}hl
 \etal~\cite{Stahl2017} propose a light-weight framework where different systems
 can emit traceability events, facilitating a standardisation of how such links
 are recorded by minimising the cost of integrating otherwise incompatible tools
-within a single eco-system, which they call the eiffel framework.
+within a single eco-system, which they call the Eiffel framework.
 
 Asuncion and Taylor~\cite{Asuncion:2009:CCL:1556908.1557008} use record-replay
 and hypermedia to tackle software traceability, a prospective problem. Their
@@ -96,16 +96,16 @@ and privacy concerns. Indeed, the solution they present invasively instrumented
 specific versions of no less than five different tools, including general
 purpose tools like Firefox and MS Word. Many of these tools are under constant
 development; updating this instrumentation out-of-tree is extremely expensive,
-suggesting that St{\aa}hl \etal's light-weight approach is more likely to be
+suggesting that St{\aa}hl~\etal's light-weight approach is more likely to be
 maintainable.
 
-Asuncion \etal~\cite{TopicTraceability} in follow-up work incorporate an LDA
+Asuncion~\etal~\cite{TopicTraceability} in follow-up work incorporate an LDA
 model into their framework to improve the interpretability of their traces. To
 remain online, they recompute an LDA model on demand for each graph
 visualisation and search query. Aide-mémoire does not rely on LDA and thus
 scales better because it does not require per query model retraining.
 
-Additionally, Falessi \etal~\cite{Falessi2017} have done work towards
+Additionally, Falessi~\etal~\cite{Falessi2017} have done work towards
 quantifying the number of links that are left to be recovered. Their work
 assumes an offline, closed-world setting; they provide a framework that can help
 an analyst decide when to stop pursuing a traceability maintenance task. The aim
@@ -193,7 +193,7 @@ commit-issue link. They show an improvement over FRLink in terms of F1-score,
 and further show that pre-processing heuristics similar to previous work, such
 as ReLink~\cite{relink} or MLink~\cite{MLink}, help DeepLink achieve a higher
 F1-score. They also spot that the FRLink corpus had commit logs and issue titles
-that are exact matches, introducing bias in the dataset which Ruan \etal handle,
+that are exact matches, introducing bias in the dataset which Ruan~\etal handle,
 while FRLink does not. Since they did not evaluate DeepLink on Apache Commons or
 against RCLinker and DeepLink is not available, we do not know its performance
 relative to RCLinker.
@@ -258,15 +258,15 @@ tangled commits and the theoretical foundations of our approach.
 \subsection{Impact of Tangled Commits}
 \label{chapter:literature:sec:flexeme_rel_work:impact}
 
-Tao \etal~\cite{Tao2012} were amongst the first to highlight the problem of
+Tao~\etal~\cite{Tao2012} were amongst the first to highlight the problem of
 change decomposition in their study on programmer code comprehension; they
 highlight the need for decomposition when many files are touched, multiple
 features implemented, or multiple bug fixes committed. The last is diagnosed by
-Murphy-Hill \etal~\cite{Murphy-Hill2012} as a deliberate practice to improve
-programmer productivity. Tao \etal conclude that decomposition is required to
+Murphy-Hill~\etal~\cite{Murphy-Hill2012} as a deliberate practice to improve
+programmer productivity. Tao~\etal conclude that decomposition is required to
 aid developer understanding of code changes.
 
-Independently, Herzig \etal~\cite{Herzig2013, Herzig2016} investigate the impact
+Independently, Herzig~\etal~\cite{Herzig2013, Herzig2016} investigate the impact
 of tangled commits on classification and regression tasks within software
 engineering research. The authors manually classify a corpora of real-world
 changesets as atomic, tangled or unknown, and find that the fraction of tangled
@@ -422,7 +422,7 @@ using graph operators and their spectral properties to infer labels, such as
 using the graph Laplacian or the non-Backtracking operator~\cite{Krzakala2013}.
 These achieved good results at a high computational cost, the latter able to
 detect communities down to the theoretical limit imposed by the Signal-to-Noise
-ration for graphs sampled from an SBM. Saade \etal~\cite{Saade2014} later
+ration for graphs sampled from an SBM. Saade~\etal~\cite{Saade2014} later
 propose using the Bethe Hessian or deformed Laplacian to compute the community
 labels. They relate this operator to the non-Backtracking operator and that it
 can also achieve community detection down the Signal-to-Noise floor.
@@ -469,14 +469,14 @@ borrowing results from the relevant areas of the Natural Language Processing
 In this section, we will focus on first providing how similar techniques were
 already employed within the Software Engineering (SE) community, followed by the
 more relevant for this task research from the NLP community, concluding with
-Ponzanelli \etal's work on \SO which is closest to our work.
+Ponzanelli~\etal's work on \SO which is closest to our work.
 
 In SE research, part-of-speech tagging has been directly applied for identifier
 naming~\cite{Binkley2011}, code summarisation~\cite{Haiduc2010a, Haiduc2010b},
 concept localisation~\cite{Abebe2010}, traceability-link
 recovery~\cite{Capobianco2013}, and bug fixing~\cite{Tian2015}. The main
 intuition behind the statistical approaches in this are are due to the
-naturalness of code as discussed by Hindle \etal~\cite{hindle2012naturalness}.
+naturalness of code as discussed by Hindle~\etal~\cite{hindle2012naturalness}.
 
 Operating directly on source code (not mixed text), Newman
 \etal~\cite{Newman2017} created source code equivalents for lexeme categories
@@ -486,7 +486,7 @@ source-code from 1) Abstract syntax trees, 2) how the tokens impact memory, 3)
 where they are declared, and 4) what type they have. They report the prevalence
 of these categories in source-code. Their goal was to map these code categories
 to PoS tags, thereby building a bridge for applying NLP techniques to code for
-tasks such as program comprehension. Treude \etal~\cite{Treude2015portuguese}
+tasks such as program comprehension. Treude~\etal~\cite{Treude2015portuguese}
 described the challenges of analysing software documentation written in
 Portuguese which commonly mixes two natural languages (Portuguese and English)
 as well as code. They suggested the introduction of a new part-of-speech tag
@@ -513,7 +513,7 @@ Liu~\cite{Solorio2008} presented the first statistical approach to the task of
 part-of-speech (PoS) tagging code-switching text. On a Spanglish corpus, one
 that mixes Spanish and English, they heuristically combine PoS taggers trained
 on larger monolingual corpora and obtain 85\% accuracy. We can think of this
-approach as a mixtures of experts model. Jamatia \etal~\cite{Jamatia2015},
+approach as a mixtures of experts model. Jamatia~\etal~\cite{Jamatia2015},
 working on an English-Hindi corpus gathered from Facebook and Twitter, recreated
 Solorio's and Liu's tagger and additionally proposed a tagger built on
 Conditional Random Fields. The mixtures of experts model performed better at
@@ -526,7 +526,7 @@ both outputs and fused the two learning targets by simply summing the respective
 losses. This network achieves a test accuracy of 90.25\% on the inter-sentential
 code-switched dataset from Miami Bangor~\cite{bangorTalk}.
 
-In the context of natural languages mixed with source code, Ponzanelli \etal are
+In the context of natural languages mixed with source code, Ponzanelli~\etal are
 the first to go beyond using regular expressions to parse such mixed text. When
 customising LexRank~\cite{Ponzanelli2015b}, a summarisation tool for mixed text,
 they employed an island grammar that parses Java and stack-trace islands

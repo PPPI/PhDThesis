@@ -156,7 +156,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass{book}
-\RequirePackage{times}
+\RequirePackage[scaled=1]{helvet}
 \RequirePackage{mathptmx}
 %    \end{macrocode}
 %
@@ -422,8 +422,8 @@
 \newcommand \@maketitle{%
     \newpage%
     \null%
-    \vspace{-3.4cm}%
-    \hspace{-4.6cm}%
+    \vspace*{-10.5em}%
+    \hspace*{-13.8em}%
     \includegraphics{images/ucl-banner-a4.eps}%
     \null%
     \vspace*{5em}%
