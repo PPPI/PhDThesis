@@ -1,11 +1,3 @@
-% I may change the way this is done in a future version, 
-%  but given that some people needed it, if you need a different degree title 
-%  (e.g. Master of Science, Master in Science, Master of Arts, etc)
-%  uncomment the following 3 lines and set as appropriate (this *has* to be before \maketitle)
-% \makeatletter
-% \renewcommand {\@degree@string} {Master of Things}
-% \makeatother
-
 \title{Improving Software Project Health using Machine Learning}
 \author{Profir-Petru P\^ar\cb{t}achi}
 \department{Department of Computer Science}
@@ -15,6 +7,7 @@
 
 \ifthenelse{\boolean{showconjoin}}{
 \begin{conjoint}
+
 The thesis “Improving Project Health using Machine Learning” by Pârțachi
 Profir-Petru, the undersigned, is composed of three main papers which were
 written in collaboration with others. For each paper, I include the list of
@@ -78,10 +71,12 @@ Santanu Dash, while manual evaluations of TaskNav augmented with POSIT were done
 together with Christoph Treude.
 
 \doublesignature{Earl T. Barr}
+
 \end{conjoint}
 }{}
 
 \begin{abstract} % 300 word limit
+
 In recent years systems that would previously live on different platforms
 have been integrated under a single umbrella. The proliferation of GitHub,
 which offers pull-requests, issue tracking and version history, and its
@@ -107,17 +102,19 @@ desirable. This thesis aims to (semi-)automate tasks for this new paradigm
 and its attendant infrastructure by bringing to the foreground the relevant
 NLP and ML techniques.
 
-Under this umbrella, we focus on three synergistic tasks from this domain:
-(1) improving the issue-pull-request traceability, which can aid existing
-systems to automatically curate the issue backlog as pull-requests are
-merged; (2) untangling commits in a version history, which can aid the
-beforementioned traceability task as well as improve the usability of
-determining a fault introducing commit, or cherry-picking via tools such as
-git bisect; (3) mixed-text parsing, to allow better API mining and open new
-avenues for project-specific code-recommendation tools.	
+Under this umbrella, I focus on three synergistic tasks from this domain: (1)
+improving the issue-pull-request traceability, which can aid existing systems to
+automatically curate the issue backlog as pull-requests are merged; (2)
+untangling commits in a version history, which can aid the beforementioned
+traceability task as well as improve the usability of determining a fault
+introducing commit, or cherry-picking via tools such as git bisect; (3)
+mixed-text parsing, to allow better API mining and open new avenues for
+project-specific code-recommendation tools.	
+
 \end{abstract}
 
 \begin{impactstatement}
+
 In the modern world, software is ubiquitous: from the personal computers most of
 us use to the mission critical systems that require fine control. Software
 quality is usually a result of a healthy software project, \ie it is not just a
@@ -138,10 +135,11 @@ borrowing techniques and methodology from Machine Learning, I propose prototype
 systems to resolve these issues.
 
 The work I present in this thesis follows the ethos of helping developers help
-themselves and us. We help developers maintain project health with its inherent
-benefits: easier onboarding, lower costs of maintenance \etc. This in turn can
-create better training data for researchers and may enable yet better automation
-techniques and research avenues for Big Code.
+themselves and us. We, as researchers, help developers maintain project health
+with its inherent benefits: easier onboarding, lower costs of maintenance \etc
+This in turn can create better training data for researchers and may enable yet
+better automation techniques and research avenues for Big Code.
+
 \end{impactstatement}
 
 \begin{acknowledgements}
@@ -186,7 +184,9 @@ informal chats were invaluable and they all helped me through the journey.
 Discussing our work together helped me, and I hope them as well, better
 understand how to do proper science, to better understand how and when
 statistical techniques should be applied, how to formulate experiments, how to
-thoroughly explore hypothesises.
+thoroughly explore hypothesises. I also extend my gratitude to my close friend,
+Tudor Haru\cb{t}a, with whom I oft shared my progress and who was always
+available to chat when I needed to take my mind off of research.
 
 Last but not by any means least, I would like to thank my family, my dear older
 sister for always bearing with me and lending a ear to listen and a pair of eyes
@@ -203,9 +203,6 @@ journey. To everyone, thank you.
 \end{acknowledgements}
 
 \setcounter{tocdepth}{2} 
-% Setting this higher means you get contents entries for
-%  more minor section headers.
-
 \hypersetup{linkcolor = {black}}
 \tableofcontents
 \listoffigures

@@ -465,7 +465,15 @@
        \newcommand \makedeclaration {%
          \clearpage%
          I, \@author , confirm that the work presented in this thesis is my own.
-         Where information has been derived from other sources, I confirm that this has been indicated in the work.
+         Where information has been derived from other sources, I confirm that
+         this has been indicated in the work. The work presented in this thesis
+         is original work undertaken between September 2016 and July 2020 at
+         University College London.
+         
+         I list the papers that comprise this work in Section 1.3. In the same
+         section, I clearly detail my contributions towards each paper. They
+         represent Chapers~3, 4, and 5 respectively.
+
          \gdef \@author{}%
          \clearpage%
        }%
