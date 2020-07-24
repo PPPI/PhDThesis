@@ -445,6 +445,7 @@
     \newpage%
     \null%
     \ifthenelse{\boolean{useuclbanner}}{%
+        % The magic numbers here assume the standard UCL A4 Header EPS file
         \vspace*{-10.5em}%
         \hspace*{-13.8em}%
         \includegraphics{\@uclbannerlocation}%
