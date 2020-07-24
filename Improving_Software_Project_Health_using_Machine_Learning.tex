@@ -38,6 +38,9 @@
 \RequirePackage[l2tabu, orthodox]{nag}
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
+% Hyperref has this option set by the cls file, 
+% so we avoid that by loading it first
+\PassOptionsToPackage{pagebackref=true}{hyperref}
 
 
 % ------ Main document class specification ------
