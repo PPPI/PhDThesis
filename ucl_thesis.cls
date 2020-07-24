@@ -158,6 +158,8 @@
 \LoadClass{book}
 \RequirePackage[scaled]{helvet}
 \RequirePackage{mathptmx}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\RequirePackage{ifthen}
 %    \end{macrocode}
 %
 %  \subsection{Page Layout}
@@ -190,9 +192,9 @@
 %  \begin{macro}{\ps@headings}
 %  Define a new style so that all the standard styles are available.
 %    \begin{macrocode}
-\def \ps@headings{%
-    \def \@oddhead{\normalfont \rmfamily \slshape \hfill \rightmark \hfill \thepage}%
-    \def \@evenhead{\normalfont \rmfamily \slshape \thepage \hfill \leftmark \hfill}%
+    \def \ps@headings{%
+    \def \@oddhead{\normalfont \sffamily \slshape \hfill \rightmark \hfill \thepage}%
+    \def \@evenhead{\normalfont \sffamily \slshape \thepage \hfill \leftmark \hfill}%
     \let \@oddfoot = \@empty%
     \let \@evenfoot = \@empty%
     \let \@mkboth = \markboth%
@@ -401,6 +403,14 @@
 %    \begin{macrocode}
 \def\department#1{\gdef\@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+\def\extradeclaration#1{\gdef\@extradeclaration{#1}}
+\def\uclbannerlocation#1{\gdef\@uclbannerlocation{#1}}
+\newboolean{useuclbanner}
+\setboolean{useuclbanner}{false}
+\ifthenelse{\boolean{useuclbanner}}%
+{\def\@uclbannerlocation{\@latex@warning@no@line{No \noexpand\uclbannerlocation given}}}{}
+\newboolean{showconjoin}
+\setboolean{useuclbanner}{false}
 \renewcommand \maketitle{%
     \setcounter{page}{1}%
     \thispagestyle{empty}%
@@ -422,9 +432,11 @@
 \newcommand \@maketitle{%
     \newpage%
     \null%
-    \vspace*{-10.5em}%
-    \hspace*{-13.8em}%
-    \includegraphics{images/ucl-banner-a4.eps}%
+    \ifthenelse{\boolean{useuclbanner}}{%
+        \vspace*{-10.5em}%
+        \hspace*{-13.8em}%
+        \includegraphics{\@uclbannerlocation}%
+    }{}%
     \null%
     \vspace*{5em}%
 %%%
@@ -471,14 +483,10 @@
          \thispagestyle{empty}%
          I, \@author , confirm that the work presented in this thesis is my own.
          Where information has been derived from other sources, I confirm that
-         this has been indicated in the work. The work presented in this thesis
-         is original work undertaken between September 2016 and July 2020 at
-         University College London.
-         
-         I list the papers that comprise this work in Section 1.3. In the same
-         section, I clearly detail my contributions towards each paper. They
-         represent Chapers~3, 4, and 5 respectively.
+         this has been indicated in the work. \@extradeclaration
 
+         \noindent Date: \@date\\
+         Signature: 
          \gdef \@author{}%
          \clearpage%
        }%
@@ -533,23 +541,23 @@
 \renewcommand \section{\@startsection {section}{1}{\z@}%
                                       {-1ex \@plus -.4ex \@minus -.2ex}%
                                       {.6ex \@plus .1ex}%
-                                      {\reset@font \Large \bfseries}}
+                                      {\raggedright \reset@font \Large \bfseries}}
 \renewcommand \subsection{\@startsection{subsection}{2}{\z@}%
                                         {-.7ex\@plus -.3ex \@minus -.2ex}%
                                         {.4ex \@plus .1ex}%
-                                        {\reset@font \large \bfseries}}
+                                        {\raggedright \reset@font \large \bfseries}}
 \renewcommand \subsubsection{\@startsection{subsubsection}{3}{\z@}%
                                         {-.5ex\@plus -.2ex \@minus -.2ex}%
                                         {.3ex \@plus .1ex}%
-                                        {\reset@font \large}}
+                                        {\raggedright \reset@font \large}}
 \renewcommand \paragraph{\@startsection{paragraph}{4}{\z@}%
                                        {.5ex \@plus .1ex \@minus .2ex}%
                                        {-.2em}%
-                                       {\reset@font \normalsize \bfseries}}
+                                       {\raggedright \reset@font \normalsize \bfseries}}
 \renewcommand \subparagraph{\@startsection{subparagraph}{5}{\parindent}%
                                           {-.3ex \@plus .1ex \@minus .2ex}%
                                           {-.2em}%
-                                          {\reset@font \normalsize \bfseries}}
+                                          {\raggedright \reset@font \normalsize \bfseries}}
 \setcounter{secnumdepth}{2}
 %    \end{macrocode}
 %

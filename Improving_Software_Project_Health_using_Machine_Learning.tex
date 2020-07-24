@@ -38,7 +38,7 @@
 \RequirePackage[l2tabu, orthodox]{nag}
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
-\PassOptionsToPackage{pagebackref=true, hypertexnames=false}{hyperref}
+\PassOptionsToPackage{pagebackref=true, hypertexnames=false, unicode, psdextra}{hyperref}
 
 
 % ------ Main document class specification ------
@@ -65,9 +65,6 @@
 
 % Keep the main file clean, moved custom macros to the GlobalMacros file
 \input{GlobalMacros}
-
-% Flags for content selection
-\setboolean{showconjoin}{false}
 
 % Sets up links within your document, for e.g. contents page entries
 %  and references, and also PDF metadata.
