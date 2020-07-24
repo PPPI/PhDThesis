@@ -1,6 +1,6 @@
 % Flags for content selection; 
 % They should be before calls to \maketitle, \makedeclaration etc.
-\setboolean{showconjoin}{false}
+\setboolean{showconjoint}{false}
 \setbool{useuclbanner}{true}
 \uclbannerlocation{images/ucl-banner-a4.eps}
 
@@ -20,7 +20,6 @@ my contributions towards each paper. They represent Chapers~\ref{chapter:am}, %
 \maketitle
 \makedeclaration
 
-\ifthenelse{\boolean{showconjoin}}{
 \begin{conjoint}
 
 The thesis “Improving Project Health using Machine Learning” by Pârțachi
@@ -88,7 +87,6 @@ together with Christoph Treude.
 \doublesignature{Earl T. Barr}
 
 \end{conjoint}
-}{}
 
 \begin{abstract} % 300 word limit
 

@@ -403,14 +403,25 @@
 %    \begin{macrocode}
 \def\department#1{\gdef\@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+%   Allows extra text after the boiler-plate declaration
 \def\extradeclaration#1{\gdef\@extradeclaration{#1}}
+%   Allows using the UCL eps A4 banners on the title page
 \def\uclbannerlocation#1{\gdef\@uclbannerlocation{#1}}
 \newboolean{useuclbanner}
 \setboolean{useuclbanner}{false}
 \ifthenelse{\boolean{useuclbanner}}%
 {\def\@uclbannerlocation{\@latex@warning@no@line{No \noexpand\uclbannerlocation given}}}{}
-\newboolean{showconjoin}
-\setboolean{useuclbanner}{false}
+%   Allows a conjoin work statement to be placed from the preamble
+\newboolean{showconjoint}
+\setboolean{showconjoint}{false}
+%   Used to place the department and UCL over the UCL eps banner
+\newcommand{\placetextbox}[3]{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \setbox0=\hbox{#3}% Put <stuff> in a box
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(\LenToUnit{#1\paperwidth},\LenToUnit{#2\paperheight}){\vtop{{\null}\makebox[0pt][l]{\begin{tabular}{l}#3\end{tabular}}}}%
+  }%
+}
+%
 \renewcommand \maketitle{%
     \setcounter{page}{1}%
     \thispagestyle{empty}%
@@ -420,7 +431,8 @@
     \gdef \@address{}%
     \gdef \@thanks{}%
     %\gdef \@author{}%
-    \gdef \@department{}%
+    \ifthenelse{\boolean{useuclbanner}}{}{%
+    \gdef \@department{}}%
     \gdef \@title{}%
     \let \maketitle = \relax%
 }
@@ -436,6 +448,10 @@
         \vspace*{-10.5em}%
         \hspace*{-13.8em}%
         \includegraphics{\@uclbannerlocation}%
+        \placetextbox{0.14}{0.899}{%
+            \textcolor{white}{\Large \bf \@department}\\%
+            \textcolor{white}{\Large \bf University College London}%
+        }%
     }{}%
     \null%
     \vspace*{5em}%
@@ -485,9 +501,14 @@
          Where information has been derived from other sources, I confirm that
          this has been indicated in the work. \@extradeclaration
 
+         \null
+         \vspace*{2em}
          \noindent Date: \@date\\
+         Name: \@author\\
          Signature: 
          \gdef \@author{}%
+         \ifthenelse{\boolean{useuclbanner}}{%
+         \gdef \@department{}}{}%
          \clearpage%
        }%
 %    \end{macrocode}
@@ -601,8 +622,11 @@
 %    \begin{macrocode}
     \newcommand \@conjoint{Statement of Conjoint Work}
     \newenvironment{conjoint}{%
-        \chapter*{\@conjoint}%
-        \@mkboth{\@conjoint}{\@conjoint}%
+        \ifthenelse{\boolean{showconjoint}}{%
+            \chapter*{\@conjoint}%
+            \@mkboth{\@conjoint}{\@conjoint}%
+            \expandafter\endcomment%
+        }{\expandafter\comment}%
     }{%
     }
     %    \end{macrocode}
