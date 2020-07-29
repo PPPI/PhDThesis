@@ -1,6 +1,6 @@
 % Flags for content selection; 
 % They should be before calls to \maketitle, \makedeclaration etc.
-\setboolean{showconjoint}{true}
+\setboolean{showconjoint}{false}
 \setbool{useuclbanner}{true}
 \uclbannerlocation{images/ucl-banner-a4.eps}
 
@@ -21,19 +21,19 @@ my contributions towards each paper. They represent Chapers~\ref{chapter:am}, %
 \makedeclaration
 
 \begin{conjoint}
-\input{conjoint}
+\input{Conjoint}
 \end{conjoint}
 
 \begin{abstract} % 300 word limit
-\input{abstract}
+\input{Abstract}
 \end{abstract}
 
 \begin{impactstatement}
-\input{impact}
+\input{Impact}
 \end{impactstatement}
 
 \begin{acknowledgements}   
-\input{acknowledgements}
+\input{Acknowledgements}
 \end{acknowledgements}
 
 \setcounter{tocdepth}{2} 

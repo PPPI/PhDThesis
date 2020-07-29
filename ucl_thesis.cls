@@ -164,6 +164,7 @@
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 \RequirePackage{ifthen}
 \RequirePackage[pscoord]{eso-pic}
+\RequirePackage[clearempty,pagestyles,newlinetospace,nobottomtitles]{titlesec}
 %    \end{macrocode}
 %
 %  \subsection{Page Layout}
@@ -536,35 +537,41 @@
     \@afterindentfalse%
     \secdef \@chapter \@schapter%
 }
-\def \@makechapterhead#1{%
-    \vspace*{40\p@}%
-    {\parindent \z@%
-     \raggedright%
-     \reset@font%
-     \ifnum \c@secnumdepth >\m@ne%
-         \if@mainmatter%
-             \Large \bfseries \@chapapp{} \thechapter%
-             \par%
-             \vskip 20\p@%
-         \fi%
-     \fi%
-     \huge \bfseries #1%
-     \par%
-     \nobreak%
-     \vskip 40\p@%
-    }%
-}
-\def \@makeschapterhead#1{%
-    \vspace*{50\p@}%
-    {\parindent \z@%
-     \raggedright%
-     \reset@font%
-     \huge \bfseries #1%
-     \par%
-     \nobreak%
-     \vskip 40\p@%
-    }%
-}
+\definecolor{chaptergrey}{rgb}{0.7,0.7,0.7}
+\titleformat{name=\chapter}[display]%
+  {\normalfont\hfuzz=\maxdimen}%
+  {\color{chaptergrey}%
+   %\ifodd\thepage\raggedleft\else\raggedright\fi%
+   \raggedleft%
+   \fontseries{bx}%
+   \fontsize{96}{96}\selectfont%
+   \setlength{\baselineskip}{\z@}%
+   \edef\@tempa{\chaptertitlename}%
+   \ifx\@tempa\chaptername\else%
+     \begingroup%
+     \fontseries{bx}%
+     \fontsize{20}{20}\selectfont%
+     \setlength{\baselineskip}{\z@}%
+     \raisebox{22pt}{\chaptertitlename\enspace}%
+     \endgroup%
+   \fi%
+   \thechapter}%
+  {-1.5pc}%
+  {%\ifodd\thepage\raggedleft\else\raggedright\fi%
+   \raggedleft%
+   \fontseries{bx}%
+   \fontsize{20}{20}\selectfont}%
+  [\addtocontents{loa}{\protect\addvspace{10pt}}]
+
+\titleformat{name=\chapter,numberless}[display]%
+  {\normalfont\hfuzz=\maxdimen}%
+  {}%
+  {-1pc}%
+  {%\ifodd\thepage\raggedleft\else\raggedright\fi%
+   \raggedleft%
+   \fontseries{bx}%
+   \fontsize{20}{20}\selectfont}
+\titlespacing*{\chapter}{0pt}{*7}{*9}
 \renewcommand \section{\@startsection {section}{1}{\z@}%
                                       {-1ex \@plus -.4ex \@minus -.2ex}%
                                       {.6ex \@plus .1ex}%
@@ -626,17 +633,17 @@
 %  \begin{environment}{statement of conjoint work}
 %  An environment for the Statement of Conjoint Work
 %    \begin{macrocode}
-    \newcommand \@conjoint{Statement of Conjoint Work}
-    \newenvironment{conjoint}{%
-        \ifthenelse{\boolean{showconjoint}}{%
-            \chapter*{\@conjoint}%
-            \@mkboth{\@conjoint}{\@conjoint}%
-            \expandafter\endcomment%
-        }{\expandafter\comment}%
-    }{%
-    }
-    %    \end{macrocode}
-    %  \end{environment}
+\newcommand \@conjoint{Statement of Conjoint Work}
+\newenvironment{conjoint}{%
+    \ifthenelse{\boolean{showconjoint}}{%
+        \chapter*{\@conjoint}%
+        \@mkboth{\@conjoint}{\@conjoint}%
+        \expandafter\endcomment%
+    }{\expandafter\comment}%
+}{%
+}
+%    \end{macrocode}
+%  \end{environment}
 %  \Finale
 \endinput
 %%
