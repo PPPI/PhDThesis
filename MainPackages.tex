@@ -85,9 +85,6 @@
 % Needed for Author name, uses the correct comma below S and T for Romanian
 \usepackage{combelow}  
 
-% Add the papers as is, compiled on their own
-\usepackage[enable-survey]{pdfpages}
-
 % Subfigures, used in Aide-mémoire
 \usepackage[caption=false,font=footnotesize,labelfont=sf,textfont=sf]{subfig}
 
@@ -115,13 +112,10 @@
 % Allow Definition environments
 \usepackage{amsthm}
 
-% Switch to natbib to allow for citep and citet as used in papers
-\usepackage{natbib}
-
 % Some of the examples need tcolorbox
 \usepackage{tcolorbox}
 
-%allow valign of graphics
+% Allow valign of graphics
 \usepackage[export]{adjustbox}
 
 % For Flexeme's diagram
@@ -131,7 +125,7 @@
 % Used by some examples in Flexeme for specific Unicode
 \usepackage[T1]{fontenc}
 
-% Used for tables in Flexeme
+% Used for tables in Flexeme, allows fixed width tables
 \usepackage{tabularx}
 
 % Used for better formatting of AM equations
@@ -142,8 +136,6 @@
 
 % Avoid bottom page titles!
 \usepackage[nobottomtitles]{titlesec}
-
-\renewcommand\familydefault{\sfdefault}
 
 % Fix TOC
 \usepackage{tocbibind}

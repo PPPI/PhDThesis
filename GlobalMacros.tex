@@ -1,3 +1,4 @@
+% General English Macros
 \newcommand{\cf}{\hbox{\emph{cf.}}\xspace}
 \newcommand{\deletia}{\ldots [deletia] \ldots}
 \newcommand{\etal}{\hbox{\emph{et al.}}\xspace}
@@ -12,6 +13,7 @@
 \newcommand{\infinity}{\infty}
 \newcommand{\green}{PineGreen}
 
+% Tools, Dataset Names, and Structures
 \newcommand{\stormed}{StORMeD\xspace}
 \newcommand{\SO}{Stack Overflow\xspace}
 \newcommand{\deltaPDG}{$\delta$-PDG\xspace}
@@ -19,9 +21,39 @@
 \newcommand{\deltaPDGs}{$\delta$-PDGs\xspace}
 \newcommand{\deltaPDGN}{$\delta$-NFG\xspace}
 \newcommand{\deltaPDGNs}{$\delta$-NFGs\xspace}
+
+% So we can read the maths normally
 \newcommand{\bra}{\langle}
 \newcommand{\ket}{\rangle}
 
+% For Flexeme, node/annotation equivalence
+\newcommand{\annequiv}{$\equiv_{a}$\xspace}
+\newcommand{\nodeequiv}{$\equiv_{n}$\xspace}
+
+% Colour Definitions (cb = colour blind)
+\definecolor{cb-green-sea}  {RGB}{  0, 146, 146}
+\definecolor{cb-purple}     {RGB}{ 73,   0, 146}
+\definecolor{cb-blue-sky}   {RGB}{109, 182, 255}
+\definecolor{cb-burgundy}   {RGB}{146,   0,   0}
+
+% Define diff language for lstlisting
+\lstdefinelanguage{diff}{
+  morecomment=[f][\color{cb-blue-sky}]{@@}, % group identifier
+  morecomment=[f][\color{cb-burgundy}]-,    % deleted lines 
+  morecomment=[f][\color{cb-green-sea}]+,   % added lines
+  morecomment=[f][\color{cb-purple}]{---},  % Diff header lines (must appear after +,-)
+  morecomment=[f][\color{magenta}]{+++},
+}
+
+% math-mode version of "l" column type to save typing
+\newcolumntype{L}{>{$}l<{$}} 
+
+% Phantom box used for highlighting and bold font selection in AM tables
+\newcommand*\phantomfbox[1]{{%
+ \ooalign{#1\cr\hidewidth\fbox{\phantom{#1}}\hidewidth\cr}}}
+\newcommand\bftab[1]{{\fontseries{b}\selectfont #1}}
+
+% In-line TODO macros with nicer typesetting.
 \newboolean{showcomments}
 \setboolean{showcomments}{true} % comment this line to deactivate comments
 \ifthenelse{\boolean{showcomments}}{
@@ -34,12 +66,16 @@
   \newcommand{\todo}[1]{}
 }
 
+% Named TODOs, one for me and one for the supervisor,
+% Mostly used for the paper imports when we still worked on them.
 \newcommand{\pp}[1]{\nbc{Profir}{#1}{blue}\xspace}
 \newcommand{\eb}[1]{\nbc{Earl}{#1}{red}\xspace}
 
+% Definition environment
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
+% Double signature for the conjoin statement
 \newcommand{\doublesignature}[2][Profir-Petru P\^ar\cb{t}achi]{%
   \parbox{\textwidth}{
     \vspace{2cm}

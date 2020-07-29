@@ -1,10 +1,9 @@
 \chapter{Flexeme: Untangling Commits Using Lexical Flows}
 \label{chapter:flexeme}
 
-% Copied here to avoid issues with the paper latex
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}
-\renewcommand{\algorithmicensure}{\textbf{Output:}}
-
+%%%--------------------------------------------------------------------------%%%
+%%% Macros from Flexeme                                                      %%%
+%%%--------------------------------------------------------------------------%%%
 
 \newcommand{\ourapproach}{\textsc{flexeme}\xspace}
 \newcommand{\Ourapproach}{\textsc{Flexeme}\xspace}
@@ -42,23 +41,9 @@
 \newcommand{\HerzigConceptsAccuracy}{$p=0.28$\xspace}
 \newcommand{\OurtoolConceptsAccuracy}{$p=0.76$\xspace}
 
-\newcommand{\annequiv}{$\equiv_{a}$\xspace}
-\newcommand{\nodeequiv}{$\equiv_{n}$\xspace}
-
-% ------------------------------------------------------- [ Colour Definitions ]
-\definecolor{cb-green-sea}  {RGB}{  0, 146, 146}
-\definecolor{cb-purple}     {RGB}{ 73,   0, 146}
-\definecolor{cb-blue-sky}   {RGB}{109, 182, 255}
-\definecolor{cb-burgundy}   {RGB}{146,   0,   0}
-
-% Define diff language for lstlisting
-\lstdefinelanguage{diff}{
-  morecomment=[f][\color{cb-blue-sky}]{@@}, % group identifier
-  morecomment=[f][\color{cb-burgundy}]-,    % deleted lines 
-  morecomment=[f][\color{cb-green-sea}]+,   % added lines
-  morecomment=[f][\color{cb-purple}]{---},  % Diff header lines (must appear after +,-)
-  morecomment=[f][\color{magenta}]{+++},
-}
+%%%--------------------------------------------------------------------------%%%
+%%% END OF Macros from Flexeme                                               %%%
+%%%--------------------------------------------------------------------------%%%
 
 \paragraph{Paper Authors}
 \begin{enumerate}

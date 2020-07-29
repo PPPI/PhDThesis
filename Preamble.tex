@@ -1,6 +1,6 @@
 % Flags for content selection; 
 % They should be before calls to \maketitle, \makedeclaration etc.
-\setboolean{showconjoint}{false}
+\setboolean{showconjoint}{true}
 \setbool{useuclbanner}{true}
 \uclbannerlocation{images/ucl-banner-a4.eps}
 
@@ -21,203 +21,19 @@ my contributions towards each paper. They represent Chapers~\ref{chapter:am}, %
 \makedeclaration
 
 \begin{conjoint}
-
-The thesis “Improving Project Health using Machine Learning” by Pârțachi
-Profir-Petru, the undersigned, is composed of three main papers which were
-written in collaboration with others. For each paper, I include the list of
-authors herein and detail exactly my contributions. All authors have contributed
-significantly to the writing of the papers; therefore, I detail only non-writing
-work. Additionally, all work was done under the careful supervision of Earl
-Barr, his insight has shaped all my work and our regular meetings were often
-used to checkpoint and plan out my research tasks.
-
-\begin{itemize}[leftmargin=*]
-    \item[] \textbf{Aide-mémoire: Improving a Project’s Collective Memory via
-Pull Request-Issue Links} 
-    
-    \noindent\emph{Authors: Profir-Petru Pârțachi, David R. White, Earl T. Barr}
-    
-    \noindent\emph{Venue: Submitted to ACM Transactions on Software Engineering
-    and Methodology (TOSEM)}
-
-    \noindent I have determined and mined the dataset of GitHub projects. I have
-    implemented the proposed PR-Issue linker, performed the exploratory data
-    analysis and feature engineering as well as wrote the evaluation and result
-    analysis scripts. The experimental and EDA designs were done in close
-    collaboration with David White who guided me patiently.
-
-    \item[] \noindent\textbf{Flexeme: Untangling Commits Using Lexical Flows}
-    
-    \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Miltose
-    Allamanis, Earl T. Barr}
-    
-    \noindent\emph{Venue: Proceedings of 28th ACM Joint European Software
-    Engineering Conference and Symposium on the Foundations of Software
-    Engineering, (ESEC/FSE 2020)}
-
-    \noindent  I have implemented in full the construction of our new structure,
-    though the idea of the structure was from Earl Barr, and the details of the
-    specification were worked in close collaboration. I also implemented the
-    necessary methods to construct the dataset, reproduced previous work in the
-    area and implemented our proposed untangling algorithms as well as their
-    evaluation on the constructed dataset. The RefiNym implementation was
-    provided by Santanu Dash who helped me integrate it with Flexeme. The
-    original PDG extraction implementation for C\# code was provided by Miltose
-    Allamanis. Santanu Dash and I performed the manual evaluations.
-    
-    %%% !Remember to check if this is still needed if you edit text above it!
-    \pagebreak
-    
-    \item[] \noindent\textbf{POSIT: Simultaneously Tagging Natural and
-    Programming Languages} 
-    
-    \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Christoph
-    Treude, Earl T. Barr}
-    
-    \noindent\emph{Venue: Proceedings of 42nd International Conference on
-    Software Engineering (ICSE ’20)}
-
-    \noindent I have implemented the preprocessing scripts, the Neural Network
-    that realises POSIT, the adaptation of the previous State-of-the-art to our
-    problem, and the necessary evaluation scripts. The Code Comments corpus was
-    provided by Santanu Dash. The original implementation of TaskNav was
-    provided by Christoph Treude. The informal proof of context-sensitivity of
-    mixed-text was worked on in close collaboration with Earl Barr without whom
-    the proof would have not been finished in a timely manner. Manual evaluation
-    of POSIT was done together with Santanu Dash, while manual evaluations of
-    TaskNav augmented with POSIT were done together with Christoph Treude.
-
-\end{itemize}
-
-\doublesignature{Earl T. Barr}
-
+\input{conjoint}
 \end{conjoint}
 
 \begin{abstract} % 300 word limit
-
-In recent years systems that would previously live on different platforms
-have been integrated under a single umbrella. The proliferation of GitHub,
-which offers pull-requests, issue tracking and version history, and its
-integration with other solutions such as Gerrit, or Travis, as well as the
-response from competitors has led to leaner and faster development cycles.
-This has also reduced the cost of entry and created large, publicly
-accessible sources of source-code together with related project artefacts.
-
-This shift in tooling has also facilitated a shift in development paradigms,
-developers now prefer a continuous integration/continuous delivery
-infrastructure. This has led to more projects adopting a more agile
-development process. Developers often forgo tasks that may aid project
-health so that they can instead travel light. However, project health
-determines project success.  Project health encompasses traceability,
-documentation, adherence to coding conventions, in short tasks that allow
-for lower maintenance costs and higher accountability.
-
-Simultaneously, this shift has allowed the proliferation of Natural
-Language or Natural Language and Formal Language textual artefacts which are
-programmatically accessible. This suggests that approaches from Natural
-Language Processing and Machine Learning are now feasible and indeed
-desirable. This thesis aims to (semi-)automate tasks for this new paradigm
-and its attendant infrastructure by bringing to the foreground the relevant
-NLP and ML techniques.
-
-Under this umbrella, I focus on three synergistic tasks from this domain: (1)
-improving the issue-pull-request traceability, which can aid existing systems to
-automatically curate the issue backlog as pull-requests are merged; (2)
-untangling commits in a version history, which can aid the beforementioned
-traceability task as well as improve the usability of determining a fault
-introducing commit, or cherry-picking via tools such as git bisect; (3)
-mixed-text parsing, to allow better API mining and open new avenues for
-project-specific code-recommendation tools.	
-
+\input{abstract}
 \end{abstract}
 
 \begin{impactstatement}
-
-In the modern world, software is ubiquitous: from the personal computers most of
-us use to the mission critical systems that require fine control. Software
-quality is usually a result of a healthy software project, \ie it is not just a
-function of the code, rather also of the process producing that code.
-Further, projects are not just source-code; indeed, they contain a wealth of
-documents written in English or other languages. Focusing strictly on
-source-code tells us only half the story.
-
-In this thesis, I propose the notion of project health; a notion that was
-previously colloquially understood and that encompasses those processes that
-help project succeed and flourish. Under this umbrella, I focus on three tasks
-that could impede project success: pull-request-issue linking, commit separation
-into atomic patches, and mixed-text segmentation and pre-processing. I focus on
-tasks that would break assumptions made by researchers when proposing techniques
-in the first two, while the latter presents a new way of handling data enabling
-analysis which is aware of algorithmic and natural language information. By
-borrowing techniques and methodology from Machine Learning, I propose prototype
-systems to resolve these issues.
-
-The work I present in this thesis follows the ethos of helping developers help
-themselves and us. We, as researchers, help developers maintain project health
-with its inherent benefits: easier onboarding, lower costs of maintenance \etc
-This in turn can create better training data for researchers and may enable yet
-better automation techniques and research avenues for Big Code.
-
+\input{impact}
 \end{impactstatement}
 
-\begin{acknowledgements}
-    
-A PhD is not an easy journey, but one I will look back on fondly. Along the way,
-I have had the support of many for whom I wish to dedicate the following
-paragraphs in thanks.
-
-I would like to thank my supervisor, Dr Earl T. Barr, for the sage advice and
-importantly patience with me especially as I was learning the art of
-academic writing. I would also like to thank Earl for bearing with me as I fell
-ill throughout the journey and offering support during those times. The
-dialectic we had trying to formally prove a hypothesis with the clock ticking to
-the deadline will be a fond memory for years despite the stress of the moment
-then.
-
-I would also like to thank Dr David R. White for the `Desk Compensation
-Meetings' that set me on the path towards rigorous experimental design early in
-my PhD. That formed the support beams for my empirical studies throughout my
-doctoral work. I would also like to thank David for being there for me when I
-needed someone to listen to me and helping navigate the academic landscape with
-more confidence.
-
-For the help and patience they showed, I would also like to thank my co-authors
-during my PhD research. I would like to thank Dr Santanu Dash, for helping me
-grok the rougher sides of Roslyn and enabling the work that followed from that.
-I would also like to thank Santanu for helping me pursue an idea that later
-became a paper by helping me with initial labelled data that would have been
-impossible without his CLANG knowledge. His help and advice on the subtilties of
-formal languages helped shape my work.
-
-I extend similar gratitude to Miltose Allamanis and Christoph Treude, who have
-made invaluable contributions and were a pleasure to work with as co-authors.
-Miltose has helped me get a better start writing Machine Learning code, while
-Christoph helped me better understand how to do qualitative and manual
-quantitative analysis
-
-I would like to thank my lab mates in CREST and SSE that made the journey more
-fun: Leo Jeoffe, David Kelly, Bobby Bruce, DongGyun Han, Matheus Paix\~ao,
-Carlos Gavidia, Giovani Guizzo, Vali Tawosi, Rebecca Mousa, Jie Zhang. The
-informal chats were invaluable and they all helped me through the journey.
-Discussing our work together helped me, and I hope them as well, better
-understand how to do proper science, to better understand how and when
-statistical techniques should be applied, how to formulate experiments, how to
-thoroughly explore hypothesises. I also extend my gratitude to my close friend,
-Tudor Haru\cb{t}a, with whom I oft shared my progress and who was always
-available to chat when I needed to take my mind off of research.
-
-Last but not by any means least, I would like to thank my family, my dear older
-sister for always bearing with me and lending a ear to listen and a pair of eyes
-to double check my English. My parents for supporting me through my PhD years
-and even donating time on the home PC when I needed extra compute resources on a
-tight deadline.
-
-Our research is shaped by those in our network, those we talk to even causally,
-thus the sum total of the contributions to this research is beyond any
-quantifiable scope; I cannot hope to enumerate everyone who has contributed to
-my work in the multitude of ways that I have been supported along on this
-journey. To everyone, thank you.
-
+\begin{acknowledgements}   
+\input{acknowledgements}
 \end{acknowledgements}
 
 \setcounter{tocdepth}{2} 

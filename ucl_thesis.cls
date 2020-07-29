@@ -26,14 +26,17 @@
 %%   in http://www.latex-project.org/lppl.txt and version 1.3 or later is part
 %%   of all distributions of LaTeX version 2005/12/01 or later.
 %%
-\def \fileversion{v1.6}
-\def \filedate{2014/08/12}
+\def \fileversion{v1.6.1}
+\def \filedate{2020/07/27}
 \def \docdate{\filedate}
 %
 %  \changes{v1.3}{1996/10/18}{}
 %
 %  \changes{v1.4}{1998/04/02}{Discovered that there were changes needed to openbib processing
 %    consequent on the upgrade to \LaTeXe\ (1997/12/01).}
+%
+%  \changes{v1.6.1}{2020/07/27}{Added conjoin section. Added an optional UCL 
+%    Banner, Added macro to add text after the boilerplate declaration.}
 %  
 %  \MakeShortVerb{\|}
 %
@@ -160,6 +163,7 @@
 \RequirePackage{mathptmx}
 \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 \RequirePackage{ifthen}
+\RequirePackage[pscoord]{eso-pic}
 %    \end{macrocode}
 %
 %  \subsection{Page Layout}
@@ -486,6 +490,7 @@
     \end{center}%
     \if@twoside %
       \newpage%
+      \thispagestyle{empty}%
       ~\\
       \newpage%
     \fi

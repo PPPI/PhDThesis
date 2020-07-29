@@ -8,6 +8,7 @@
 % See: http://tex.stackexchange.com/questions/65348/clash-between-bibentry-and-hyperref-with-bibstyle-elsart-harv
 \usepackage{bibentry}
 \makeatletter\let\saved@bibitem\@bibitem\makeatother
+
 \usepackage[pdftex,colorlinks]{hyperref}
 \usepackage{bookmark}
 \hypersetup{bookmarksnumbered = true,
@@ -19,13 +20,21 @@
             urlcolor = {blue},		
             filecolor = {blue}, 
             linkcolor = {blue},}
+
 % Needed for sane references, used in papers, must be after hyperref
 \usepackage[nameinlink]{cleveref}
 % Define label for Definition environments
 \creflabelformat{defn}{Definition\textup{#1}}
+
 % Again, after hyperlink by requirement, used in Flexeme
 \usepackage[noend]{algorithmic} % may not be installed
 \usepackage{algorithm}
+
+% Help avoid ambiguous destinations
+\renewcommand{\theHsection}{\thepart.section.\thesection}
+\renewcommand{\theHsubsection}{\thepart.subsection.\thesection}
+\renewcommand{\theHsubsubsection}{\thepart.subsubsection.\thesection}
+
 \makeatletter\let\@bibitem\saved@bibitem\makeatother
 \makeatletter
 \AtBeginDocument{
@@ -37,4 +46,3 @@
     }
 }
 \makeatother
-    
