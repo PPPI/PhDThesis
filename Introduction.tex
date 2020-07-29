@@ -146,27 +146,27 @@ required to maintain the project health.
 
 Under the three synergistic tasks, I have found the following ways of improving
 the state-of-the-art, which can benefit both practitioners as well as
-researchers:
+researchers; This thesis:
 
 \begin{enumerate}
-    \item This thesis provides an online pull-request traceability link
-    inference algorithm realised as Aide-mémoire. It solves a modern variant of
-    the ``Missing Links'' problem proposed by Bachman~\etal~\cite{MissingLinks}.
-    It departs from using commits in favour of pull-requests. Aide-mémoire
-    suggests links when developers are already handling a PR or an issue.
-    \item This thesis forwards the state-of-the-art in commit
-    untangling and thus enables the creation of better statistical tooling for
-    developers indirectly, while directly allowing them to improve the health of
-    their version histories. I realise this as a tool I call Flexeme. Flexeme
-    offers precise untangling suggestions within 10 seconds, suggesting it could
-    be integrated into the code review process.
-    \item This thesis formulates the mixed-text parsing problem, posing it as a
-    simultaneous segmentation and tagging task. It proposes a solution, POSIT,
-    which borrows from the Natural Language Processing and Linguistics
-    literature that concerns itself with code-switching. It maps the borrowed
-    results to the Software Engineering context and allows extending methods to
-    languages other than English or resources that freely mix natural and formal
-    languages.
+    \item Provides an online pull-request traceability link inference algorithm
+    realised as Aide-mémoire. It solves a modern variant of the ``Missing
+    Links'' problem proposed by Bachman~\etal~\cite{MissingLinks}. It departs
+    from using commits in favour of pull-requests. Aide-mémoire suggests links
+    when developers are already handling a PR or an issue.
+
+    \item Forwards the state-of-the-art in commit untangling and thus enables
+    the creation of better statistical tooling for developers indirectly, while
+    directly allowing them to improve the health of their version histories. I
+    realise this as Flexeme. Flexeme offers precise untangling suggestions
+    within 10 seconds; fast enough to be viable in the code-review process.
+
+    \item Formulates the mixed-text parsing problem, posing it as a simultaneous
+    segmentation and tagging task. It proposes a solution, POSIT, which borrows
+    from the Natural Language Processing and Linguistics literature that
+    concerns itself with code-switching. It maps the borrowed results to the
+    Software Engineering context and allows extending methods to languages other
+    than English or resources that freely mix natural and formal languages.
 \end{enumerate}
 
 The solutions I propose can help developers directly, by improving the state of
@@ -249,9 +249,16 @@ Request-Issue Links}
 \section{Thesis Organisation}
 \label{chapter:introduction:sec:organisation}
 
-\Cref{chapter:literature} presents the relevant literature. It starts from a
-general perspective on the constituents of project health and narrows to the
-sub-problems tackled.
+The remainder of the thesis is organised as follows.
+
+\Cref{chapter:literature} first presents literature on the areas encompassed by
+project health. It then focuses on the areas touched by the proposed tasks in
+the order they are presented in the thesis. It first discusses traceability and
+the ``Missing Links'' problem~\cite{MissingLinks}, it then focuses on the issues
+caused by tangled commits and approaches to the commit untangling, it concludes
+with an exploration of existing approaches to mixed-text: how do researchers
+tackle code when applying natural language techniques and how the natural
+language processing community handles the mixing of multiple natural languages.
 
 \Cref{chapter:am} presents Aide-mémoire, a solution to online pull-request-issue
 linking problem. It extends the ``Missing Links'' problem due to
@@ -261,17 +268,17 @@ extensive corpus of GitHub projects.
 
 \Cref{chapter:flexeme} presents Flexeme, a solution to the commit untangling
 problem. It shows that Flexeme improves the state-of-the-art while being fast
-enough to be viable at diff time. Flexeme is evaluated on an artificial corpus
-that is rigorously constructed to mimic tangled commits
+enough to be viable at during code-review. Flexeme is evaluated on an artificial
+corpus that is rigorously constructed to mimic tangled commits
 Herzig~\etal~\cite{Herzig2016} have observed developers make.
 
 \Cref{chapter:posit} presents POSIT, where the mixed-text parsing problem is
 introduced together with our proposed solution: POSIT. In it, we argue that the
 mixed-text parsing problem is context-sensitive in the general case and hence
-propose a neural approach for the problem. We show that POSIT can both directly
-improve software fora by suggesting mixed code annotations, as well as aid other
-research tools: we show POSIT to improve
-TaskNav's~\cite{Treude:2015:TTN:2819009.2819128} recall.
+propose a distributional semantics approach, realised as a neural network, for
+the problem. We show that POSIT can both directly improve software fora by
+suggesting mixed code annotations, as well as aid other research tools: we show
+POSIT to improve TaskNav's~\cite{Treude:2015:TTN:2819009.2819128} recall.
 
 \Cref{chapter:conclusions} concludes the thesis and provides directions for
 future work.
