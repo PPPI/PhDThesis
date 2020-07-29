@@ -22,7 +22,7 @@ TestCases=phd,a4paper,oneside.pdf phd,a4paper,twoside.pdf mres,a4paper,oneside.p
 test: $(TestCases)
 
 $(TestCases): $(LaTeXSources)
-	export OPTIONS=$(subst .pdf,,$@); sed -e s/phd,a4paper,oneside/$$OPTIONS/ Main.tex >$(basename $@).tex
+	export OPTIONS=$(subst .pdf,,$@); sed -e s/phd,a4paper,oneside/$$OPTIONS/ Improving_Software_Project_Health_using_Machine_Learning.tex >$(basename $@).tex
 	lualatex --halt-on-error $(basename $@).tex
 	bibtex $(basename $@)
 	lualatex --halt-on-error $(basename $@).tex
