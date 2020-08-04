@@ -1,7 +1,53 @@
 \chapter{Supervised Learning}
 \label{appendix:supervised}
 
-\todo{Basics, up to classification. Different types of classieres.}
+In the context of Machine Learning, Supervised Learning tasks itself with
+learning a mapping $x \rightarrowtail y: \mathbb{R}^n \rightarrow Y$ when we
+observe pairs: $\{(x^{(1)}, y^{(1)}),\dots,(x^{(n)}, y^{(n)})\}$. If $Y$ is a
+continuous set, such as $\mathbb{R}$, then we are solving a regression task,
+whereas if $Y$ is discrete, such as $\{c_1, \dots, c_k\}$, we are solving a
+classification task. Supervised learning in either case either learns a decision
+boundary, such as for Regression models or Support Vector Machines, or learns a
+probability distribution over the data for each class, for example in Na\"ive
+Bayes or Gaussian Discriminant Analysis. In the remainder of this chapter, I
+will first cover some preliminary notions, then I will use them to build up to
+Random Forest and Mondrian Forests classification, the main models used in
+\Cref{chapter:am}.
+
+\section{Preliminaries}
+\label{appendix:supervised:prelim}
+
+\begin{definition}[\textbf{Hypothesis and Hypothesis Space}]
+    A hypothesis, noted $h_{\theta}$, is the particular trained model that we
+    choose, the model output is represented by $h_{\theta}(x^{(i)})$ for a
+    particular $x^{(i)}$. The hypothesis space $\mathcal{H}$ represents the
+    space of all functions $h_{\theta}$ that our model can approximate.
+\end{definition}
+%
+\noindent Of note is the use of $\theta$ as a subscript. This makes the
+dependence of the hypothesis on the model parameters and hyperparameters
+explicit.
+
+\begin{definition}[\textbf{Loss Function}]
+    A loss function $L: Y \times Y \rightarrow \mathbb{R}$ is a mapping that
+    takes the model prediction and the actual value and outputs how different
+    they are. It measures how correct/wrong a model is at a particular point.
+    
+\end{definition}
+
+\begin{definition}[\textbf{Cost Function}]
+    The cost function $J$ is used to model the performance of a model and is
+    related to the loss function as follows:
+    \begin{align}
+        J(\theta) = \sum_{i=1}^{n}L(h_{\theta}(x^{(i)}), y^{(i)})
+    \end{align}
+\end{definition}
+
+\begin{definition}[\textbf{Likelihood}]
+    \todo{Define likelihood and log-likelihood}
+\end{definition}
+
+\todo{MLE and MAP definitions}
 
 \todo{Introduction to the problem and task}
 
@@ -12,7 +58,7 @@
 
 \todo{simple examples of methods: OLR, SVM etc.}
 
-\section{Ensamble Learning}
+\section{Ensemble Learning}
 \label{appendix:supervised:ensamble}
 
 \todo{Adaboost and Random Forests}
