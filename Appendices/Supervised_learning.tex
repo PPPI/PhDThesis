@@ -1,4 +1,4 @@
-\chapter{Supervised Learning}
+\chapter{Supervised Learning:\\Random Forests and Mondrian Forests}
 \label{appendix:supervised}
 
 In the context of Machine Learning, Supervised Learning tasks itself with
@@ -44,24 +44,29 @@ explicit.
 \end{definition}
 
 \begin{definition}[\textbf{Likelihood}]
-    \todo{Define likelihood and log-likelihood}
+    The likelihood function $\mathcal{L}(\theta)$ is a measure of the models'
+    goodness of fit. It represents the join probability of the sample as a
+    function of the model parameters. When training a model, often we want to
+    maximise the the likelihood function. Often for numerical convivence its
+    log,\ie $\log(\mathcal{L}(\theta))$, is used instead of the likelihood
+    function.
 \end{definition}
 
-\todo{MLE and MAP definitions}
+\noindent Learning is often formulated in terms of minimising $J(\theta)$ or
+maximising $\mathcal{L}(\theta)$.
 
-\todo{Introduction to the problem and task}
+\section{Decision Trees and Random Forests}
+\label{appendix:supervised:randomforests}
 
-\section{Types of Supervised Learning}
-\label{appendix:supervised:learning_task}
+The first model of interest to us is the Random Forest classifier. To understand it, we must first describe decision trees.
 
-\todo{what is the target of learning?}
-
-\todo{simple examples of methods: OLR, SVM etc.}
-
-\section{Ensemble Learning}
-\label{appendix:supervised:ensamble}
-
-\todo{Adaboost and Random Forests}
+\begin{definition}[\textbf{Decision Tree}]
+    A decision tree is a non-parametric tree model where leaves represent the
+    values in $Y$ and the non-terminal nodes are a predicate $\pi$ over the
+    input $x$, such that we continue down the left child when $\pi$ is true and
+    down the right child otherwise. The goal is to learn simple decision rules
+    from the data.
+\end{definition}
 
 \section{Mondrian Forests}
 \label{appendix:supervised:mondrian}
