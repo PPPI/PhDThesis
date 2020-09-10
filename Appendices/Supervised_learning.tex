@@ -68,6 +68,26 @@ The first model of interest to us is the Random Forest classifier. To understand
     from the data.
 \end{definition}
 
+To learn a decision tree, we iteratively pick a subset of features from the
+input vector $\mathbf{x}$. This choice is made based on a notion of local
+optimality: maximising information gain or minimising Gini impurity; a globally
+optimal solution is known to be NP-Complete~\cite{laurent1976constructing}. How
+subsets are chosen differs by algorithm, for example C4.5 first iterates through
+each feature and picks the one that provides the best information gain when
+splitting $\mathbf{y}$ based on it~\cite{quinlan2014c4}. The next step is to
+then recurse on each subset until we either reach a depth limit or we have split
+on all attributes.
+
+To go from a Decision Tree to Random Forests we need to apply bagging on both
+features and training data. The first step in training a forest of classifiers,
+is to create $B$ subsamples from our training data by repeatedly sampling with
+replacement from it. We can then train a decision tree on each of the $B$
+subsamples. We could stop here, and simply average the responses (continuous),
+or majority vote (classification); however, to obtain a Random Forest, we should
+also perform the other bagging step. When training a decision tree on a of the
+$B$ subsamples, we should also sample a subset of features that this decision
+tree can use.
+
 \section{Mondrian Forests}
 \label{appendix:supervised:mondrian}
 

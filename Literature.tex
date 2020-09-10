@@ -1,7 +1,6 @@
 \chapter{Literature Review}
 \label{chapter:literature}
 
-\todo{Chapter Intro}
 In this chapter I first present the wider literature that concerns developer
 activities impacting project health in
 \Cref{chapter:literature:sec:project_health}. I then focus on the subproblems
@@ -17,28 +16,77 @@ mixed-text in \Cref{chapter:literature:sec:posit_rel_work}.
 As project health comprises different aspects of a project --- from technical,
 through design, to social --- it is natural that it touches many areas of active
 interest from researchers. Some of the more prominently researched areas are
-technical debt, software evolution and maintenance, human aspects of software
-engineering, and traceability.
-\Cref{chapter:literature:sec:am_rel_work:tracability} discusses traceability in
-detail, while this section will briefly touch on the other facets of project
-health. I will discuss technical debt, and how it impacts software systems. I
-then will shift focus to the area of software evolution and maintenance, with a
-primary focus on how it helps projects remain active. I conclude this section by
-presenting recent research in human aspects of software engineering, with a
-focus on improving the development process by removing negative incentives.
+technical debt, human aspects of software engineering. I will first present
+technical debt literature and its relation to project health. I then will shift
+focus to the area of software evolution and maintenance, with a primary focus on
+how it helps projects remain active. I conclude this section by presenting
+recent research in human aspects of software engineering, with a focus on
+improving the development process by removing negative incentives.
 
-\todo{Tech debt lit review}
+Technical debt primarily arose as a concept from a metaphor relating it to
+financial debt and serving to capture the consequences of poor software
+development~\cite{cunningham1992wycash}. The core concept was that debt is not
+necessarily bad, it can be used as a asset to speed up development at a crucial
+point so long as it is repaid. While this provided an intuitive basis for the
+concept, the lack of a formal definition left the boundaries fuzzy. 
 
-\todo{Software Evolution and maintenance}
+Tom \etal~\cite{tom2012consolidated} found that this created an apparently
+fragmented understanding from a number of both themes and anecdotal accounts
+that fail to fully capture the phenomenon. Later, Tom \etal conduct a multivocal
+literature review~\cite{tom2013exploration} within which they determine the
+dimensions of technical debt, its attributes, and provide a taxonomy for it. Tom
+\etal separate technical debt into: code debt, design and architectural debt,
+environment debt, knowledge distribution and documentation debt, and testing
+debt:
+\begin{itemize}
+    \item Code debt covers hacks or sloppy code that was written and would incur
+    heavy maintenance costs.
+    \item Design and architectural debt comes mainly in two flavours: an upfront
+    design that did not factor maintenance or scale or piecemeal design that was
+    done without the required refactoring; further, this debt could also arise
+    as a consequence of a sub-optimal architectural solution, be it sub-optimal
+    at the time of design or as technology progresses.
+    \item Environmental debt covers software, hardware, dependencies, or even
+    lack of automation. It manifests itself as suboptimal use of labour, reduced
+    development velocity or even vulnerabilities.
+    \item Knowledge distribution and documentation cost covers aspects related
+    to having a high `bus factor', when a complex system is maintained by few
+    knowledgeable individuals and the process is not documented, a company risks
+    a sudden increase of technical debt should the individuals leave.
+    \item Testing debt covers the need for manual quality assurance when the
+    task can be automated. While it shares the automation aspect with
+    Environmental debt, it has the associated risk of brand damage if a faulty
+    patch is pushed through to production.
+\end{itemize}  
 
-\todo{Empritical Game Theory/Carlos' work, other research on the dev process}
+As impact on project health, in the short term, it allows a boost in project
+velocity; and should this debt never come due, you may feel free to incur high
+amounts~\cite{tom2013exploration}; however, in the long term, it can create
+brittle code, increase the cost of new features or products by decreasing
+reusability, and even increase production costs by decreasing long term project
+velocity as bandwidth is taken by debt repayment or simply attrition from the
+sub-optimal products and development pipelines. Tom \etal further found that
+this can have an impact on not just productivity, quality, and risk, but also
+developer morale as work time is taken on repaying debt and working in a brittle
+system that is difficult to reason about.
+
+While technical debt as made crisp by Tom \etal~\cite{tom2013exploration} covers
+some of the impacts from developers on project health: such as low morale, low
+documentation, sub-optimal tooling; it does not cover the scenario when the
+development process itself has negative incentives. Indeed, a development or
+maintenance process, such as bug triaging, may have hidden incentives that, when
+each participant behaves optimally for themselves, causes sub-optimal outcomes
+for the project, such as wasted development time. \todo{Finish after rereading Carlos.}
 
 \section{Bridging the Gap between Issues and History}
 \label{chapter:literature:sec:am_rel_work}
 
-In this section, we focus on software traceability as an area, the position of
-the commits to issues traceability task within this wider context, and our
-proposed contribution within this.
+A method of combating accruing knowledge distribution debt is by maintain a high
+degree of traceability --- interlinking of development and design artefacts by a
+`are related/implements/specifies etc.' link. In this section, I focus on
+software traceability as an area, and the position of the commits to issues
+traceability task, which we generalise and propose a solution for in
+\Cref{chapter:am}, within this wider context.
 
 \subsection{Modern Development}
 \label{chapter:literature:sec:am_rel_work:modern_dev}
@@ -49,10 +97,10 @@ under a single system. Notable examples are GitHub and Atlassian's JIRA. This
 new development paradigm poses new problems and opportunities. Kalliamvakou
 \etal~\cite{Kalliamvakou2014} elucidates these, using GitHub as their archetypal
 example. A particular opportunity Kalliamvakou~\etal identify is this paradigm's
-integration of Version Control and Issue Tracking. Aide-mémoire rests on this
-integration. Aide-mémoire also takes a step toward realising a promise they
-identify:  interlinking developers, pull requests, issues and commits to offer a
-comprehensive view of the software development process. 
+integration of Version Control and Issue Tracking with the potential to
+interlink them. This brings in opportunities for those following in the
+footsteps of Bachmann \etal's Missing Links Problem~\cite{MissingLinks}, as they
+show that indeed this integration is not fully realised.
 
 Lack of PR-issue links is an ongoing problem in modern software development.  So
 much so, Agile practice specifies spring cleaning an issue (a user story in
@@ -63,7 +111,8 @@ requests, user stories, as well their links --- in favour of starting the next
 sprint from a clean slate~\cite{BacklogRefinement}. Projects must resort to this
 spring cleaning all too often~\cite{laurieTrattPersonalCommunciation}. Clearly,
 this practice loses valuable information. The loss of documentation it entails
-it just one example. Adoption of PR-issue inference tooling, like Aide-mémoire,
+it just one example. This can exacerbate the accumulation of Knowledge
+distribution and documentation debt. Adoption of PR-issue inference tooling
 promises to reduce the need to resort to this drastic measure by enabling
 automatic issue triaging.
 
@@ -106,7 +155,7 @@ are recorded by minimising the cost of integrating otherwise incompatible tools
 within a single eco-system, which they call the Eiffel framework.
 
 Asuncion and Taylor~\cite{Asuncion:2009:CCL:1556908.1557008} use record-replay
-and hypermedia to tackle software traceability, a prospective problem. Their
+and hypermedia to tackle software traceability as an online problem. Their
 online solution cannot employ offline information retrieval techniques (such as
 VSM, tf-idf or topic modelling) commonly used in retrospective approaches to
 traceability~\cite{4249808}. They focus on requirements and specifications,
@@ -124,8 +173,7 @@ maintainable.
 Asuncion~\etal~\cite{TopicTraceability} in follow-up work incorporate an LDA
 model into their framework to improve the interpretability of their traces. To
 remain online, they recompute an LDA model on demand for each graph
-visualisation and search query. Aide-mémoire does not rely on LDA and thus
-scales better because it does not require per query model retraining.
+visualisation and search query.
 
 Additionally, Falessi~\etal~\cite{Falessi2017} have done work towards
 quantifying the number of links that are left to be recovered. Their work
@@ -162,16 +210,16 @@ bi-directional inference is more sound. Their BFLinks proposes two link
 predictors (based on bug and commit IDs) and a series of filters to reduce the
 candidate set of links.
 
-Prior to Aide-mémoire, Li~\etal was the state of the art.
-RCLinker~\cite{RCLinker} further improves recall. \Cref{am:sec:reproduction}
-details RCLinker's realisation. RCLinker relies on
+RCLinker~\cite{RCLinker} further improves recall. RCLinker relies on
 ChangeScribe~\cite{ChangeScribe} to produce textual descriptions of commits,
 especially those that lack commit messages. PRs have their own message and
 aggregate multiple commits and their messages.  
-This fact alleviates the problem of sparse commit descriptions for Aide-mémoire.
-Both tools would benefit from better PR summarisation and description. Liu
-\etal~\cite{liu2019automatic} propose a tool, based on a bi-directional RNN with
-a copy network, to tackle this task. 
+This fact alleviates the problem of sparse commit descriptions when considering
+issue-PR interlinking. PR descriptions for some projects can be of low quality,
+impacting those that would rely on them. Liu \etal~\cite{liu2019automatic}
+propose a tool, based on a bi-directional RNN with a copy network, to tackle PR
+summarisation, which can help side-step the low-quality PR descriptions.
+\Cref{am:sec:reproduction} provides a more detailed description of RCLinker.
 
 Sun~\etal~\cite{FRLink} used non-source files in commits for commit-issue link
 inference. They argue that these files are important for capturing developer
@@ -226,33 +274,7 @@ work stemming from Bachmann~\etal. The missing link inference work above uses a
 vector space model over unigrams for textual features. They opt instead for a
 n-gram model. They are the first to perform feature selection, using Weka's
 feature auto-selection. They report promising results but on a different dataset
-than Apache Commons. As previously noted (\Cref{am:sec:reproduction}),
-Rath~\etal's work is difficult to compare with Aide-mémoire, because it uses
-temporal features, such as a predicate that is true when a commit falls between
-issue's creation and its resolution. In Aide-mémoire's online setting, this
-predicate will sometimes be defined in terms of an event that is in the future
-relative to the present query.
-
-In contrast to previous work, Aide-mémoire exclusively focuses on the PR-issue
-link inference problem. Good PR-issue linking accelerates development: PR-issue
-links allow developers to more quickly understand why a pull-request was
-submitted or how an issue was resolved in code; they also permit the use of
-productivity enhancing techniques like automatic bug
-localisation~\cite{BugLocBasedOnHistory, SoftChangeToBugLoc}, or automatic patch
-generation tools such as R2Fix~\cite{R2Fix}. Version control and issue tracking
-are almost ubiquitous in modern software development. PRs and issues are
-plentiful, well-suited for machine learning which is data hungry, and their
-format is well-known. Thus, unlike more general traceability tools, Aide-mémoire
-does not have to contend with missing artefacts or a profusion of formats.
-Solutions to this problem can exploit the structure encoded in PR meta-data. We
-do not rely on change summarisers to produce a natural language description of
-the source changes; we exploit the PR description instead. We designed
-Aide-mémoire to seamlessly integrate into modern development practice. We
-suggest links when a developer closes an issue or submits a PR, when this
-information is pertinent, without intrusive instrumentation of developer tools
-and the attendant privacy and deployability concerns. Further, the link
-recording event can easily be emitted to the Eiffel framework by queueing an
-appropriately formatted JSON.
+than Apache Commons.
 
 \section{Towards Atomic Commits}
 \label{chapter:literature:sec:flexeme_rel_work}
@@ -267,15 +289,6 @@ detect multi-concern commits and (2) slice multi-concern commits into atomic
 patches may aid reduce this source of noise. Further, this can have an added
 benefit for developers since tools such as \lstinline+git bisect+ would also
 benefit from such a segmentation of commits.
-
-We propose a new multi-version representation of code, the \deltaPDGN. It is
-natural to think of identification of communities in it as a slicing problem
-~\cite{slicingsurvey}. However, boundaries across concerns do not naturally map
-to a slicing criteria; it is unclear on how to seed the slicing algorithm and
-when to terminate it. This stems from concerns sharing edges making their
-separation into disjoint entities using a slicing criteria difficult to specify.
-In the rest of this section, we discuss the literature around the problem of
-tangled commits and the theoretical foundations of our approach.
 
 \subsection{Impact of Tangled Commits}
 \label{chapter:literature:sec:flexeme_rel_work:impact}
@@ -302,14 +315,6 @@ fault localisation.
 \subsection{Untangling Commits into Atomic Patches}
 \label{chapter:literature:sec:flexeme_rel_work:untangle}
 
-It is natural to think of identification of communities in the \deltaPDGN as a
-slicing problem~\cite{slicingsurvey}. However, boundaries across concerns do not
-naturally map to a slicing criterion; it is unclear how to seed a slicing
-algorithm and when to terminate it. This is because concerns are linked with
-multiple edges which makes their separation difficult to specify with a slicing
-criterion. In the rest of this section, we discuss the literature around the
-problem of tangled commits and the theoretical foundations of Flexeme.
-
 Research on the impact of both tangled commits and non-essential code changes
 prompted an investigation into changeset decomposition. Herzig
 \etal~\cite{Herzig2013, Herzig2016} apply confidence voters in concert with
@@ -330,9 +335,7 @@ Program Dependency Graph, and correctly classify commits as (un)tangled in over
 90\% of the cases for the systems studied, excluding some projects where they
 are hampered by toolchain limitations. They propose, but do not implement, the
 use of System Dependency Graphs to reduce some of the limitations of their
-approach, such as being solely intraprocedural. Flexeme tackles interprocedural
-and cross-file dependencies by merging the $\delta$-PDGs of the files touched by
-a commit.  
+approach, such as being solely intraprocedural.
 
 Barnett~\etal~\cite{Barnett2015} implement and evaluate a commit-untangling
 prototype. This prototype projects commits onto def-use chains, clusters the
@@ -353,7 +356,7 @@ developers had themselves separated the commit in question after review. In
 addition to validating their prototype, their interviews also found evidence for
 the need for commit decomposition tools. Because they use def-use chains and
 ignore trivial clusters, Barnett~\etal's approach can miss tangled concerns that
-Flexeme can discern. Barnett~\etal's user study itself shows that this can
+are in the same method. Barnett~\etal's user study itself shows that this can
 matter: it reports that some developers disagreed with the classification of
 some changesets as trivial.
 
@@ -367,9 +370,6 @@ otherwise be lost, such as changes that override earlier ones. This approach
 also avoids relying on static analysis. They report a high median success rate
 of 91\% when used by developers during a two-week study. While Dias~\etal
 sidestep static analysis, they require developers to use an instrumented IDE.
-Heddle is complementary to EpiceaUntangler: it allows reviewers to propose
-untanglings of code that may originate from development contexts where
-instrumentation might not be possible.
 
 \subsection{Multiversion Representations of Code}
 \label{chapter:literature:sec:flexeme_rel_work:multiversion_repr}
@@ -389,9 +389,7 @@ facilitate matching nodes within a NFG.
 
 Le~\etal~\cite{Le2014} propose a Multiversion Interprocedural Control Graph
 (MVICFG) for efficient and scalable multiversion patch verification over systems
-such as the PuTTY SSH client. Our $\delta$-PDG is a generalisation of this
-approach to a more expressive data structure, with applications beyond
-traditional static analysis. 
+such as the PuTTY SSH client.
 
 Alexandru~\etal~\citep{alexandru2019redundancy} generalise the Le~\etal MVICFG
 construction to arbitrary software artefacts by constructing a framework that
@@ -403,9 +401,7 @@ usefulness of such a framework by means of `McCabe’s Complexity', which they
 implement in this framework such that it is language agnostic, does not repeat
 computations unnecessarily and reuses the data stores in the sparse graph by
 propagating from child to parent node. \citet{Sebastian2018} propose a compact,
-multiversion AST that cleverly shares state across versions. Flexeme, in
-contrast, rests on PDGs and is well-suited for the untangling tasks, as our
-evaluation demonstrates.
+multiversion AST that cleverly shares state across versions.
 
 \subsection{Semantic Slicing of Version Histories}
 \label{chapter:literature:sec:flexeme_rel_work:sem_slice_vh}
@@ -423,58 +419,7 @@ untangling backwards through history.  This retrospective framing is why they
 treat the history as immutable. In this initial solution, Li~\etal treat commits
 as atomic so their slices may contain noise introduced by tangled commits. To
 reduce this noise, Li~\etal, in more recent work~\cite{Li2019}, unpack commits
-into single-file commits into a private, local history. Flexeme, in contrast, is
-static and online:  built from the ground up to rewrite commits as developer
-make history.  
-As such Flexeme and semantic slicing are complementary:  Flexeme would improve
-the signal to noise ratio of semantic slicing. An interesting direction for
-future work would be to use Flexeme to preprocess version histories prior to
-semantically slicing them as with Definer~\cite{Li2019}.
-
-\subsection{Graph Segmentation, Graph Kernels, and Community Detection}
-\label{chapter:literature:sec:flexeme_rel_work:graph_seg}
-
-\todo{Update to be Graph Kernels as the focus.}
-
-An active area of research is the inference of labels from a graph structure,
-and a common benchmark used for the methods proposed is the Stochastic Block
-Model (SBM)~\cite{HOLLAND1983}. This problem can be formulated in an
-unsupervised, semi-supervised, or supervised fashion. Early solutions focused on
-using graph operators and their spectral properties to infer labels, such as
-using the graph Laplacian or the non-Backtracking operator~\cite{Krzakala2013}.
-These achieved good results at a high computational cost, the latter able to
-detect communities down to the theoretical limit imposed by the Signal-to-Noise
-ration for graphs sampled from an SBM. Saade~\etal~\cite{Saade2014} later
-propose using the Bethe Hessian or deformed Laplacian to compute the community
-labels. They relate this operator to the non-Backtracking operator and that it
-can also achieve community detection down the Signal-to-Noise floor.
-
-In software engineering, spectral clustering has been used by Zhang
-\etal~\cite{Zhang2016} to perform cross-project defect prediction in an
-unsupervised manner, achieving results comparable to supervised classifiers in
-both within- and cross-project settings. To our knowledge, such segmentation
-techniques have not been employed for other tasks within SE.
-
-Another family of approaches considered for graph prediction tasks are the graph
-kernels~\cite{vishwanathan2010graph}. In domains where relational data is
-naturally occurring, such as bioinformatics, social networks and others,
-considering approaches where information is represented as a graph is natural.
-Within such frameworks it is also natural to ask questions such as: `How similar
-are two nodes in the same/different graphs?' or `How similar are two graphs?'.
-Kernels offer to learn a notion of similarity~\cite{smola1998learning}, and
-graph kernels offer to answer this for structured data. In our case, we consider
-the \deltaPDGN representation of methods and use this approach to learn a
-similarity function such that edits that are from the same atomic patch are more
-similar.
-
-A further approach, that is considered as a stretch goal, is to make use of the
-recent advances in Graph Neural Networks~\cite{scarselli2008graph} for learning
-a similarity function. Specifically, Graph Matching
-Networks~\cite{DBLP:journals/corr/abs-1904-12787} offer to jointly learn
-embeddings of two or more graphs for the purposes of a similarity function. Both
-this approach, or the graph kernels approach would nevertheless still require an
-agglomerative clustering step at the end to materialise the actual atomic commit
-suggestions.
+into single-file commits into a private, local history.
 
 \section{Discerning Text from Code}
 \label{chapter:literature:sec:posit_rel_work}
