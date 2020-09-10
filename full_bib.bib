@@ -509,6 +509,17 @@
   url         = {https://hal-upec-upem.archives-ouvertes.fr/hal-00790624}
 }
 
+@article{cunningham1992wycash,
+  title={The WyCash portfolio management system},
+  author={Cunningham, Ward},
+  journal={ACM SIGPLAN OOPS Messenger},
+  volume={4},
+  number={2},
+  pages={29--30},
+  year={1992},
+  publisher={ACM New York, NY, USA}
+}
+
 @article{CVB-LDA,
   author   = {Teh, Yee Whye and Newman, David and Welling, Max and Neaman, D},
   journal  = {Advances in Neural Information Processing Systems 19 (NIPS 2006)},
@@ -612,7 +623,6 @@
   year      = {2006},
   isbn      = {9780471420279}
 }
-
 @article{EarlyFailedImplementPrediction,
   author   = {Fitzgerald, Camilo and Letier, Emmanuel and Finkelstein, Anthony},
   journal  = {Requirements Engineering},
@@ -627,6 +637,7 @@
   isbn     = {9781457709234},
   keywords = {Cost-benefit of requirements engineering,Early failure prediction,Feature requests management systems,Global software development,Open source}
 }
+
 @inproceedings{Enslen2009,
   abstract  = {Automated software engineering tools (e.g., program search, concern location, code reuse, quality assessment, etc.) increasingly rely on natural language information from comments and identifiers in code. The first step in analyzing words from identifiers requires splitting identifiers into their constituent words. Unlike natural languages, where space and punctuation are used to delineate words, identifiers cannot contain spaces. One common way to split identifiers is to follow programming language naming conventions. For example, Java programmers often use camel case, where words are delineated by uppercase letters or non-alphabetic characters. However, programmers also create identifiers by concatenating sequences of words together with no discernible delineation, which poses challenges to automatic identifier splitting. In this paper, we present an algorithm to automatically split identifiers into sequences of words by mining word frequencies in source code. With these word frequencies, our identifier splitter uses a scoring technique to automatically select the most appropriate partitioning for an identifier. In an evaluation of over 8000 identifiers from open source Java programs, our Samurai approach outperforms the existing state of the art techniques.},
   author    = {Enslen, Eric and Hill, Emily and Pollock, Lori and Vijay-Shanker, K.},
@@ -638,7 +649,6 @@
   title     = {{Mining source code to automatically split identifiers for software analysis}},
   year      = {2009}
 }
-
 @inproceedings{Eshkevari2010,
   author    = {Eshkevari, Laleh Mousavi},
   booktitle = {Proc. - Work. Conf. Reverse Eng. WCRE},
@@ -650,6 +660,7 @@
   isbn      = {9780769541235},
   issn      = {1095-1350}
 }
+
 @inproceedings{ExplainingDefects,
   author    = {T. H. Chen and S. W. Thomas and M. Nagappan and A. E. Hassan},
   booktitle = {2012 9th IEEE Working Conference on Mining Software Repositories (MSR)},
@@ -716,7 +727,6 @@
   mendeley-groups = {Untangle},
   url             = {https://www.cs.utexas.edu/{~}pingali/CS395T/2009fa/papers/ferrante87.pdf}
 }
-
 @article{FixingCommits,
   author        = {Tufano, Michele and Bavota, Gabriele and Poshyvanyk, Denys and {Di Penta}, Massimiliano and Oliveto, Rocco and {De Lucia}, Andrea},
   journal       = {Journal of Software: Evolution and Process},
@@ -747,6 +757,7 @@
   doi       = {10.1186/s13173-014-0020-x},
   publisher = {SpringerOpen}
 }
+
 @article{FRLink,
   author   = {Sun, Yan and Wang, Qing and Yang, Ye},
   journal  = {Information and Software Technology},
@@ -757,6 +768,23 @@
   volume   = {84},
   abstract = {Context: Though linking issues and commits plays an important role in software verification and maintenance, such link information is not always explicitly provided during software development or maintenance activities. Current practices in recovering such links highly depend on tedious manual examination. To automatically recover missing links, several approaches have been proposed to compare issue reports with log messages and source code files in commits. However, none of such approaches looked at the role of non-source code complementary documents in commits; nor did they consider the distinct roles each piece of the source code played in the same commit. Objective: We propose to revisit the definition of relevant files contributing to missing link recovery. More specifically, our work extends existing approaches from two perspectives: (1) Inclusion extension: incorporating complementary documents (i.e., non-source documents) to learn from more relevant data; (2) Exclusion extension: analyzing and filtering out irrelevant source code files to reduce data noise. Method: We propose a File Relevance-based approach (FRLink), to implement the above two considerations. FRLink utilizes non-source documents in commits, since they typically clarify code changes details, with similar textual information from corresponding issues. Moreover, FRLink differentiates the roles of different source code files in a single commit and discards files containing no similar code terms as those in issues based on similarity analysis. Results: FRLink is evaluated on 6 projects and compared with RCLinker, which is the latest state-of-the-art approach in missing link recovery. The result shows that FRLink outperforms RCLinker in F-Measure by 40.75{\%} when achieving the highest recalls. Conclusion: FRLink can significantly improve the performance of missing link recovery compared with existing approaches. This indicates that in missing link recovery studies, sophisticated data selection and processing techniques necessitate more discussions due to the increasing variety and volume of information associated with issues and commits.},
   doi      = {10.1016/j.infsof.2016.11.010}
+}
+@article{gavidia2019assessor,
+  title={The assessor's dilemma: Improving bug repair via empirical game theory},
+  author={Gavidia-Calderon, Carlos and Sarro, Federica and Harman, Mark and Barr, Earl T},
+  journal={IEEE Transactions on Software Engineering},
+  year={2019},
+  publisher={IEEE}
+}
+
+@article{gavidia2020game,
+  title={Game-theoretic analysis of development practices: Challenges and opportunities},
+  author={Gavidia-Calderon, Carlos and Sarro, Federica and Harman, Mark and Barr, Earl T},
+  journal={Journal of Systems and Software},
+  volume={159},
+  pages={110424},
+  year={2020},
+  publisher={Elsevier}
 }
 
 @inproceedings{gensim,
@@ -800,6 +828,8 @@
   url     = {http://aclweb.org/anthology/P07-1094},
   year    = {2007}
 }
+
+
 @article{Gonen2018,
   author        = {Gonen, Hila and Goldberg, Yoav},
   title         = {{Language Modeling for Code-Switching: Evaluation, Integration of Monolingual Data, and Discriminative Training}},
@@ -839,7 +869,6 @@
   url       = {http://doi.acm.org/10.1145/1810295.1810335}
 }
 
-
 @inproceedings{Haiduc2010b,
   author    = {S. Haiduc and J. Aponte and L. Moreno and A. Marcus},
   booktitle = {2010 17th Working Conference on Reverse Engineering},
@@ -875,7 +904,6 @@
   mendeley-groups = {Code pseudo-PoS tagging},
   url             = {https://doi.org/10.1145/3236024.3236051 http://dl.acm.org/citation.cfm?doid=3236024.3236051}
 }
-
 @article{Herzig2013,
   author          = {Herzig, Kim and Zeller, Andreas},
   journal         = {IEEE Int. Work. Conf. Min. Softw. Repos.},
@@ -889,7 +917,6 @@
   keywords        = {Bias,Data quality,Mining software repositories,Noise,Tangled code changes},
   mendeley-groups = {Untangle}
 }
-
 @article{Herzig2016,
   author   = {Herzig, Kim and Just, Sascha and Zeller, Andreas},
   journal  = {Empir. Softw. Eng.},
@@ -913,6 +940,7 @@
   year         = {2012},
   organization = {IEEE}
 }
+
 @book{hogg_tanis_zimmerman_2020,
   place     = {Hoboken, NJ},
   title     = {Probability and statistical inference},
@@ -920,6 +948,7 @@
   author    = {Hogg, Robert V. and Tanis, Elliot A. and Zimmerman, Dale L.},
   year      = {2020}
 }
+
 @article{HOLLAND1983,
   author  = {Paul W. Holland and Kathryn Blackmond Laskey and Samuel Leinhardt},
   journal = {Social Networks},
@@ -1003,7 +1032,6 @@
   note         = {Accessed: 2017-08-20},
   year         = {2017}
 }
-
 @inproceedings{Johnson:2013:WDS:2486788.2486877,
   author    = {Johnson, Brittany and Song, Yoonki and Murphy-Hill, Emerson and Bowdidge, Robert},
   booktitle = {Proceedings of the 2013 International Conference on Software Engineering},
@@ -1019,7 +1047,6 @@
   numpages  = {10},
   url       = {http://dl.acm.org/citation.cfm?id=2486788.2486877}
 }
-
 @inproceedings{Kalliamvakou2014,
   abstract  = {We are now witnessing the rapid growth of decentralized source code management (DSCM) systems, in which every developer has her own repository. DSCMs facilitate a style of collaboration in which work output can flow sideways (and privately) between collaborators, rather than always up and down (and publicly) via a central repository. Decentralization comes with both the promise of new data and the peril of its misinterpretation. We focus on git, a very popular DSCM used in high-profile projects. Decentralization, and other features of git, such as automatically recorded contributor attribution, lead to richer content histories, giving rise to new questions such as ldquoHow do contributions flow between developers to the official project repository?rdquo However, there are pitfalls. Commits may be reordered, deleted, or edited as they move between repositories. The semantics of terms common to SCMs and DSCMs sometimes differ markedly, potentially creating confusion. For example, a commit is immediately visible to all developers in centralized SCMs, but not in DSCMs. Our goal is to help researchers interested in DSCMs avoid these and other perils when mining and analyzing git data.},
   address   = {New York, New York, USA},
@@ -1034,7 +1061,6 @@
   url       = {http://dl.acm.org/citation.cfm?doid=2597073.2597074},
   year      = {2014}
 }
-
 @inproceedings{Kalliamvakou2015,
   author          = {Kalliamvakou, Eirini and Damian, Daniela and Blincoe, Kelly and Singer, Leif and German, Daniel M},
   booktitle       = {Proc. - Int. Conf. Softw. Eng.},
@@ -1062,6 +1088,7 @@
   url      = {http://portal.acm.org/citation.cfm?doid=1985793.1985842},
   year     = {2011}
 }
+
 @article{Kersten2005,
   author   = {Kersten, Mik and Murphy, Gail C},
   journal  = {Proceedings of the 4th international conference on Aspect-oriented software development - AOSD '05},
@@ -1082,6 +1109,7 @@
   pages     = {58--64},
   doi       = {10.1145/1137983.1137999}
 }
+
 @article{Kingma14,
   author    = {Kingma, Diederik P. and Ba, Jimmy},
   journal   = {CoRR},
@@ -1110,6 +1138,7 @@
   url             = {http://dl.acm.org/citation.cfm?doid=2597008.2597798},
   year            = {2014}
 }
+
 @article{Kirinuki2017,
   author   = {Kirinuki, Hiroyuki and Higo, Yoshiki and Hotta, Keisuke and Kusumoto, Shinji},
   journal  = {Proc. - Asia-Pacific Softw. Eng. Conf. APSEC},
@@ -1122,7 +1151,6 @@
   isbn     = {9781509055753},
   keywords = {Change pattern,Repository mining,Source code analysis}
 }
-
 @article{Knyazev2007,
   author          = {Knyazev, A V and Argentati, M E and Lashuk, I. and Ovtchinnikov, E E},
   journal         = {SIAM Journal on Scientific Computing},
@@ -1158,7 +1186,6 @@
   publisher = {National Academy of Sciences},
   url       = {http://www.pnas.org/content/110/52/20935}
 }
-
 @article{Kuhn1955,
   author   = {Kuhn, H. W.},
   journal  = {Naval Research Logistics Quarterly},
@@ -1171,6 +1198,7 @@
   eprint   = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.3800020109},
   url      = {https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.3800020109}
 }
+
 @inproceedings{lakew2017multilingual,
   title     = {Multilingual Neural Machine Translation for Low Resource Languages.},
   author    = {Lakew, Surafel Melaku and Di Gangi, Mattia Antonino and Federico, Marcello},
@@ -1185,6 +1213,7 @@
   year      = {2014},
   pages     = {3140--3148}
 }
+
 @inproceedings{Lapata2001,
   author    = {Lapata, Maria},
   booktitle = {Proc. Second Meet. North Am. Chapter Assoc. Comput. Linguist. Lang. Technol.},
@@ -1193,6 +1222,16 @@
   pages     = {1--8},
   abstract  = {In this paper we investigate polysemous adjectives whose meaning varies depending on the nouns they modify (e.g., fast). We acquire the meanings of these adjectives from a large corpus and propose a probabilistic model which provides a ranking on the set of possible interpretations. We identify lexical semantic information automatically by exploiting the consistent correspondences between surface syntactic cues and lexical meaning. We evaluate our results against paraphrase judgments elicited experimentally from humans and show that the model's ranking of meanings correlates reliably with human intuitions: meanings that are found highly probable by the model are also rated as plausible by the subjects.},
   doi       = {10.3115/1073336.1073345}
+}
+
+@article{laurent1976constructing,
+  title={Constructing optimal binary decision trees is NP-complete},
+  author={Laurent, Hyafil and Rivest, Ronald L},
+  journal={Information processing letters},
+  volume={5},
+  number={1},
+  pages={15--17},
+  year={1976}
 }
 
 @misc{laurieTrattPersonalCommunciation,
@@ -1626,7 +1665,6 @@
   keywords  = {Costs,Databases,Documentation,Navigation,Performance analysis,Portfolios,Robustness,Software maintenance,Software performance,Software systems},
   url       = {http://ieeexplore.ieee.org/document/1021343/}
 }
-
 @article{Murphy-Hill2012,
   author        = {Murphy-Hill, Emerson and Parnin, Chris and Black, Andrew P.},
   journal       = {IEEE Transactions on Software Engineering},
@@ -1656,7 +1694,6 @@
   year      = {2005},
   publisher = {Citeseer}
 }
-
 @inproceedings{Neumuller06,
   author    = {C. Neumuller and P. Grunbacher},
   booktitle = {21st IEEE/ACM International Conference on Automated Software Engineering (ASE'06)},
@@ -1678,6 +1715,7 @@
   title    = {{Lexical Categories for Source Code Identifiers}},
   year     = {2017}
 }
+
 @techreport{Ng2007,
   abstract        = {Despite many empirical successes of spectral clustering methods-algorithms that cluster points using eigenvectors of matrices derived from the data-there are several unresolved issues. First, there are a wide variety of algorithms that use the eigenvectors in slightly different ways. Second, many of these algorithms have no proof that they will actually compute a reasonable clustering. In this paper, we present a simple spectral clustering algorithm that can be implemented using a few lines of Matlab. Using tools from matrix perturbation theory, we analyze the algorithm, and give conditions under which it can be expected to do well. We also show surprisingly good experimental results on a number of challenging clustering problems.},
   author          = {Ng, Andrew Y and Jordan, Michael I},
@@ -1693,6 +1731,7 @@
   year      = {1993},
   publisher = {Academic Press}
 }
+
 @inproceedings{NonSourceInMLR,
   address   = {New York, New York, USA},
   author    = {Sun, Yan and Wang, Qing and Li, Mingshu},
@@ -1817,7 +1856,7 @@
   pages     = {76--84},
   doi       = {10.1109/ICRE.1996.491432},
   keywords  = {software quality;software tools;systems analysis;PRO-ART 2.0;PRO-ART requirements engineering environment;automated trace capture;high-quality software systems development;requirements pre-traceability;requirements traceability;scalability problems;selective trace retrieval;three-dimensional requirements engineering framework;tool interoperability approach;trace information structuring;trace-repository;Buildings;Computer errors;Contracts;Design engineering;Environmental management;Information retrieval;Logic design;Maintenance engineering;Scalability;Software systems}
-}
+} 
 
 @inproceedings{ponzanelli2014holistic,
   title     = {Holistic recommender systems for software engineering},
@@ -1864,7 +1903,7 @@
   isbn            = {9780769555942},
   keywords        = {Holistic,Stack overfliow,Summarization},
   mendeley-groups = {Code pseudo-PoS tagging}
-} 
+}
 
 @article{Poplack1980,
   author  = {Poplack, Shana},
@@ -1954,7 +1993,12 @@
   doi       = {10.1109/ASE.2017.8115627},
   keywords  = {learning (artificial intelligence);pattern classification;software maintenance;automatic link recovery approaches;improving missing issue-commit link recovery;link recovery model;missing links;positive data;traditional classifier;unlabeled link data;Feature extraction;Indexes;Metadata;Software maintenance;Training}
 }
-
+@book{quinlan2014c4,
+  title={C4. 5: programs for machine learning},
+  author={Quinlan, John},
+  year={2014},
+  publisher={Elsevier}
+}
 @phdthesis{R2Fix,
   abstract  = {Many bugs, even those that are known and documented in bug reports, remain in mature software for a long time due to the lack of the development resources to fix them. We propose a general approach, R2Fix, to automatically generate bug-fixing patches from free-form bug reports. R2Fix combines past fix patterns, machine learning techniques, and semantic patch generation techniques to fix bugs automatically. We evaluate R2Fix on three projects, i.e., the Linux kernel, Mozilla, and Apache, for three important types of bugs: buffer overflows, null pointer bugs, and memory leaks. R2Fix generates 57 patches correctly, 5 of which are new patches for bugs that have not been fixed by developers yet. We reported all 5 new patches to the developers, 4 have already been accepted and committed to the code repositories. The 57 correct patches generated by R2Fix could have shortened and saved up to an average of 63 days of bug diagnosis and patch generation time. 2013 IEEE.},
   author    = {Liu, Chen and Yang, Jinqiu and Tan, Lin and Hafiz, Munawar},
@@ -1967,7 +2011,6 @@
   title     = {{R2Fix: Automatically generating bug fixes from bug reports}},
   year      = {2013}
 }
-
 @inproceedings{RCLinker,
   author    = {Le, Tien Duy B and Linares-V{\'{a}}squez, Mario and Lo, David and Poshyvanyk, Denys},
   booktitle = {IEEE International Conference on Program Comprehension},
@@ -2013,6 +2056,8 @@
   series    = {ESEC/FSE '11},
   url       = {http://doi.acm.org/10.1145/2025113.2025120}
 }
+
+
 @inproceedings{RetForBugLoc,
   author    = {Rao, Shivani and Kak, Avinash},
   booktitle = {Proceeding of the 8th working conference on Mining software repositories - MSR '11},
@@ -2024,7 +2069,8 @@
   isbn      = {9781450305747},
   issn      = {0270-5257},
   keywords  = {bug localization,information,latent dirichlet allocation,latent semantic analysis,retrieval,software engineering}
-}
+} 
+
 @misc{RFE_scipy,
   author       = {{Scikit-learn}},
   title        = {{Recursive Feature Elimination: SciKit Implementation}},
@@ -2032,6 +2078,7 @@
   note         = {Accessed: 2020-06-17},
   year         = {2020}
 }
+
 @article{Rigby2014,
   author   = {Rigby, Peter C. and German, Daniel M. and Cowen, Laura and Storey, Margaret-Anne},
   journal  = {ACM Trans. Softw. Eng. Methodol.},
@@ -2045,7 +2092,6 @@
   doi      = {10.1145/2594458},
   url      = {http://dl.acm.org/citation.cfm?doid=2668018.2594458}
 }
-
 @inproceedings{Robillard:2003:FTL:776816.776969,
   author    = {Robillard, Martin P. and Murphy, Gail C.},
   booktitle = {Proceedings of the 25th International Conference on Software Engineering},
@@ -2060,20 +2106,18 @@
   location  = {Portland, Oregon},
   numpages  = {2}
 }
-
 @article{Roover2017,
   author = {Roover, De and Muylaert, Ward},
   title  = {{Untangling Source Code Changes Using Program Slicing}},
   year   = {2017}
 }
 
-
 @misc{Roslyn,
   author       = {{Microsoft}},
   howpublished = {\url{https://github.com/dotnet/roslyn}},
   note         = {Accessed: 2018-05-31},
   title        = {Microsoft Rosyln}
-} 
+}
 
 @article{ruan2019deeplink,
   title     = {DeepLink: Recovering issue-commit links based on deep learning},
@@ -2098,6 +2142,7 @@
   eprinttype    = {arxiv},
   url           = {http://arxiv.org/abs/1406.1880}
 }
+
 @article{scarselli2008graph,
   title     = {The graph neural network model},
   author    = {Scarselli, Franco and Gori, Marco and Tsoi, Ah Chung and Hagenbuchner, Markus and Monfardini, Gabriele},
@@ -2108,6 +2153,7 @@
   year      = {2008},
   publisher = {IEEE}
 }
+
 @misc{SciPy,
   author = {Eric Jones and Travis Oliphant and Pearu Peterson and others},
   title  = {{SciPy}: Open source scientific tools for {Python}},
@@ -2306,6 +2352,23 @@
   year         = {2015},
   organization = {IEEE},
   pages        = {570--574}
+}
+
+@article{tom2012consolidated,
+  title={A consolidated understanding of technical debt},
+  author={Tom, Edith and Aurum, Aybuke and Vidgen, Richard},
+  year={2012}
+}
+
+@article{tom2013exploration,
+  title={An exploration of technical debt},
+  author={Tom, Edith and Aurum, Ayb{\"u}Ke and Vidgen, Richard},
+  journal={Journal of Systems and Software},
+  volume={86},
+  number={6},
+  pages={1498--1516},
+  year={2013},
+  publisher={Elsevier}
 }
 
 @book{TopicModelSurvey,
@@ -2639,51 +2702,5 @@
   year      = {2005},
   publisher = {IEEE}
 }
-
-@article{cunningham1992wycash,
-  title={The WyCash portfolio management system},
-  author={Cunningham, Ward},
-  journal={ACM SIGPLAN OOPS Messenger},
-  volume={4},
-  number={2},
-  pages={29--30},
-  year={1992},
-  publisher={ACM New York, NY, USA}
-}
-
-@article{tom2012consolidated,
-  title={A consolidated understanding of technical debt},
-  author={Tom, Edith and Aurum, Aybuke and Vidgen, Richard},
-  year={2012}
-}
-
-@article{tom2013exploration,
-  title={An exploration of technical debt},
-  author={Tom, Edith and Aurum, Ayb{\"u}Ke and Vidgen, Richard},
-  journal={Journal of Systems and Software},
-  volume={86},
-  number={6},
-  pages={1498--1516},
-  year={2013},
-  publisher={Elsevier}
-}
-
-@article{laurent1976constructing,
-  title={Constructing optimal binary decision trees is NP-complete},
-  author={Laurent, Hyafil and Rivest, Ronald L},
-  journal={Information processing letters},
-  volume={5},
-  number={1},
-  pages={15--17},
-  year={1976}
-}
-
-@book{quinlan2014c4,
-  title={C4. 5: programs for machine learning},
-  author={Quinlan, John},
-  year={2014},
-  publisher={Elsevier}
-}
-
 
 @Comment{jabref-meta: databaseType:bibtex;}
