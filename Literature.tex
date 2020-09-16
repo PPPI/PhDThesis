@@ -1,7 +1,7 @@
 \chapter{Literature Review}
 \label{chapter:literature}
 
-In this chapter I first present the wider literature that concerns developer
+In this chapter, I first present the wider literature that concerns developer
 activities impacting project health in
 \Cref{chapter:literature:sec:project_health}. I then focus on the subproblems
 tackled in the thesis and start by presenting Traceability and Commit-Issue
@@ -70,7 +70,7 @@ this can have an impact on not just productivity, quality, and risk, but also
 developer morale as work time is taken on repaying debt and working in a brittle
 system that is difficult to reason about.
 
-While technical debt as made crisp by Tom \etal~\cite{tom2013exploration} covers
+While Tom \etal's~\cite{tom2013exploration} definition of technical debt covers
 some of the impacts from developers on project health: such as low morale, low
 documentation, sub-optimal tooling; it does not cover the scenario when the
 development process itself has negative incentives. Indeed, a development or
@@ -84,9 +84,12 @@ process intervention can be devised in a way that avoids negative incentives.
 They demonstrate their approach using simulation based examples that cover bug
 priority inflation, acquisition of technical debt in a simple fix or kugel
 example, and the tragedy of the test suite (the accumulation of test cases due
-to incorrect developer incentivisation). The work presented in this thesis could
+to incorrect developer incentivisation). 
+
+\todo{This thesis reduces the need to take debt and when repaying it reduces interest.}
+The work presented in this thesis could
 serve to reduce the cost of actions associated with good long-term project
-health in the pay-off matrix in the framework of Gavidia-Calderon \etal.
+health in the pay-off matrix in the framework of Gavidia-Calderon \etal
 
 \section{Bridging the Gap between Issues and History}
 \label{chapter:literature:sec:am_rel_work}
@@ -192,6 +195,8 @@ an analyst decide when to stop pursuing a traceability maintenance task. The aim
 of this work is to provide a quantifiable signal of when the traceability task
 should be finished as linking can be considered good enough.
 
+\todo{what are the gaps, how do we fill them?}
+
 \subsection{Commit-Issue Link Inference}
 \label{chapter:literature:sec:am_rel_work:cli}
 
@@ -286,8 +291,12 @@ n-gram model. They are the first to perform feature selection, using Weka's
 feature auto-selection. They report promising results but on a different dataset
 than Apache Commons.
 
+\todo{what are the gaps, how do we fill them?}
+
 \section{Towards Atomic Commits}
 \label{chapter:literature:sec:flexeme_rel_work}
+
+\todo{define atomic commit.}
 
 A potential source of inaccuracy and noise for the task of maintaining links
 between commits and pull-requests is multi-concern commits. A developer, as part
@@ -381,6 +390,8 @@ also avoids relying on static analysis. They report a high median success rate
 of 91\% when used by developers during a two-week study. While Dias~\etal
 sidestep static analysis, they require developers to use an instrumented IDE.
 
+\todo{what are the gaps, how do we fill them?}
+
 \subsection{Multiversion Representations of Code}
 \label{chapter:literature:sec:flexeme_rel_work:multiversion_repr}
 
@@ -412,6 +423,8 @@ implement in this framework such that it is language agnostic, does not repeat
 computations unnecessarily and reuses the data stores in the sparse graph by
 propagating from child to parent node. \citet{Sebastian2018} propose a compact,
 multiversion AST that cleverly shares state across versions.
+
+\todo{what are the gaps, how do we fill them?}
 
 \subsection{Semantic Slicing of Version Histories}
 \label{chapter:literature:sec:flexeme_rel_work:sem_slice_vh}
@@ -528,3 +541,5 @@ Further, since in a setting where multiple natural languages and formal
 languages are mixed, we expect each respective language to be low-resource; thus
 we expect Transformers to offer a better promise of solving the task as they
 have been shown to fare better in such scenarios~\cite{lakew2017multilingual}.
+
+\todo{what are the gaps, how do we fill them?}

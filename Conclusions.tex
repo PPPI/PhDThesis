@@ -4,13 +4,11 @@
 As projects continue, they accumulate bit-rot, technical debt, and generally
 suffer an attrition to their health. Maintaining them in shape is indeed an
 active process, oft forgone for implementing new features. One can hardly blame
-the developer when the cost typically a considerable time investment and the
+the developer when the cost is typically a considerable time investment and the
 reward is considerably delayed. To fix the situation, we need to fix either the
-cost or the incentives.
-
-In this thesis, I consider reducing the cost of maintaining project health. I
+cost or the incentives. In this thesis, I consider reducing the cost of maintaining project health. I
 present three tools and approaches that can aid developers, either directly or
-via tool-smiths, actively maintain project health. I present Aide-mémoire, a
+via tool smiths, actively maintain project health. I present Aide-mémoire, a
 tool for PR-Issue link prediction, Flexeme, a commit untangling tool, and POSIT,
 a mixed-text segmentation and tagging tool. 
 
@@ -33,7 +31,7 @@ approaches over commits more attractive.
 Through POSIT, we hope to have opened a new line of research. We formulated the
 mixed-text tagging problem and demonstrated the benefits of considering both
 natural and formal language channels when considering sources that mix both.
-Although POSIT is closer to a meta-tool, it assists tool-smiths make their tools
+Although POSIT is closer to a meta-tool, it assists tool smiths make their tools
 aware to the two channels intertwined in a mixed-text, POSIT can directly help
 user of software fora such as Stack Overflow by detecting missed code
 annotations.
@@ -58,9 +56,9 @@ Natural Language.
 
 \textbf{Graph Neural Network Approaches for Graph Similarity}
 In Flexeme, we make use of graph kernels for graph Similarity computation;
-however recent research in Graph Neural Networks show promising results, and
+however, recent research in Graph Neural Networks show promising results, and
 future work may focus on replacing our graph kernels for a neural network
-implementation if a suitable training corpus is present.
+implementation, if a suitable training corpus is available.
 
 \textbf{Multi-version PDG Static Analysis}
 As we use the \deltaPDG for pairs of versions, we do not exploit the structure
@@ -69,8 +67,8 @@ aware such that the analysis can be carried out over multiple versions by simply
 considering the \deltaPDG.
 
 \textbf{Online Traceability}
-In Aide-mémoire, we consider online traceability of PR-Issue links. This idea
-could be extended to other forms of traceability, for example the commit-issue
+In Aide-mémoire, we considered online traceability of PR-Issue links. This idea
+could be extended to other forms of traceability, for example, the commit-issue
 linking problem from which we started. While the research area of Just-In-Time
 Traceability indeed exists and is active~\cite{hayes2003improving,
 lin2006poirot, lucia2007recovering, cleland2007best}, it often uses offline

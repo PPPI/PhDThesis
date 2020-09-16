@@ -4,30 +4,31 @@
 The software development process involves a multitude of aspects: the
 specification and design, the architecture of the system, the code writing
 itself, code version histories, issue tracking, code review. In an opensource
-project: external collaboration and their integration. And last but not least,
-the developers themselves and the project culture. Some projects are vibrant;
-some moribund; others implode after a few commits. \emph{Project health}
-determines project success. Project health encompasses: technical, traceability,
-and social aspects of a project. It is defined by the quality of code,
-documentation, version histories, issue tracking, specifications and
-requirements. It is further defined by the quality of the interlinking of these
-aspects. And last but not least, it is defined by the culture of the project, be
-that explicitly codified in a file/manifesto or implicit in the interactions of
-developers. In this work, I focus only on the first two aspects of project
-health: technical and traceability. It is of no surprise that the artefacts
-produced by these processes span a profusion of formats and both natural as well
-as programming languages, even intermixed.
+project external collaboration and their integration are also a part of it. Last
+but not least, the developers themselves and the project culture further define
+the development process. Some projects are vibrant; some moribund; others
+implode after a few commits. \emph{Project health} determines project success.
+Project health encompasses: technical, traceability, and social aspects of a
+project. It is defined by the quality of code, documentation, version histories,
+issue tracking, specifications and requirements. It is further defined by the
+quality of the interlinking of these aspects. Finally, but not less important,
+it is defined by the culture of the project, be that explicitly codified in a
+file/manifesto or implicit in the interactions of developers. In this work, I
+focus only on the first two aspects of project health: technical and
+traceability. It is of no surprise that the artefacts produced by these
+processes span a profusion of formats and both natural as well as programming
+languages, even intermixed.
 
-In recent years systems that would previously live on different platforms have
+In recent years systems, that would previously live on different platforms have
 been integrated under a single umbrella, thus the different aspects that can
 impact project health can be centrally observed. The proliferation of GitHub,
 which offers pull-requests, issue tracking and version history, and its
-integration with other solutions such as Gerrit, for Code Reviews, Travis, for
-continuous integration and delivery, as well as the response from competitors
-such as GitLab and Atlassian to offer equivalent offerings has led to leaner and
-faster development cycles. This has also reduced the cost of entry and created
+integration with other solutions such as Gerrit (for Code Reviews), Travis (for
+continuous integration and delivery), as well as the response from competitors,
+such as GitLab and Atlassian who offer equivalent offerings has led to leaner and
+faster development cycles\todo{cite}. This has also reduced the cost of entry and created
 large, publicly accessible sources of source-code together with related project
-artefacts. Within this context, developers can benefit from the automation of
+artefacts, such as GHTorrent~\cite{GHTorrent} and similar datasets. Within this context, developers can benefit from the automation of
 tasks, especially if they are oft forgotten or ignored in favour of traveling
 light. 
 
@@ -35,17 +36,20 @@ This shift in tooling has also facilitated a shift in development paradigms,
 developers now prefer a continuous integration/continuous delivery
 infrastructure. This has led to more projects adopting a more agile development
 process. Cleland-Huang~\etal~\cite{Cleland-Huang2014} and St{\aa}hl
-\etal~\cite{Stahl2017} observe that for traceability to be adopted within an
+\etal~\cite{Stahl2017} observe that, for traceability to be adopted, within an
 agile framework, it must remain within the traveling light paradigm.
-Simultaneously, this shift has allowed for the proliferation of Natural Language
-or Natural Language and Formal Language textual artefacts which are
-programmatically accessible. This suggests that approaches from Natural Language
-Processing and Machine Learning are now feasible and indeed desirable. This
-thesis aims to (semi-)automate tasks for this new paradigm and its attendant
-infrastructure by bringing to the foreground the relevant NLP and ML techniques.
+Simultaneously, the shift to continuous improvement/continuous development has
+allowed for the proliferation of Natural Language or Natural Language and Formal
+Language textual artefacts which are programmatically accessible. This suggests
+that approaches from Natural Language Processing and Machine Learning are now
+feasible and indeed desirable. This thesis aims to (semi-)automate tasks for
+this new paradigm and its attendant infrastructure by bringing to the foreground
+the relevant NLP and ML techniques.
 
 \section{Problem Statements}
 \label{chapter:introduction:sec:problem_statement}
+
+\todo{define travelling light}
 
 Under Improving Project Health, I focus on three synergistic tasks: (1)
 improving the issue-pull-request traceability, which can aid existing systems to
@@ -71,22 +75,23 @@ Ståhl~\etal~\cite{Stahl2017} provide the Eiffel framework, which allows
 integrating different sources of traceability information in a light-weight
 manner.
 
-To help developers, tool-smiths themselves require supporting artefacts and
+To help developers, tool smiths themselves require supporting artefacts and
 utilities. One of these is access to high quality data that can be used both to
 train a human intuition for a task as well as statistical approaches to enable
 developers from less well maintained projects improve their situation. The
 proliferation of web-sites such as GitHub, BitBucket/JIRA, GitLab, and others
 that enable developers to have commits, issues, pull-request, code-reviews and
-other development processes under one umbrella also open a potential resource to
-researchers and tool-smiths that wish to study the properties of the
+other development processes under one umbrella also opens a potential resource
+to researchers and tool smiths that wish to study the properties of the
 inter-relationships of such artefacts. In this context, traceability can help
 developers maintain the collective memory of projects. When using such
-resources, developers are incentivised to maintain code-review/issue to commit
-links by the promise of automatic triaging of issues as commits resolving them
-are accepted into the mainline. I have, however, observed a lack of such links
-as far as GitHub is concerned, despite an encouragement of contributors to do so
-in the contribution guidelines. Further, developers only partially recording
-such link introduces bias in the datasets researchers use.
+resources, the promise of automatic triaging of issues as commits resolving them
+are accepted into the mainline incentivises developers to maintain
+code-review/issue to commit links. I have, however, observed a lack of such
+links as far as GitHub is concerned, despite an encouragement of contributors to
+do so in the contribution guidelines (\Cref{am:sec:eval:prelim}). Further,
+developers only partially recording such link introduces bias in the datasets
+researchers use.
 
 \begin{tcolorbox}[title=Pull-request-Issue Traceability]
     Given a project, developers should receive traceability link suggestions
@@ -150,16 +155,17 @@ researchers; This thesis:
 
 \begin{enumerate}
     \item Provides an online pull-request traceability link inference algorithm
-    realised as Aide-mémoire. It solves a modern variant of the ``Missing
-    Links'' problem proposed by Bachman~\etal~\cite{MissingLinks}. It departs
-    from using commits in favour of pull-requests. Aide-mémoire suggests links
-    when developers are already handling a PR or an issue.
+    realised as Aide-mémoire. It solves an online, modern variant of the
+    ``Missing Links'' problem proposed by Bachman~\etal~\cite{MissingLinks}. It
+    departs from using commits in favour of pull-requests. Aide-mémoire suggests
+    links when developers are already handling a PR or an issue.
 
-    \item Forwards the state-of-the-art in commit untangling and thus enables
-    the creation of better statistical tooling for developers indirectly, while
-    directly allowing them to improve the health of their version histories. I
-    realise this as Flexeme. Flexeme offers precise untangling suggestions
-    within 10 seconds; fast enough to be viable in the code-review process.
+    \item Forwards the state-of-the-art in commit untangling both in accuracy
+    and in speed and thus enables the creation of better statistical tooling for
+    developers indirectly, while directly allowing them to improve the health of
+    their version histories. I realise this as Flexeme. Flexeme offers precise
+    untangling suggestions within 10 seconds; fast enough to be viable in the
+    code-review process.
 
     \item Formulates the mixed-text parsing problem, posing it as a simultaneous
     segmentation and tagging task. It proposes a solution, POSIT, which borrows
@@ -170,7 +176,7 @@ researchers; This thesis:
 \end{enumerate}
 
 The solutions I propose can help developers directly, by improving the state of
-the project artefacts, or indirectly by helping tool-smiths. Further, these
+the project artefacts, or indirectly by helping tool smiths. Further, these
 solutions interact synergistically, the Flexeme and POSIT improve the quality of
 the training data for Aide-mémoire, while also improving the general health of
 developer version histories (Flexeme) or developer issue trackers and fora
@@ -179,17 +185,15 @@ developer version histories (Flexeme) or developer issue trackers and fora
 \section{List of Papers}
 \label{chapter:introduction:sec:papers}
 
-\todo{Check with Earl that this is fine, otherwise, a we/I substitution might be needed}
-
 A long research project, like a PhD, is a close collaboration where it is
 difficult, often impossible, to separate each collaborator's contributions. What
 is clear is who took the lead on which aspects and tasks. The reader will also
 notice a mixed use of `I' and `we', I continue to use `we' in the paper chapters
-when referring to work done in close collaboration with my co-authors as to
+when referring to work done in close collaboration with my co-authors to
 acknowledge their contribution. Further, the papers are presented as published
 or submitted for review spare figures and tables that required editing to fit
-into the thesis format. I now enumerate the tasks I lead on each of the papers
-included in this thesis.
+into the thesis format. I now enumerate the tasks I lead in each of the papers
+in this thesis.
 
 \begin{itemize}[leftmargin=*]
     \item[]\noindent\textbf{1. Aide-mémoire: Improving a Project’s Collective Memory via Pull
@@ -200,7 +204,7 @@ Request-Issue Links}
     \noindent\emph{Venue: Submitted to ACM Transactions on Software Engineering
     and Methodology (TOSEM)}
 
-    \noindent I have determined and mined the dataset of GitHub projects. I have
+    \noindent I determined and mined the dataset of GitHub projects. I
     implemented the proposed PR-Issue linker, performed the exploratory data
     analysis and feature engineering as well as wrote the evaluation and result
     analysis scripts. The experimental and EDA designs were done in close
@@ -208,22 +212,23 @@ Request-Issue Links}
 
     \item[]\noindent\textbf{2. Flexeme: Untangling Commits Using Lexical Flows}
 
-    \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Miltose
+    \noindent\emph{Authors: Profir-Petru Pârțachi, Santanu Kumar Dash, Miltos
     Allamanis, Earl T. Barr}
 
     \noindent\emph{Venue: Proceedings of 28th ACM Joint European Software
     Engineering Conference and Symposium on the Foundations of Software
     Engineering, (ESEC/FSE 2020)}
 
-    \noindent  I have implemented in full the construction of our new structure,
-    though the idea of the structure was from Earl Barr, and the details of the
-    specification were worked in close collaboration. I also implemented the
-    necessary methods to construct the dataset, reproduced previous work in the
-    area and implemented our proposed untangling algorithms as well as their
-    evaluation on the constructed dataset. The RefiNym implementation was
-    provided by Santanu Dash who helped me integrate it with Flexeme. The
-    original PDG extraction implementation for C\# code was provided by Miltose
-    Allamanis. Santanu Dash and I performed the manual evaluations.
+    \noindent I implemented in full the construction of our new structure,
+    though the idea of the structure was from Earl Barr, and the details of its
+    specification were worked out in close collaboration with him. I also
+    implemented the necessary methods to construct the dataset, reproduced
+    previous work in the area and implemented our proposed untangling algorithms
+    as well as their evaluation on the constructed dataset. The RefiNym
+    implementation was provided by Santanu Dash who helped me integrate it with
+    Flexeme. The original PDG extraction implementation for C\# code was
+    provided by Miltos Allamanis. Santanu Dash and I performed the manual
+    evaluations.
 
     \item[]\noindent\textbf{3. POSIT: Simultaneously Tagging Natural and Programming
     Languages} 
@@ -234,7 +239,7 @@ Request-Issue Links}
     \noindent\emph{Venue: Proceedings of 42nd International Conference on
     Software Engineering (ICSE ’20)}
 
-    \noindent I have implemented the preprocessing scripts, the Neural Network
+    \noindent I implemented the preprocessing scripts, the Neural Network
     that realises POSIT, the adaptation of the previous state-of-the-art to our
     problem, and the necessary evaluation scripts. The Code Comments corpus was
     provided by Santanu Dash. The original implementation of TaskNav was
