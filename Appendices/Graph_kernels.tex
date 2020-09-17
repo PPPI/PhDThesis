@@ -22,10 +22,10 @@ parametrization by real constants, has non-negative weighted sum over all
 inputs. A \emph{graph kernel} is a positive semi-definite kernel on a set of graphs.
 
 Now, let us consider a collection of graphs $\mathcal{G}$, where each graph $G
-\in \mathcal{G}$ has vertexes from an abstract vertex space $\mathcal{V}$.
-Further, let $\mathcal{L}_v$ be the space of node labels, and let $lv:
+\in \mathcal{G}$ has vertexes from an arbitrary vertex set $\mathcal{V}$.
+Further, let $\mathcal{L}_v$ be the set of node labels, and let $lv:
 \mathcal{V} \rightarrow \mathcal{L}_v$ be the graph labelling function.
-Similarly, for edges let $\mathcal{L}_e$ be the space of edge labels, with a
+Similarly, for edges let $\mathcal{L}_e$ be the set of edge labels, with a
 similarly defined $le$. We will now consider a kernel function to be a function
 $k: \mathcal{G} \rightarrow \mathbb{R}^{|\mathcal{G}|} \times
 \mathbb{R}^{|\mathcal{G}|}$. In particular:
@@ -65,9 +65,9 @@ We can define a third kernel simply by considering:
     k(\mathcal{G})_{ij} = \langle[\mathbf{f},\mathbf{g}]_i, [\mathbf{f},\mathbf{g}]_j\rangle,
 \end{equation}
 %
-where $[\cdot,\cdot]$ represents vector concatenation. That is, we consider the
-inner product of both vertex and edge histograms when computing the inner
-product. This defines the Vertex-Edge-Label-Histogram kernel.
+where $[\mathbf{f},\mathbf{g}]$ represents vector concatenation. That is, we
+consider the inner product of both vertex and edge histograms when computing the
+inner product. This defines the Vertex-Edge-Label-Histogram kernel.
 
 For each of the three presented kernels, Vertex Label Histogram, Edge Label
 Histogram and Vertex-Edge Label Histogram, we can obtain the Gaussian Radial
@@ -106,10 +106,10 @@ E_{\times} = \{ ((u_i, u_j), (v_i, v_j)) \in V_{\times} \times V_{\times} \mid \
 %
 and labels are propagated \ie:
 \[
-\text{lv}_{\times}((v_i, v_j)) = \text{lv}_i(v_i) = \text{lv}_j(v_j),
+\text{lv}_{\times}((v_i, v_j)) = \text{lv}_i(v_i),
 \]
 \[
-\text{le}_{\times}(((u_i, u_j), (v_i, v_j))) = \text{le}_i((u_i, v_i)) = \text{le}_j((u_j, v_j)).
+\text{le}_{\times}(((u_i, u_j), (v_i, v_j))) = \text{le}_i((u_i, v_i)).
 \]
 
 For the Graphlet kernel, for each graph $G_i$ consider the vector $\mathbf{l_i}
