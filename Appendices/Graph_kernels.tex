@@ -2,8 +2,8 @@
 \label{appendix:graph_kernels}
 
 In this Appendix, I will first define a kernel and a graph kernel. I will then
-show some of the earlier examples of kernels: from Vertex Label Histogram
-Kernels through to random-walk and Graphlet Kernels. I will then detail the
+show some of the earlier examples of kernels: from vertex/edge label histogram
+kernels through to random-walk and graphlet Kernels. I will then detail the
 general Weisfeiler-Lehman graph kernel framework and show how to instantiate it
 with a subtree graph kernel. Kernels in general, and graph kernels being no
 exception, are used to allow machine learning approaches,such as clustering,
@@ -19,7 +19,9 @@ non-empty sets $X$. A kernel is positive semi-definite if:
 \end{align*}
 The function $k$, for any
 parametrization by real constants, has a non-negative weighted sum over all
-inputs. A \emph{graph kernel} is a positive semi-definite kernel on a set of graphs.
+inputs. A \emph{graph kernel} is a positive semi-definite kernel on a set of
+graphs. A kernel is equivalent to an inner product, as inner products are
+positive semi-definite, kernels must be as well.
 
 Now, let us consider a collection of graphs $\mathcal{G}$, where each graph $G
 \in \mathcal{G}$ has vertexes from an arbitrary vertex set $\mathcal{V}$.
@@ -43,10 +45,12 @@ This is often referred to as a kernel trick~\cite{theodoridis2008}.
 \section{Vertex and Edge Label Histogram Kernels}
 \label{appendix:graph_kernels:histogram}
 
-Let us now consider a few simple graph kernels: vertex/edge label histogram
-kernels. For the vertex label histogram kernel, let $n=|\mathcal{L}_v|$, and let
-$\psi$ return length $n$ vectors $\mathbf{f}$, such that the $i$-th value
-represents the count of the $i$-th vertex label in the graph, \ie: 
+To build your intuition on how to construct a graph kernel, we start with two
+simple, but useful examples, that aggregate a graph's labels to build a
+histogram summary of a graph: vertex/edge label histogram kernels. For the
+vertex label histogram kernel, let $n=|\mathcal{L}_v|$, and let $\psi$ return
+length $n$ vectors $\mathbf{f}$, such that the $i$-th value represents the count
+of the $i$-th vertex label in the graph, \ie: 
 \begin{equation}
     \psi(G) = \mathbf{f},
 \end{equation}
@@ -82,14 +86,19 @@ the kernels then becomes:
 %
 where $\sigma^2$ is the variance of our Gaussian RBF kernel.
 
+If we were to apply these kernels to our commit untangling task in
+\Cref{chapter:flexeme}, we would make use of only the immediate neighbourhoods
+of changed nodes. We would lose considerable topological information: that of
+higher-order neighbours.
 
 \section{Random-Walk Kernel}
 \label{appendix:graph_kernels:random_walk}
 
-Let us now consider random-walk based kernels. For the $\kappa$-step random walk
-kernel, we consider as input a vector of weights $(\lambda_0, \lambda_1, \dots,
-\lambda_\kappa)$ where each $\lambda_i \in \mathbb{R}^+$ and define the
-kernel as:
+Let us now consider a more complicated kernel that allows for the better
+preservation of topological information: random-walk based kernels. For the
+$\kappa$-step random walk kernel, we consider as input a vector of weights
+$(\lambda_0, \lambda_1, \dots, \lambda_\kappa)$ where each $\lambda_i \in
+\mathbb{R}^+$ and define the kernel as:
 \begin{equation}
     k(\mathcal{G})_{ij} = \sum\limits_{i',j'=1}^{|V_{\times}|}\left[\sum\limits_{t=0}^{\kappa}\lambda_tA_{\times}^{t}\right]_{i'j'},
 \end{equation}
@@ -130,10 +139,26 @@ our kernel:
 %
 Due to high computational costs, implementations of this kernel ignore Vertex
 and Edge labels. For more details, see Shervashidze
-\etal~\cite{shervashidze2009}.
+\etal~\cite{shervashidze2009}. If applied to Flexeme, this would discard code
+snippet and other valuable information that can help solve the untangling
+problem. Indeed, purely by dataflow and controlflow branching, it is difficult
+to discern code in a PDG by task.
 
 \section{Weisfeiler-Lehman Kernel}
 \label{appendix:graph_kernels:wl}
+
+Let us now first consider the Weisfeiler-Lehman kernel
+framework~\cite{shervashidze2011weisfeiler}, which arose from a graph
+isomorphism test~\cite{Weisfeiler1968ReductionOA}. The kernel equivalent to the
+isomorphism test arose in the Biomedical community as a method of computing the
+similarity between graph structures such as proteins as a proxy for determining
+the properties of new protein structures~\cite{Sugiyama2018Bioinfo}. When
+combined with a subtree kernel, this allows us to consider graphs that have
+similar views from each node: when starting a tree from a node up to a certain
+depth, two graphs are more similar the more trees are held in common when
+considering both topology and labels. In Flexeme's setting, this means that the
+two graphs are similar if they have similar statements following each other: a
+proxy for similar executions.
 
 For the Weisfeiler-Lehman (WL) kernel, consider the following: the labelling
 function $lv$ associated with a graph $G=(V,E)$ becomes the labelling function
@@ -177,8 +202,12 @@ a node label. We will now build our vector as:
 By defining the projection function $\psi$, we side-step the process of
 computing $k$ directly for each graph. The inner product of the vector space
 onto which $\psi$ projects represents the number of common rooted subtrees
-shared by the respective projected graphs. Finally, we obtain the similarity
-matrix, by replacing $\psi$ from \Cref{eq:wl_vector} in
-\Cref{eq:kernel_general}, which enables Flexeme to then perform agglomerative
+shared by the respective projected graphs. Finally, let $\psi(G_i) = s_i$, then we obtain the similarity
+matrix as:
+\begin{equation}
+    k(\mathcal{G})_{ij} = \langle\mathbf{s_i}, \mathbf{s_j}\rangle
+\end{equation}
+%
+This enables Flexeme to then perform agglomerative
 clustering; the intuition is that common rooted subtrees represent a good proxy
 for similar execution paths.

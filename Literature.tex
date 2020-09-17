@@ -86,10 +86,15 @@ priority inflation, acquisition of technical debt in a simple fix or kugel
 example, and the tragedy of the test suite (the accumulation of test cases due
 to incorrect developer incentivisation). 
 
-\todo{This thesis reduces the need to take debt and when repaying it reduces interest.}
-The work presented in this thesis could
-serve to reduce the cost of actions associated with good long-term project
-health in the pay-off matrix in the framework of Gavidia-Calderon \etal
+When technical debt cannot be avoided, a risk associated with technical debt is
+its interest rate. The work I present in this thesis aims to, first, reduce the
+need to accrue technical debt by (semi-)automating tasks that would otherwise be
+forgone for a leaner project. When debt is acquired, the work herein aims to
+reduce the interest rate. Recasting the perspective into the framework presented
+by Gavidia-Calderon \etal, the thesis aims to reduce the cost of actions
+associated with good long-term project health in the pay-off matrix, \ie to
+ensure that short horizon decisions optimal decisions are also optimal in a long
+horizon setting.
 
 \section{Bridging the Gap between Issues and History}
 \label{chapter:literature:sec:am_rel_work}
@@ -104,8 +109,8 @@ traceability task, which we generalise and propose a solution for in
 \subsection{Modern Development}
 \label{chapter:literature:sec:am_rel_work:modern_dev}
 
-Modern development increasingly relies on tooling that integrates Version
-Control, Issue Tracking, Wikis, Continuous Integration and Continuous Deployment
+Modern development increasingly relies on tooling that integrates version
+control, issue tracking, wikis, continuous integration and continuous deployment
 under a single system. Notable examples are GitHub and Atlassian's JIRA. This
 new development paradigm poses new problems and opportunities. Kalliamvakou
 \etal~\cite{Kalliamvakou2014} elucidates these, using GitHub as their archetypal
@@ -122,8 +127,11 @@ stories and reprioritise and re-estimate remaining stories. When all stories are
 stale, this practice discards all sprint-related artefacts --- issues, feature
 requests, user stories, as well their links --- in favour of starting the next
 sprint from a clean slate~\cite{BacklogRefinement}. Projects must resort to this
-spring cleaning all too often~\cite{laurieTrattPersonalCommunciation}. Clearly,
-this practice loses valuable information. The loss of documentation it entails
+spring cleaning all too often~\cite{laurieTrattPersonalCommunciation}. This
+practice loses user stories, documentation, issues, discussions, and other such
+artefacts associated with a sprint by design; this loss of information comes at
+the cost of higher maintenance costs, onboarding costs \etc as the information
+has to be recreated or reverse engineered. The loss of documentation it entails
 it just one example. This can exacerbate the accumulation of Knowledge
 distribution and documentation debt. Adoption of PR-issue inference tooling
 promises to reduce the need to resort to this drastic measure by enabling
@@ -154,18 +162,19 @@ disruptive, requiring the developer to switch contexts, or invasive, as when
 they require developers to change their workflow or use instrumented
 IDEs~\cite{TopicTraceability}, raising privacy and deployability concerns.
 Inferring traces over these heterogeneous artefacts, as a consequence of their
-heterogeneity, can only leverage abstract, generic features. As many of the
-artefacts within such systems are textual, work in this area borrowed techniques
-from Information Retrieval, including ourselves. An excellent survey detailing
-the use of such methods within traceability has been done by Borg
-\etal~\cite{Borg2014}. Further, Mills
-\etal~\cite{Mills:2017:ATL:3106237.3121280} propose to reduce the human effort
-required by IR based techniques by adding a classification step after the
-recommender that filters the suggestions. Finally, St{\aa}hl
-\etal~\cite{Stahl2017} propose a light-weight framework where different systems
-can emit traceability events, facilitating a standardisation of how such links
-are recorded by minimising the cost of integrating otherwise incompatible tools
-within a single eco-system, which they call the Eiffel framework.
+heterogeneity, can only leverage abstract, generic features. 
+
+As many of the artefacts within such systems are textual, work in this area
+borrowed techniques from Information Retrieval, including ourselves. Borg
+\etal~\cite{Borg2014} provide an excellent survey detailing the use of such
+methods within traceability. Further, Mills
+\etal~\cite{Mills:2017:ATL:3106237.3121280} propose reducing the human effort
+required by IR based techniques via a classification step after the recommender
+that filters the suggestions. Finally, St{\aa}hl \etal~\cite{Stahl2017} propose
+a light-weight framework where different systems can emit traceability events,
+facilitating a standardisation of how such links are recorded by minimising the
+cost of integrating otherwise incompatible tools within a single eco-system,
+which they call the Eiffel framework.
 
 Asuncion and Taylor~\cite{Asuncion:2009:CCL:1556908.1557008} use record-replay
 and hypermedia to tackle software traceability as an online problem. Their
@@ -181,12 +190,10 @@ specific versions of no less than five different tools, including general
 purpose tools like Firefox and MS Word. Many of these tools are under constant
 development; updating this instrumentation out-of-tree is extremely expensive,
 suggesting that St{\aa}hl~\etal's light-weight approach is more likely to be
-maintainable.
-
-Asuncion~\etal~\cite{TopicTraceability} in follow-up work incorporate an LDA
-model into their framework to improve the interpretability of their traces. To
-remain online, they recompute an LDA model on demand for each graph
-visualisation and search query.
+maintainable. Asuncion~\etal~\cite{TopicTraceability} in follow-up work
+incorporate an LDA model into their framework to improve the interpretability of
+their traces. To remain online, they recompute an LDA model on demand for each
+graph visualisation and search query.
 
 Additionally, Falessi~\etal~\cite{Falessi2017} have done work towards
 quantifying the number of links that are left to be recovered. Their work
@@ -195,7 +202,15 @@ an analyst decide when to stop pursuing a traceability maintenance task. The aim
 of this work is to provide a quantifiable signal of when the traceability task
 should be finished as linking can be considered good enough.
 
-\todo{what are the gaps, how do we fill them?}
+Work in general traceability, due to its broader nature, deals with a profusion
+of formats and has, so far, either resorted to intrusive
+instrumentation~\cite{Asuncion:2009:CCL:1556908.1557008, TopicTraceability}, or
+defining a protocol which tools must implement and communicate
+via~\cite{Stahl2017}. The more limited scope of this work allows us to exploit
+known structures that developers using platforms such as GitHub naturally
+produce: namely issues and pull-requests. This enables Aide-mémoire to rely on
+API access from GitHub, or, with minimal additional effort, JIRA, rather than
+instrument the developer environment (\Cref{am:sec:imp:deployability}).
 
 \subsection{Commit-Issue Link Inference}
 \label{chapter:literature:sec:am_rel_work:cli}
@@ -291,19 +306,31 @@ n-gram model. They are the first to perform feature selection, using Weka's
 feature auto-selection. They report promising results but on a different dataset
 than Apache Commons.
 
-\todo{what are the gaps, how do we fill them?}
+Work focusing on the narrower traceability area of commit-issue linking has so
+far been offline, focusing on fixing the situation after the fact, and working
+at the commit level. The commit to issue mapping, however, is not
+one-to-one~\cite{Kawrykow2011}. Indeed, current practice on GitHub suggests that
+the one-to-one mapping be from pull-requests, that may contain a feature branch,
+onto issues (\Cref{am:sec:eval:prelim}). Still, \Cref{am:sec:eval:prelim} also
+shows that the state of pull-request-issue linking is non-ideal. To address
+these issues, we focused Aide-mémoire as an online pull-request-issue lining
+tool. Its online nature makes it complementary to offline approaches, while it
+has a lower recall, it can still improve the training data of offline approaches
+and allow for better link recovery. Its shift to pull-request focuses it on the
+modern development practice which is now common on platforms such as GitHub.
 
 \section{Towards Atomic Commits}
 \label{chapter:literature:sec:flexeme_rel_work}
-
-\todo{define atomic commit.}
 
 A potential source of inaccuracy and noise for the task of maintaining links
 between commits and pull-requests is multi-concern commits. A developer, as part
 of a bug fix or indeed to facilitate said bug fix, can and indeed do mix
 refactoring changes together with fixes. These are then committed as a single
-patch. Changes unrelated to the fix may confuse statistical tools that strive to
-maintain traceability links due to the added noise, thus approaches to (1)
+patch. Such commits represent tangled commits. The ideal state of a version
+history would be to contain only atomic commits, \ie those that tackle a single
+task (would be linked to a single issue or implements a single stakeholder
+concern). Changes unrelated to the fix may confuse statistical tools that strive
+to maintain traceability links due to the added noise, thus approaches to (1)
 detect multi-concern commits and (2) slice multi-concern commits into atomic
 patches may aid reduce this source of noise. Further, this can have an added
 benefit for developers since tools such as \lstinline+git bisect+ would also
@@ -329,7 +356,11 @@ that most projects contain a maximum of four tangled concerns per commit, which
 is  consistent with previous findings by Kawrykow and
 Robillard~\cite{Kawrykow2011}. They find discover non-atomic commits
 significantly impact the accuracy of classification and regression tasks such as
-fault localisation. 
+fault localisation.
+
+In this thesis, we borrow the approach that Herzig~\etal~\cite{Herzig2016}
+propose for generating a plausible dataset of tangled commits which we use to
+compare previous approaches and our proposed approach to untangling commits.
 
 \subsection{Untangling Commits into Atomic Patches}
 \label{chapter:literature:sec:flexeme_rel_work:untangle}
@@ -390,7 +421,17 @@ also avoids relying on static analysis. They report a high median success rate
 of 91\% when used by developers during a two-week study. While Dias~\etal
 sidestep static analysis, they require developers to use an instrumented IDE.
 
-\todo{what are the gaps, how do we fill them?}
+Previous literature proposed approaches that were either simple and by virtue of
+the simplicity efficient~\cite{Barnett2015}, made use of heuristics to construct
+their similarities for a decompose-recluster approach~\cite{Herzig2016}, or
+relied on heavy IDE instrumentation~\cite{Dias2015}. In \Cref{chapter:flexeme}
+we propose an approach that does not rely on heuristics, instead uses
+similarities over a multi-version representation of code in a
+decompose-recluster method similar to Herzig \etal. While slower than Barnett
+\etal, it is within 10 seconds (\Cref{flex:sec:impl:deploy}), hence compatible
+with CI/CD, while being more accurate (13\% accuracy vs 81\%). Further, Flexeme
+does not require project instrumentation and its static analysis can be done
+incrementally as a post-commit script.
 
 \subsection{Multiversion Representations of Code}
 \label{chapter:literature:sec:flexeme_rel_work:multiversion_repr}
@@ -411,7 +452,6 @@ facilitate matching nodes within a NFG.
 Le~\etal~\cite{Le2014} propose a Multiversion Interprocedural Control Graph
 (MVICFG) for efficient and scalable multiversion patch verification over systems
 such as the PuTTY SSH client.
-
 Alexandru~\etal~\citep{alexandru2019redundancy} generalise the Le~\etal MVICFG
 construction to arbitrary software artefacts by constructing a framework that
 creates a multiversion representation of concrete syntax trees for a git
@@ -424,7 +464,14 @@ computations unnecessarily and reuses the data stores in the sparse graph by
 propagating from child to parent node. \citet{Sebastian2018} propose a compact,
 multiversion AST that cleverly shares state across versions.
 
-\todo{what are the gaps, how do we fill them?}
+Previous work mostly considered multiversion representation of code for static
+analysis or the compute of software metrics. We instead focus on multiversion
+representations of code as a initial structure from which we can segment atomic
+commits. To that end, we propose two new multiversion graph representations of
+code, firstly, the \deltaPDG, which generalises Le~\etal's MVICFG to PDGs, and
+the \deltaPDGN that further augments \deltaPDGNs with nameflow information,
+which we hoped to enable us to better approximate the location of concerns in
+code via naming conventions.
 
 \subsection{Semantic Slicing of Version Histories}
 \label{chapter:literature:sec:flexeme_rel_work:sem_slice_vh}
@@ -444,24 +491,33 @@ as atomic so their slices may contain noise introduced by tangled commits. To
 reduce this noise, Li~\etal, in more recent work~\cite{Li2019}, unpack commits
 into single-file commits into a private, local history.
 
+Flexeme, in contrast, is static and online:  built from the ground up to rewrite
+commits as developer make history.  
+As such Flexeme and semantic slicing are complementary:  Flexeme would improve
+the signal to noise ratio of semantic slicing. An interesting direction for
+future work would be to use Flexeme to preprocess version histories prior to
+semantically slicing them as with Definer~\cite{Li2019}.
+
+
 \section{Discerning Text from Code}
 \label{chapter:literature:sec:posit_rel_work}
-
-\todo{Consider subsections}
 
 One of the meta-task that can aid the traceability aspect of this research is
 the segmentation of English, or natural languages in a more general sense, from
 formal languages. While online fora perform a best effort attempt at maintaining
 separate formatting for the two modalities of text, this signal remains
-noisy~\cite{ponzanelli2014improving}. The work carried out for our tool seeks to
-improve the situation by framing the task as a code-switching phenomenon and
+noisy~\cite{ponzanelli2014improving}. The work carried out in this thesis seeks
+to improve the situation by framing the task as a code-switching phenomenon and
 borrowing results from the relevant areas of the Natural Language Processing
-(NLP) community.
+(NLP) community (\Cref{chapter:posit}).
 
 In this section, we will focus on first providing how similar techniques were
 already employed within the Software Engineering (SE) community, followed by the
 more relevant for this task research from the NLP community, concluding with
-Ponzanelli~\etal's work on \SO which is closest to our work.
+Ponzanelli~\etal's work on \SO which is closest to POSIT.
+
+\subsection{Part of Speech Tagging in Software Engineering}
+\label{chapter:literature:sec:posit_rel_work:pos4se}
 
 In SE research, part-of-speech tagging has been directly applied for identifier
 naming~\cite{Binkley2011}, code summarisation~\cite{Haiduc2010a, Haiduc2010b},
@@ -472,25 +528,31 @@ naturalness of code as discussed by Hindle~\etal~\cite{hindle2012naturalness}.
 
 Operating directly on source code (not mixed text), Newman
 \etal~\cite{Newman2017} created source code equivalents for lexeme categories
-from natural languages. The looked at the behaviour exhibited by Proper Nouns,
+from natural languages. They looked at the behaviour exhibited by Proper Nouns,
 Nouns, Pronouns, Adjectives, and Verbs and derived similar notions for
 source-code from 1) Abstract syntax trees, 2) how the tokens impact memory, 3)
 where they are declared, and 4) what type they have. They report the prevalence
 of these categories in source-code. Their goal was to map these code categories
 to PoS tags, thereby building a bridge for applying NLP techniques to code for
-tasks such as program comprehension. Treude~\etal~\cite{Treude2015portuguese}
-described the challenges of analysing software documentation written in
-Portuguese which commonly mixes two natural languages (Portuguese and English)
-as well as code. They suggested the introduction of a new part-of-speech tag
-called Lexical Item to capture cases where the ``correct'' tag cannot be
-determined easily due to language switching.
+tasks such as program comprehension. 
 
-We first review natural language processing (NLP) research on code-switching,
-the natural language analogue of the mixed text problem.  This is work on which
-we based POSIT.  Then we discuss initial efforts to establish analogues for
-parts of speech categories for code and use them to tag code tokens.  We close
-with the pioneering work on \stormed, the first context-free work to
-automatically tackle the mixed text tagging problem.
+Treude~\etal~\cite{Treude2015portuguese} described the challenges of analysing
+software documentation written in Portuguese which commonly mixes two natural
+languages (Portuguese and English) as well as code. They suggested the
+introduction of a new part-of-speech tag called Lexical Item to capture cases
+where the ``correct'' tag cannot be determined easily due to language switching.
+
+Instead of adapting code to part-of-speech akin to Newman
+\etal~\cite{Newman2017}, in this thesis, we instead wish to treat the problem as
+a multi-lingual parsing problem, \ie we want to know what part of speech or part
+of code each token is for all languages that we may consider. In POSIT, we
+realised a first step towards this by considering the single natural language
+and a single C-like source code case. Indeed, it is still an open problem to
+tackle situations such as those presented by Treude
+\etal~\cite{Treude2015portuguese}.
+
+\subsection{Part of Speech Tagging in Code-Switched Natural Languages}
+\label{chapter:literature:sec:posit_rel_work:nlcs}
 
 NLP researchers are growing more interested in code-switching text and speech,
 \ie that mixes multiple natural languages, among other reasons due to the higher
@@ -518,30 +580,24 @@ both outputs and fused the two learning targets by simply summing the respective
 losses. This network achieves a test accuracy of 90.25\% on the inter-sentential
 code-switched dataset from Miami Bangor~\cite{bangorTalk}.
 
-In the context of natural languages mixed with source code, Ponzanelli~\etal are
-the first to go beyond using regular expressions to parse such mixed text. When
-customising LexRank~\cite{Ponzanelli2015b}, a summarisation tool for mixed text,
-they employed an island grammar that parses Java and stack-trace islands
-embedded in natural language, which is relegated to water. They followed up
-LexRank with \stormed, a tool that uses an island grammar to parse Java, JSON,
-and XML islands in mixed text \SO posts, again relegating natural language to
+The languages that previous literature considered for code-switching tasks may have different tag distributions or even tag sets; although not as disjoint as in our case with POSIT. This provided an initial starting point for promising architectures. 
+
+\subsection{Mixed-Text: When Natural Meets Formal}
+\label{chapter:literature:sec:posit_rel_work:mixed}
+
+In the context of natural languages mixed with source code and other formal
+languages (mixed-text), Ponzanelli~\etal are the first to go beyond using
+regular expressions to parse such mixed text. When customising
+LexRank~\cite{Ponzanelli2015b}, a summarisation tool for mixed text, they
+employed an island grammar that parses Java and stack-trace islands embedded in
+natural language, which is relegated to water. They followed up LexRank with
+\stormed, a tool that uses an island grammar to parse Java, JSON, and XML
+islands in mixed text \SO posts, again relegating natural language to
 water~\cite{Ponzanelli2015a}.  \stormed produces heterogeneous abstract syntax
 trees (AST), which are ASTs decorated with natural language snippets. They make
 both the tool and the resulting corpus available. \stormed, however, remains
 reliant on either code-block annotations or heuristics to discern code from
 English. POSIT instead learns this segmentation from data, and, after a manual
 evaluation, we indeed observed it to be capable of segmenting \SO posts where
-submitters forgotten to include the appropriate formatting.
-
-In extending this work from the single-natural-language and
-single-formal-language case implemented as POSIT, we can look to the more recent
-advances in NLP that are due to the adoption of the Transformers
-model~\cite{vaswani2017attention, wang2019language}. They have been shown to
-learn long-range dependencies, suggesting that they would be able to relate
-single token code-occurrences to their repeated appearance in longer snippets.
-Further, since in a setting where multiple natural languages and formal
-languages are mixed, we expect each respective language to be low-resource; thus
-we expect Transformers to offer a better promise of solving the task as they
-have been shown to fare better in such scenarios~\cite{lakew2017multilingual}.
-
-\todo{what are the gaps, how do we fill them?}
+submitters forgotten to include the appropriate formatting
+(\Cref{posit:sec:application}).
