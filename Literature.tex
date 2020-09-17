@@ -313,19 +313,19 @@ one-to-one~\cite{Kawrykow2011}. Indeed, current practice on GitHub suggests that
 the one-to-one mapping be from pull-requests, that may contain a feature branch,
 onto issues (\Cref{am:sec:eval:prelim}). Still, \Cref{am:sec:eval:prelim} also
 shows that the state of pull-request-issue linking is non-ideal. To address
-these issues, we focused Aide-mémoire as an online pull-request-issue lining
+these issues, we focused Aide-mémoire as an online pull-request-issue linking
 tool. Its online nature makes it complementary to offline approaches, while it
 has a lower recall, it can still improve the training data of offline approaches
 and allow for better link recovery. Its shift to pull-request focuses it on the
-modern development practice which is now common on platforms such as GitHub.
+modern development practice that is now common on platforms such as GitHub.
 
 \section{Towards Atomic Commits}
 \label{chapter:literature:sec:flexeme_rel_work}
 
 A potential source of inaccuracy and noise for the task of maintaining links
 between commits and pull-requests is multi-concern commits. A developer, as part
-of a bug fix or indeed to facilitate said bug fix, can and indeed do mix
-refactoring changes together with fixes. These are then committed as a single
+of a bug fix or indeed to facilitate said bug fix, can and often do mix
+refactoring changes with fixes. These are then committed as a single
 patch. Such commits represent tangled commits. The ideal state of a version
 history would be to contain only atomic commits, \ie those that tackle a single
 task (would be linked to a single issue or implements a single stakeholder
@@ -360,7 +360,8 @@ fault localisation.
 
 In this thesis, we borrow the approach that Herzig~\etal~\cite{Herzig2016}
 propose for generating a plausible dataset of tangled commits which we use to
-compare previous approaches and our proposed approach to untangling commits.
+compare previous approaches and our proposed approach to untangling commits
+(\Cref{flex:sec:eval:corpus}).
 
 \subsection{Untangling Commits into Atomic Patches}
 \label{chapter:literature:sec:flexeme_rel_work:untangle}
@@ -469,9 +470,9 @@ analysis or the compute of software metrics. We instead focus on multiversion
 representations of code as a initial structure from which we can segment atomic
 commits. To that end, we propose two new multiversion graph representations of
 code, firstly, the \deltaPDG, which generalises Le~\etal's MVICFG to PDGs, and
-the \deltaPDGN that further augments \deltaPDGNs with nameflow information,
-which we hoped to enable us to better approximate the location of concerns in
-code via naming conventions.
+the \deltaPDGN that further augments \deltaPDGNs with nameflow information
+(\Cref{flex:sec:pdgn}), which we hoped to enable us to better approximate the
+location of concerns in code via naming conventions.
 
 \subsection{Semantic Slicing of Version Histories}
 \label{chapter:literature:sec:flexeme_rel_work:sem_slice_vh}
@@ -497,7 +498,6 @@ As such Flexeme and semantic slicing are complementary:  Flexeme would improve
 the signal to noise ratio of semantic slicing. An interesting direction for
 future work would be to use Flexeme to preprocess version histories prior to
 semantically slicing them as with Definer~\cite{Li2019}.
-
 
 \section{Discerning Text from Code}
 \label{chapter:literature:sec:posit_rel_work}
@@ -580,7 +580,11 @@ both outputs and fused the two learning targets by simply summing the respective
 losses. This network achieves a test accuracy of 90.25\% on the inter-sentential
 code-switched dataset from Miami Bangor~\cite{bangorTalk}.
 
-The languages that previous literature considered for code-switching tasks may have different tag distributions or even tag sets; although not as disjoint as in our case with POSIT. This provided an initial starting point for promising architectures. 
+The languages that previous literature considered for code-switching tasks may
+have different tag distributions or even tag sets; although not as disjoint as
+in our case with POSIT. This provided an initial starting point for promising
+architectures. \Cref{posit:sec:impl} details how we combined these approaches to
+enables us to solve a version of our joint tagging and segmentation task.
 
 \subsection{Mixed-Text: When Natural Meets Formal}
 \label{chapter:literature:sec:posit_rel_work:mixed}
