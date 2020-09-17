@@ -175,7 +175,10 @@ a node label. We will now build our vector as:
 \end{equation}
 %
 By defining the projection function $\psi$, we side-step the process of
-computing $k$ directly for each graph. Finally, we obtain the similarity matrix,
-by replacing $\psi$ from \Cref{eq:wl_vector} in \Cref{eq:kernel_general}, which
-enables Flexeme to then perform agglomerative clustering.
-
+computing $k$ directly for each graph. The inner product of the vector space
+onto which $\psi$ projects represents the number of common rooted subtrees
+shared by the respective projected graphs. Finally, we obtain the similarity
+matrix, by replacing $\psi$ from \Cref{eq:wl_vector} in
+\Cref{eq:kernel_general}, which enables Flexeme to then perform agglomerative
+clustering; the intuition is that common rooted subtrees represent a good proxy
+for similar execution paths.
