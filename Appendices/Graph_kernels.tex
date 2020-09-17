@@ -20,8 +20,10 @@ non-empty sets $X$. A kernel is positive semi-definite if:
 The function $k$, for any
 parametrization by real constants, has a non-negative weighted sum over all
 inputs. A \emph{graph kernel} is a positive semi-definite kernel on a set of
-graphs. A kernel is equivalent to an inner product, as inner products are
-positive semi-definite, kernels must be as well.
+graphs. As we use kernels as a measure of similarity, we are interested in those
+kernels that have an equivalent inner product definition. As inner products are
+positive semi-definite, we are only interested in positive semi-definite
+kernels.
 
 Now, let us consider a collection of graphs $\mathcal{G}$, where each graph $G
 \in \mathcal{G}$ has vertexes from an arbitrary vertex set $\mathcal{V}$.
@@ -40,7 +42,8 @@ where $\psi$ embeds a graph into a vector space and $\langle\cdot,\cdot\rangle$
 represents the inner product. By doing so, we avoid needing to compute an
 explicit feature space, which depending on our set $X$ can be costly. Instead we
 can operate on the images of our data points, here graphs, onto a vector space.
-This is often referred to as a kernel trick~\cite{theodoridis2008}.
+This is often referred to as a kernel trick~\cite{theodoridis2008}. This trick
+may not be possible for kernels that are not positive semi-definite.
 
 \section{Vertex and Edge Label Histogram Kernels}
 \label{appendix:graph_kernels:histogram}
