@@ -25,12 +25,15 @@ impact project health can be centrally observed. The proliferation of GitHub,
 which offers pull-requests, issue tracking and version history, and its
 integration with other solutions such as Gerrit (for Code Reviews), Travis (for
 continuous integration and delivery), as well as the response from competitors,
-such as GitLab and Atlassian who offer equivalent offerings has led to leaner and
-faster development cycles\todo{cite}. This has also reduced the cost of entry and created
-large, publicly accessible sources of source-code together with related project
-artefacts, such as GHTorrent~\cite{GHTorrent} and similar datasets. Within this context, developers can benefit from the automation of
-tasks, especially if they are oft forgotten or ignored in favour of traveling
-light. 
+such as GitLab and Atlassian who offer equivalent offerings has led to leaner
+and faster development cycles: GitHub advertises their CI offerings with a
+promise to reduce time spent merging commits or debugging and increase time
+spend writing code~\cite{GitHubCI}. This has also reduced the cost of entry and
+created large, publicly accessible sources of source-code together with related
+project artefacts, such as GHTorrent~\cite{GHTorrent},
+CodeSearchNet~\cite{Husain2019} and similar datasets. Within this context,
+developers can benefit from the automation of tasks, especially if they are oft
+forgotten or ignored in favour of traveling light. 
 
 This shift in tooling has also facilitated a shift in development paradigms,
 developers now prefer a continuous integration/continuous delivery
@@ -49,8 +52,6 @@ the relevant NLP and ML techniques.
 \section{Problem Statements}
 \label{chapter:introduction:sec:problem_statement}
 
-\todo{define travelling light}
-
 Under Improving Project Health, I focus on three synergistic tasks: (1)
 improving the issue-pull-request traceability, which can aid existing systems to
 automatically curate the issue backlog as pull-requests are merged; (2)
@@ -63,8 +64,8 @@ project-specific code-recommendation tools.
 Software development is a community task. The programming task itself is a
 component of a much wider process. It is, however, a task that is viewed
 exclusively when considered by developers at the cost of other administrative
-tasks. This manifests itself as, for example, in the case of traceability which
-companies to recognise as important by organisations reaching an insufficient
+tasks. This manifests itself as, for example, in the case of traceability, which
+companies recognise as important, by organisations reaching an insufficient
 level of traceability~\cite{mader2009motivation}. These administrative tasks
 come with the promise of facilitating internal follow-ups, evaluation or
 improvement of the development process~\cite{domges1998adapting}. Agile
@@ -73,7 +74,14 @@ to documentation, reduces the direct applicability of existing approaches,
 though work has been done to adapt to the new paradigm:
 Ståhl~\etal~\cite{Stahl2017} provide the Eiffel framework, which allows
 integrating different sources of traceability information in a light-weight
-manner.
+manner. Indeed, the conflict arises between the traditional assumptions of
+Traceability and the agile team's tendencies of traveling quite
+light~\cite{Cleland-Huang2014}. Indeed, \emph{traveling light} means forgoing
+documentation, user stories not being punted to new sprints, or, more generally,
+administrative tasks that distract from a developer coding being ignored. If
+combined with backlog refinement~\cite{BacklogRefinement}, traveling light can
+manifest itself as a form of project amnesia. This is a form of technical debt,
+and will degrade project health in the long-run.
 
 To help developers, tool smiths themselves require supporting artefacts and
 utilities. One of these is access to high quality data that can be used both to
