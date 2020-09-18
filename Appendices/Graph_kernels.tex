@@ -150,36 +150,38 @@ it is difficult to identify concerns in a commit.
 \section{Weisfeiler-Lehman Kernel}
 \label{appendix:graph_kernels:wl}
 
-Let us now first consider the Weisfeiler-Lehman kernel
+Let us now first consider the Weisfeiler-Lehman (WL) kernel
 framework~\cite{shervashidze2011weisfeiler}, which arose from a graph
 isomorphism test~\cite{Weisfeiler1968ReductionOA}. The kernel equivalent to the
 isomorphism test was first introduced in the Biomedical community as a method of
 computing the similarity between graph structures such as proteins as a proxy
 for determining the properties of new protein
 structures~\cite{Sugiyama2018Bioinfo}. When combined with a subtree kernel, this
-allows us to consider graphs that have similar views from each node: when
-starting a tree from a node up to a certain depth, two graphs are more similar
-the more trees are held in common when considering both topology and labels. In
-Flexeme's setting, this means that the two graphs are similar if they have
-similar statements following each other: a proxy for similar executions.
+allows us to consider graphs that can have similar walks through the graph given
+arbitrary starts within them; each node is treated as a root of a tree while the
+trees themselves record walks of bounded lengths.   Two graphs are more similar
+the larger the intersection of their constituent node trees when considering
+both topology and labels. In Flexeme's setting, this means that the two graphs
+are similar if they have similar statements following each other: a proxy for
+similar executions.
 
-For the Weisfeiler-Lehman (WL) kernel, consider the following: the labelling
+For the WL kernel, consider the following: the labelling
 function $lv$ associated with a graph $G=(V,E)$ becomes the labelling function
 $lv_0$, the labelling function of 0 steps of Weisfeiler-Lehman (the base case).
-To perform a step, we replace the set of labels of a node $v$ with the set
-containing the current label and the sorted set of labels of the neighbours of
-$v$. The multi-set label is then compressed to a short label. We obtain
-$lv_{i+1}$ from $lv_i$ as follows: 
+To perform a step, we replace the current label of a node $v$ with the ordered
+multi-set that contains the current label unioned with the sorted multi-set of
+labels of the neighbours of $v$. This multi-set of labels is then compressed to
+a short label. We obtain $lv_{i+1}$ from $lv_i$ as follows: 
 \begin{equation}
     lv_{i+1}(v) = \text{compress}(\{lv_i(v)\} \cup \{lv_i(v') \mid v' \in N(v)\})
 \end{equation}
 %
 This process is repeated for $h$ iterations. In particular, the compress
 function must ensure that nodes obtain identical new labels if and only if they
-have identical multi-set labels. Due to obtaining a sequence of labelling
+have identical multi-sets of labels. Due to obtaining a sequence of labelling
 functions, we also generate a sequence of length $h$ of graphs $(G_0, G_1,
 \ldots, G_h)$ which differ only in their associated labelling functions. We now
-define the WL kernel itself, which is in effect a meta kernel, as:
+define the WL kernel itself, which is, in effect, a meta kernel, as:
 \begin{equation}
     k_{WL}(\mathcal{G}) = k(\mathcal{G}_0) + k(\mathcal{G}_1) + \ldots + k(\mathcal{G}_h) 
 \end{equation}
