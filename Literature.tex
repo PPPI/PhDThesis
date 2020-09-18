@@ -422,17 +422,17 @@ also avoids relying on static analysis. They report a high median success rate
 of 91\% when used by developers during a two-week study. While Dias~\etal
 sidestep static analysis, they require developers to use an instrumented IDE.
 
-Previous literature proposed approaches that were either simple and by virtue of
-the simplicity efficient~\cite{Barnett2015}, made use of heuristics to construct
-their similarities for a decompose-recluster approach~\cite{Herzig2016}, or
-relied on heavy IDE instrumentation~\cite{Dias2015}. In \Cref{chapter:flexeme}
-we propose an approach that does not rely on heuristics, instead uses
-similarities over a multi-version representation of code in a
-decompose-recluster method similar to Herzig \etal. While slower than Barnett
-\etal, it is within 10 seconds (\Cref{flex:sec:impl:deploy}), hence compatible
-with CI/CD, while being more accurate (13\% accuracy vs 81\%). Further, Flexeme
-does not require project instrumentation and its static analysis can be done
-incrementally as a post-commit script.
+Previous literature proposed approaches were either simple and, by virtue of the
+simplicity, efficient~\cite{Barnett2015}, made use of heuristics to construct
+their similarities and decompose-recluster commits~\cite{Herzig2016}, or relied
+on heavy IDE instrumentation~\cite{Dias2015}. In \Cref{chapter:flexeme}, we
+propose an approach that does not rely on heuristics, instead uses similarities
+over a multi-version representation of code in a decompose-recluster method
+similar to Herzig \etal. While slower than Barnett \etal, it is within 10
+seconds (\Cref{flex:sec:impl:deploy}), hence compatible with CI/CD, while being
+more accurate (13\% accuracy vs 81\%). Further, Flexeme does not require project
+instrumentation and its static analysis can be done incrementally as a
+post-commit script.
 
 \subsection{Multiversion Representations of Code}
 \label{chapter:literature:sec:flexeme_rel_work:multiversion_repr}
