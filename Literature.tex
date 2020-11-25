@@ -59,10 +59,10 @@ debt:
     patch is pushed through to production.
 \end{itemize}  
 
-As impact on project health, in the short term, it allows a boost in project
-velocity; and should this debt never come due, you may feel free to incur high
-amounts~\cite{tom2013exploration}; however, in the long term, it can create
-brittle code, increase the cost of new features or products by decreasing
+As impact on project health, in the short term, technical debt allows a boost in
+project velocity; and should this debt never come due, you may feel free to
+incur high amounts~\cite{tom2013exploration}; however, in the long term, it can
+create brittle code, increase the cost of new features or products by decreasing
 reusability, and even increase production costs by decreasing long term project
 velocity as bandwidth is taken by debt repayment or simply attrition from the
 sub-optimal products and development pipelines. Tom \etal further found that
@@ -132,7 +132,7 @@ practice loses user stories, documentation, issues, discussions, and other such
 artefacts associated with a sprint by design; this loss of information comes at
 the cost of higher maintenance costs, onboarding costs \etc as the information
 has to be recreated or reverse engineered. The loss of documentation it entails
-it just one example. This can exacerbate the accumulation of Knowledge
+it just one example. This can exacerbate the accumulation of knowledge
 distribution and documentation debt. Adoption of PR-issue inference tooling
 promises to reduce the need to resort to this drastic measure by enabling
 automatic issue triaging.
@@ -354,7 +354,7 @@ changesets as atomic, tangled or unknown, and find that the fraction of tangled
 commits in a series of version histories ranges from 7\% to 20\%; they also find
 that most projects contain a maximum of four tangled concerns per commit, which
 is  consistent with previous findings by Kawrykow and
-Robillard~\cite{Kawrykow2011}. They find discover non-atomic commits
+Robillard~\cite{Kawrykow2011}. They find that non-atomic commits
 significantly impact the accuracy of classification and regression tasks such as
 fault localisation.
 
@@ -479,7 +479,7 @@ location of concerns in code via naming conventions.
 
 Features in a system often co-evolve, which tangles the changes made for a one
 high-level feature with others in a version history. To resurface
-feature-specific changes, they dynamically slice a target version, then walk
+feature-specific changes, one can dynamically slice a target version, then walk
 backwards in history while they can reverse the intra-version patch without
 conflict; at each version they reach, they add any commit that contains a hunk
 that touches the current slice to it. The goal of this semantic slicing of
